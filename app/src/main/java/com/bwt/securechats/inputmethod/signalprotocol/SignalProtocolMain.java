@@ -512,4 +512,16 @@ public class SignalProtocolMain {
   public void setAccount(final Account account) {
     this.mAccount = account;
   }
+
+  // --------------------------------------------------------------------------
+  //    NUEVA FUNCIÓN AÑADIDA PARA SINCRONIZAR EL mAccount TRAS EL BORRADO
+  // --------------------------------------------------------------------------
+  /**
+   * Llama internamente a {@link #reloadAccount(Context)} para recargar desde disco
+   * y forzar que la mAccount en memoria refleje los datos actualizados tras el borrado.
+   */
+  public static void syncAccountAfterDeletion(Context context) {
+    Log.d(TAG, "syncAccountAfterDeletion: Forzando la recarga del mAccount desde disco...");
+    reloadAccount(context);
+  }
 }

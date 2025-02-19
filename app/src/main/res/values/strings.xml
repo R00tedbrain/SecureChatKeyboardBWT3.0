@@ -70,16 +70,19 @@
 
     <!-- Description for a traditional keyboard layout, such as Nepali (Traditional). -->
   <string name="subtype_traditional">Traditional</string>
-  <!-- Description for a compact keyboard layout, such as Hindi (Compact). -->
+    <string name="delete_history">Eliminar historial</string>
+
+    <!-- Description for a compact keyboard layout, such as Hindi (Compact). -->
   <string name="subtype_compact">Compact</string>
   <!-- Description for Bulgarian (BDS) keyboard layout. -->
   <string name="subtype_bds">BDS</string>
-  <string name="subtype_q">Q</string>
+  <string   name="subtype_q">Q</string>
   <!-- Description for Turkish (F) keyboard layout. -->
   <string name="subtype_f">F</string>
   <!-- Description for Bengali (Bijoy) keyboard layout. -->
   <string name="subtype_bijoy">Bijoy</string>
-
+    <string name="language_icon_desc">Icon for language settings</string>
+    <string name="settings_screen_languages">Language Settings</string>
   <string name="keyboard_theme_dark_border" translatable="false">Material Dark Border</string>
   <string name="keyboard_theme_light_border" translatable="false">Material Light Border</string>
   <string name="keyboard_theme_dark" translatable="false">Material Dark</string>
