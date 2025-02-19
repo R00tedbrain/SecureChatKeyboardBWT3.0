@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Vibrar ao primir as teclas"</string>
+  <string name="sound_on_keypress">"Som ao premir as teclas"</string>
+  <string name="popup_on_keypress">"Mostrar popup ao premir tecla"</string>
+  <string name="settings_screen_preferences">"Preferências"</string>
+  <string name="settings_screen_theme">"Tema"</string>
+  <string name="settings_system_default">"Predef. do sistema"</string>
+  <string name="auto_cap">"Letras maiúsculas automáticas"</string>
+  <string name="auto_cap_summary">"Maiúscula no início da frase"</string>
+  <string name="select_language">"Idiomas"</string>
+  <string name="locale_name_en_GB">"Inglês (RU)"</string>
+  <string name="locale_name_en_US">"Inglês (EUA)"</string>
+  <string name="locale_name_es_US">"Espanhol (EUA)"</string>
+  <string name="locale_name_hi_ZZ">"Hinglish"</string>
+  <string name="locale_name_sr_ZZ">"Sérvio (latim)"</string>
+  <string name="subtype_traditional">"tradicional"</string>
+  <string name="subtype_compact">"compacto"</string>
+  <string name="add">"Adicionar"</string>
+  <string name="remove">"Remover"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Duração vibr. ao premir teclas"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Volume do som ao premir teclas"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Atraso ao manter tecla premida"</string>
+  <string name="button_default">"Predefinido"</string>
+  <string name="prefs_keyboard_height_settings">Altura do teclado</string>
+  <string name="keyboard_color">Definir cor personalizada do teclado</string>
+  <string name="hide_special_chars">Ocultar caracteres especiais</string>
+  <string name="hide_language_switch_key">Ocultar tecla para trocar idiomas</string>
+  <string name="show_number_row">Mostrar números em linha distinta</string>
+  <string name="space_swipe">Espaço deslizar cursor movimento</string>
+  <string name="delete_swipe">Apagar deslizar</string>
+  <string name="matching_navbar_color">Use a cor da barra de navegação correspondente</string>
+  <string name="setup_message">O Securechat Keyboard não está ativado. Clique em OK para abrir os Idiomas &amp; e as configurações de entrada. Você precisará selecionar SecureChat Keyboard no teclado actual para usá-lo.</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="pt-PT">
+	<body>
+		<main>
+			<h3>Como iniciar um chat?</h3>
+			<ul>
+				<li>Convide um parceiro para o chat, clicando na lista de contactos (ícone de pessoa) e enviando a sua mensagem de convite (ícone de adicionar pessoa). A mensagem de convite será colocada diretamente no campo de texto da aplicação de mensagens.</li>
+				<li>O seu parceiro de chat tem de o adicionar à sua lista de contactos e, em seguida, enviar-lhe uma mensagem encriptada. Copie essa mensagem para a sua área de transferência e clique no botão “desencriptar” (ícone de cadeado aberto).</li>
+				<li>Será aberto um novo menu contextual, onde deverá guardar o nome do parceiro de chat. Depois, clique no botão “concluído”.<br/>O contacto será selecionado automaticamente.</li>
+			</ul>
+
+			<h3>Alguém enviou-me uma mensagem de convite. O que tenho de fazer?</h3>
+			<ul>
+				<li>Copie a mensagem de convite para a sua área de transferência e clique no botão “desencriptar” (ícone de cadeado aberto).</li>
+				<li>Será aberto um novo menu contextual, onde deverá guardar o nome do parceiro de chat. Depois, clique no botão “concluído”.</li>
+				<li>Selecione o seu parceiro de chat na lista de contactos (ícone de pessoa) e envie-lhe uma mensagem encriptada (ícone de envelope fechado).</li>
+			</ul>
+
+			<h3>Como envio/encripto uma mensagem?</h3>
+			<ul>
+				<li>Se já adicionou o seu parceiro de chat aos seus contactos, selecione-o na lista de contactos (ícone de pessoa) e, em seguida, escreva a sua mensagem no campo de texto do SecureChat.</li>
+				<li>Depois, clique no botão “encriptar” (ícone de envelope fechado). A mensagem será encriptada e colocada no campo de texto da aplicação de mensagens, e poderá enviá-la.</li>
+				<li>Se ainda não adicionou o seu parceiro de chat, consulte a secção “Como iniciar um chat?”</li>
+			</ul>
+
+			<h3>Como recebo/desencripto uma mensagem?</h3>
+			<ul>
+				<li>Selecione o seu parceiro de chat na lista de contactos (ícone de pessoa) e copie a mensagem para a sua área de transferência. Em seguida, clique no botão “desencriptar” (ícone de cadeado aberto).</li>
+				<li>A mensagem será apresentada no campo de texto do SecureChat.</li>
+			</ul>
+
+			<h3>Como posso ver as mensagens anteriores com o meu parceiro de chat?</h3>
+			<ul>
+				<li>Selecione o seu parceiro de chat na lista de contactos (ícone de pessoa) e, em seguida, clique no botão “histórico de mensagens” na visualização principal (ícone de balão de texto).</li>
+				<li>Note que, se eliminar o contacto, o histórico de mensagens será também eliminado.</li>
+			</ul>
+
+			<h3>Como posso verificar se o meu parceiro de chat é quem diz ser?</h3>
+			<ul>
+				<li>Junto ao nome do seu parceiro de chat na lista de contactos (ícone de pessoa) aparece um símbolo de verificado/não verificado (ícone de escudo).</li>
+				<li>Clique nesse símbolo e aparecerá o número de segurança partilhado. Compare-o com o número do seu parceiro de chat.</li>
+				<li>Se coincidirem, clique no botão “concluído” e o seu contacto será marcado como verificado.</li>
+			</ul>
+
+			<h3>Quais são os modos de texto e como posso alternar entre eles?</h3>
+			<ul>
+				<li>Existem dois modos diferentes para enviar mensagens encriptadas.</li>
+				<li>No modo Bruto, as chaves públicas e outras informações são apresentadas na sua forma original.<br/>No modo Conto de Fadas, toda a informação está oculta num texto de engano.</li>
+				<li>Em ambos os modos, todas as mensagens permanecem encriptadas e não podem ser lidas por terceiros.</li>
+				<li>Pode alternar entre os modos clicando no ícone de bruto/livro no campo de texto do SecureChat, à esquerda.</li>
+			</ul>
+
+			<h3>O que é uma mensagem de atualização?</h3>
+			<ul>
+				<li>A cada 30 dias, a sua prekey assinada será renovada.</li>
+				<li>Para este efeito, é enviada uma mensagem especial que consiste na informação da sua chave renovada e na sua mensagem encriptada.</li>
+				<li>Para si e para o seu parceiro de chat, isto não requer qualquer esforço adicional, pois a mensagem será gerada automaticamente quando enviar a próxima mensagem encriptada.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

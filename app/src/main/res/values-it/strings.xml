@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Vibrazione tasti"</string>
+  <string name="sound_on_keypress">"Suono tasti"</string>
+  <string name="popup_on_keypress">"Popup tasti"</string>
+  <string name="settings_screen_preferences">"Preferenze"</string>
+  <string name="settings_screen_key_press">Pressione tasti</string>
+  <string name="settings_screen_appearance">Aspetto</string>
+  <string name="settings_screen_theme">"Tema"</string>
+  <string name="settings_system_default">"Predefinito"</string>
+  <string name="auto_cap">"Maiuscole automatiche"</string>
+  <string name="auto_cap_summary">"Iniziale maiuscola per la prima parola di ogni frase"</string>
+  <string name="select_language">"Lingue"</string>
+  <string name="locale_name_en_GB">"Inglese (UK)"</string>
+  <string name="locale_name_en_US">"Inglese (USA)"</string>
+  <string name="locale_name_es_US">"Spagnolo (USA)"</string>
+  <string name="locale_name_hi_ZZ">"Hinglish"</string>
+  <string name="locale_name_sr_ZZ">"Serbo (latino)"</string>
+  <string name="subtype_traditional">"tradizionale"</string>
+  <string name="subtype_compact">"compatto"</string>
+  <string name="add">"Aggiungi"</string>
+  <string name="remove">"Rimuovi"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Durata vibrazione pressione tasto"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Volume audio a pressione tasto"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Ritardo pressione lunga tasti"</string>
+  <string name="button_default">"Predefinito"</string>
+  <string name="prefs_keyboard_height_settings">Altezza tastiera</string>
+  <string name="keyboard_color">Cambia colore tastiera</string>
+  <string name="hide_special_chars">Nascondi caratteri speciali</string>
+  <string name="hide_language_switch_key">Nascondi tasto per cambiare lingua</string>
+  <string name="pref_enable_ime_switch">"Passa a un'altra tastiera"</string>
+  <string name="info_no_contact_chosen">Nessun contatto selezionato</string>
+  <string name="info_pre_key_detected">Keybundle rilevato: clicca su decripta per salvare il contenuto</string>
+  <string name="info_signal_message_detected">Messaggio crittografato rilevato: clicca su decripta per visualizzare il messaggio</string>
+  <string name="info_pre_key_and_signal_message_detected">Messaggio di aggiornamento crittografato rilevato: clicca su decripta per visualizzare il messaggio</string>
+  <string name="info_add_contact">Aggiungi un contatto per inviare/ricevere messaggi</string>
+  <string name="info_contact_list">Scegli il tuo partner di chat per inviare/ricevere messaggi. Se desideri chattare con qualcuno di nuovo, invitalo tramite il pulsante aggiungi</string>
+  <string name="info_messages_list_default">Prima scegli un contatto per vedere i messaggi qui</string>
+  <string name="info_no_saved_messages">Non ci sono messaggi salvati per questo contatto</string>
+  <string name="info_verify_contact">Per verificare la sicurezza della tua crittografia end-to-end con %1$s, confronta i numeri sopra con quelli del loro dispositivo</string>
+  <string name="info_session_creation_failed">Creazione della sessione fallita. Se possibile, elimina il mittente nella lista dei contatti e chiedi un nuovo keybundle</string>
+  <string name="info_contact_creation_failed">Impossibile creare il contatto. Annulla</string>
+  <string name="info_add_firstname_add_contact">Inserisci un nome per creare il contatto</string>
+  <string name="info_choose_contact_first">Per favore, scegli prima un contatto</string>
+  <string name="info_no_message_to_encrypt">Nessun messaggio da crittografare</string>
+  <string name="info_no_message_to_decrypt">Nessun messaggio da decriptare</string>
+  <string name="info_message_decryption_failed">Il messaggio non può essere decriptato. Possibili ragioni: hai decriptato un messaggio già decriptato in precedenza o la sessione non è valida. In tal caso, elimina il contatto, chiedi che ti elimini e richiedi un nuovo invito</string>
+  <string name="info_signal_message_no_contact_found">Per favore, aggiungi prima il contatto</string>
+  <string name="info_message_encryption_failed">Il messaggio non può essere crittografato</string>
+  <string name="info_update_contact_failed">Impossibile aggiornare le informazioni del contatto</string>
+  <string name="show_number_row">Mostra numeri in una riga separata</string>
+  <string name="space_swipe">Muovi cursore scorrendo sulla barra spaziatrice</string>
+  <string name="delete_swipe">Cancella scorrendo sul tasto cancella</string>
+  <string name="matching_navbar_color">Colora anche la barra di navigazione</string>
+  <string name="setup_message">SecureChats Keyboard non è abilitata. Premi OK per aprire le impostazioni di lingua ed inserimento. Dovrai selezionare KryptEY Keyboard come tastiera corrente per usarla.</string>
+  <string name="user_languages">Lingue tastiera attive</string>
+  <string name="add_language">Aggiungi lingua</string>
+  <string name="remove_language">Rimuovi lingua</string>
+  <string name="generic_language_layouts">Layout della tastiera in <xliff:g id="LANGUAGE_NAME" example="English (US)">%s</xliff:g></string>
+  <string name="change_keyboard">Cambia tastiera</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="es">
+	<body>
+		<main>
+			<h3>¿Cómo iniciar un chat?</h3>
+			<ul>
+				<li>Invita a un compañero de chat haciendo clic en la lista de contactos (icono de persona) y enviándole tu mensaje de invitación (icono de añadir persona). El mensaje de invitación se colocará directamente en el campo de texto del mensajero.</li>
+				<li>Tu compañero de chat debe agregarte a su lista de contactos y luego enviarte un mensaje cifrado. Copia este mensaje a tu portapapeles y haz clic en el botón de "descifrar" (icono de candado abierto).</li>
+				<li>Se abrirá un nuevo menú contextual en el que tendrás que guardar el nombre del compañero de chat. Luego haz clic en el botón de "listo".
+				El contacto se seleccionará automáticamente.</li>
+			</ul>
+
+			<h3>Alguien me envió un mensaje de invitación. ¿Qué tengo que hacer?</h3>
+			<ul>
+				<li>Copia el mensaje de invitación a tu portapapeles y haz clic en el botón de "descifrar" (icono de candado abierto).</li>
+				<li>Se abrirá un nuevo menú contextual en el que tendrás que guardar el nombre del compañero de chat. Luego haz clic en el botón de "listo".</li>
+				<li>Selecciona a tu compañero de chat desde la lista de contactos (icono de persona) y envíale un mensaje cifrado (icono de sobre cerrado).</li>
+			</ul>
+
+			<h3>¿Cómo envío/cifro un mensaje?</h3>
+			<ul>
+				<li>Si ya has agregado a tu compañero de chat como contacto, selecciónalo desde la lista de contactos (icono de persona) y luego escribe tu mensaje en el campo de texto de SecureChat.</li>
+				<li>Luego haz clic en el botón de "cifrar" (icono de sobre cerrado). El mensaje se colocará cifrado en el campo de texto de tu mensajero y podrás enviarlo.</li>
+				<li>Si aún no has agregado a tu compañero de chat, consulta "¿Cómo iniciar un chat?"</li>
+			</ul>
+
+			<h3>¿Cómo recibo/descifro un mensaje?</h3>
+			<ul>
+				<li>Selecciona a tu compañero de chat desde la lista de contactos (icono de persona) y copia el mensaje a tu portapapeles. Luego haz clic en el botón de "descifrar" (icono de candado abierto).</li>
+				<li>El mensaje se mostrará en el campo de texto de Securechat.</li>
+			</ul>
+
+			<h3>¿Cómo puedo ver los mensajes anteriores con mi compañero de chat?</h3>
+			<ul>
+				<li>Selecciona a tu compañero de chat desde la lista de contactos (icono de persona) y luego haz clic en el botón de "registro de mensajes" en la vista principal (icono de burbuja de texto).</li>
+				<li>Ten en cuenta que, si eliminas el contacto, el historial de mensajes también se eliminará.</li>
+			</ul>
+
+			<h3>¿Cómo puedo verificar que mi compañero de chat es quien dice ser?</h3>
+			<ul>
+				<li>Junto al nombre de tu compañero de chat en la lista de contactos (icono de persona) aparece un símbolo de verificado/no verificado (icono de escudo).</li>
+				<li>Haz clic en el símbolo y aparecerá tu número de seguridad compartido. Compáralo con el número de tu compañero de chat.</li>
+				<li>Si coinciden, haz clic en el botón de "listo" y tu contacto quedará marcado como verificado.</li>
+			</ul>
+
+			<h3>¿Cuáles son los modos de texto y cómo cambio entre ellos?</h3>
+			<ul>
+				<li>Existen dos modos diferentes en los que puedes enviar tus mensajes cifrados.</li>
+				<li>En el modo Crudo, las claves públicas y otra información se muestran en su forma original.
+				En el modo Cuento de Hadas, toda la información está oculta en un texto señuelo.</li>
+				<li>En ambos modos, todos los mensajes permanecen cifrados y no pueden ser leídos por terceros.</li>
+				<li>Puedes cambiar entre los modos haciendo clic en el símbolo de crudo/libro en el campo de texto de SecureChat, a la izquierda.</li>
+			</ul>
+
+			<h3>¿Qué es un mensaje de actualización?</h3>
+			<ul>
+				<li>Cada 30 días se renovará tu preclave firmada.</li>
+				<li>Para ello, se envía un mensaje especial que consiste en la información de tu clave renovada y tu mensaje cifrado.</li>
+				<li>Para ti y tu compañero de chat, esto no supone ningún esfuerzo adicional, ya que el mensaje se generará automáticamente cuando envíes el siguiente mensaje cifrado.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+</resources>

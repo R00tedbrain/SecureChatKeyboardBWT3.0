@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Vibrar al pulsar tecla"</string>
+  <string name="sound_on_keypress">"Sonar al pulsar tecla"</string>
+  <string name="popup_on_keypress">"Ampliar al pulsar tecla"</string>
+  <string name="settings_screen_preferences">"Preferencias"</string>
+  <string name="settings_screen_theme">"Tema"</string>
+  <string name="settings_system_default">"Predeterminado"</string>
+  <string name="auto_cap">"Mayúsculas automáticas"</string>
+  <string name="auto_cap_summary">"Escribir la primera letra de cada frase en mayúscula"</string>
+  <string name="select_language">"Idiomas"</string>
+  <string name="locale_name_en_GB">"inglés (Reino Unido)"</string>
+  <string name="locale_name_en_US">"inglés (EE.UU.)"</string>
+  <string name="locale_name_es_US">"Español (EE.UU.)"</string>
+  <string name="locale_name_hi_ZZ">"Hinglish"</string>
+  <string name="locale_name_sr_ZZ">"Serbio (latino)"</string>
+  <string name="subtype_traditional">"tradicional"</string>
+  <string name="subtype_compact">"compacto"</string>
+  <string name="add">"Añadir"</string>
+  <string name="remove">"Quitar"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Duración de la vibración al pulsar"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Volumen de sonido al pulsar tecla"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Retraso al mantener pulsado"</string>
+  <string name="button_default">"Predeterminado"</string>
+  <string name="prefs_keyboard_height_settings">Altura del teclado</string>
+  <string name="keyboard_color">Establecer color personalizado del teclado</string>
+  <string name="hide_special_chars">Ocultar caracteres especiales</string>
+  <string name="hide_language_switch_key">Ocultar tecla de cambio de idioma</string>
+  <string name="pref_enable_ime_switch">Cambiar a otros teclados</string>
+  <string name="show_number_row">Mostrar la fila de dígitos separada</string>
+  <string name="space_swipe">Desplazamiento del cursor del espacio</string>
+  <string name="delete_swipe">Deslizar para eliminar</string>
+  <string name="info_no_contact_chosen">No hay contacto seleccionado</string>
+  <string name="info_pre_key_detected">Keybundle detectado: haz clic en descifrar para guardar el contenido</string>
+  <string name="info_signal_message_detected">Mensaje cifrado detectado: haz clic en descifrar para ver el mensaje</string>
+  <string name="info_pre_key_and_signal_message_detected">Mensaje de actualización cifrado detectado: haz clic en descifrar para ver el mensaje</string>
+  <string name="info_add_contact">Agrega un contacto para enviar/recibir mensajes</string>
+  <string name="info_contact_list">Elige a tu compañero de chat para enviar/recibir mensajes. Si quieres chatear con alguien nuevo, invítalo mediante el botón de agregar</string>
+  <string name="info_messages_list_default">Primero selecciona un contacto para ver los mensajes aquí</string>
+  <string name="info_no_saved_messages">No hay mensajes guardados para este contacto</string>
+  <string name="info_verify_contact">Para verificar la seguridad de tu cifrado de extremo a extremo con %1$s, compara los números de arriba con los de su dispositivo</string>
+  <string name="info_session_creation_failed">La creación de la sesión falló. Si es posible, elimina al remitente en la lista de contactos y pide un nuevo keybundle</string>
+  <string name="info_contact_creation_failed">No se pudo crear el contacto. Abortando</string>
+  <string name="info_add_firstname_add_contact">Ingresa un nombre para crear el contacto</string>
+  <string name="info_choose_contact_first">Por favor, selecciona un contacto primero</string>
+  <string name="info_no_message_to_encrypt">No hay mensaje para cifrar</string>
+  <string name="info_no_message_to_decrypt">No hay mensaje para descifrar</string>
+  <string name="info_message_decryption_failed">No se pudo descifrar el mensaje. Posibles razones: has descifrado un mensaje que ya habías descifrado anteriormente o la sesión es inválida. En ese caso, elimina a tu contacto, pídele que te elimine a ti y solicita una nueva invitación</string>
+  <string name="info_signal_message_no_contact_found">Por favor, añade el contacto primero</string>
+  <string name="info_message_encryption_failed">No se pudo cifrar el mensaje</string>
+  <string name="info_update_contact_failed">No se pudo actualizar la información del contacto</string>
+  <string name="matching_navbar_color">Usar el color correspondiente de la barra de navegación</string>
+  <string name="setup_message">SecureChats Keyboard no está habilitado. Haga clic en OK para abrir Idiomas &amp; Ajustes de entrada. Necesitará seleccionar SecureChats Keyboard en su teclado actual para usarlo.</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="es">
+	<body>
+		<main>
+			<h3>¿Cómo iniciar un chat?</h3>
+			<ul>
+				<li>Invita a un compañero de chat haciendo clic en la lista de contactos (icono de persona) y enviándole tu mensaje de invitación (icono de añadir persona). El mensaje de invitación se colocará directamente en el campo de texto del mensajero.</li>
+				<li>Tu compañero de chat debe agregarte a su lista de contactos y luego enviarte un mensaje cifrado. Copia este mensaje a tu portapapeles y haz clic en el botón de "descifrar" (icono de candado abierto).</li>
+				<li>Se abrirá un nuevo menú contextual en el que tendrás que guardar el nombre del compañero de chat. Luego haz clic en el botón de "listo".
+				El contacto se seleccionará automáticamente.</li>
+			</ul>
+
+			<h3>Alguien me envió un mensaje de invitación. ¿Qué tengo que hacer?</h3>
+			<ul>
+				<li>Copia el mensaje de invitación a tu portapapeles y haz clic en el botón de "descifrar" (icono de candado abierto).</li>
+				<li>Se abrirá un nuevo menú contextual en el que tendrás que guardar el nombre del compañero de chat. Luego haz clic en el botón de "listo".</li>
+				<li>Selecciona a tu compañero de chat desde la lista de contactos (icono de persona) y envíale un mensaje cifrado (icono de sobre cerrado).</li>
+			</ul>
+
+			<h3>¿Cómo envío/cifro un mensaje?</h3>
+			<ul>
+				<li>Si ya has agregado a tu compañero de chat como contacto, selecciónalo desde la lista de contactos (icono de persona) y luego escribe tu mensaje en el campo de texto de SecureChat.</li>
+				<li>Luego haz clic en el botón de "cifrar" (icono de sobre cerrado). El mensaje se colocará cifrado en el campo de texto de tu mensajero y podrás enviarlo.</li>
+				<li>Si aún no has agregado a tu compañero de chat, consulta "¿Cómo iniciar un chat?"</li>
+			</ul>
+
+			<h3>¿Cómo recibo/descifro un mensaje?</h3>
+			<ul>
+				<li>Selecciona a tu compañero de chat desde la lista de contactos (icono de persona) y copia el mensaje a tu portapapeles. Luego haz clic en el botón de "descifrar" (icono de candado abierto).</li>
+				<li>El mensaje se mostrará en el campo de texto de Securechat.</li>
+			</ul>
+
+			<h3>¿Cómo puedo ver los mensajes anteriores con mi compañero de chat?</h3>
+			<ul>
+				<li>Selecciona a tu compañero de chat desde la lista de contactos (icono de persona) y luego haz clic en el botón de "registro de mensajes" en la vista principal (icono de burbuja de texto).</li>
+				<li>Ten en cuenta que, si eliminas el contacto, el historial de mensajes también se eliminará.</li>
+			</ul>
+
+			<h3>¿Cómo puedo verificar que mi compañero de chat es quien dice ser?</h3>
+			<ul>
+				<li>Junto al nombre de tu compañero de chat en la lista de contactos (icono de persona) aparece un símbolo de verificado/no verificado (icono de escudo).</li>
+				<li>Haz clic en el símbolo y aparecerá tu número de seguridad compartido. Compáralo con el número de tu compañero de chat.</li>
+				<li>Si coinciden, haz clic en el botón de "listo" y tu contacto quedará marcado como verificado.</li>
+			</ul>
+
+			<h3>¿Cuáles son los modos de texto y cómo cambio entre ellos?</h3>
+			<ul>
+				<li>Existen dos modos diferentes en los que puedes enviar tus mensajes cifrados.</li>
+				<li>En el modo Crudo, las claves públicas y otra información se muestran en su forma original.
+				En el modo Cuento de Hadas, toda la información está oculta en un texto señuelo.</li>
+				<li>En ambos modos, todos los mensajes permanecen cifrados y no pueden ser leídos por terceros.</li>
+				<li>Puedes cambiar entre los modos haciendo clic en el símbolo de crudo/libro en el campo de texto de SecureChat, a la izquierda.</li>
+			</ul>
+
+			<h3>¿Qué es un mensaje de actualización?</h3>
+			<ul>
+				<li>Cada 30 días se renovará tu preclave firmada.</li>
+				<li>Para ello, se envía un mensaje especial que consiste en la información de tu clave renovada y tu mensaje cifrado.</li>
+				<li>Para ti y tu compañero de chat, esto no supone ningún esfuerzo adicional, ya que el mensaje se generará automáticamente cuando envíes el siguiente mensaje cifrado.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

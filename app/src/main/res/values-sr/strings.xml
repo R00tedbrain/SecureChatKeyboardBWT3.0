@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Вибрирај на притисак тастера"</string>
+  <string name="sound_on_keypress">"Звук на притисак тастера"</string>
+  <string name="popup_on_keypress">"Искачући прозор приликом притиска тастера"</string>
+  <string name="settings_screen_preferences">"Подешавања"</string>
+  <string name="settings_screen_theme">"Тема"</string>
+  <string name="settings_system_default">"Подразумевано"</string>
+  <string name="auto_cap">"Аутоматски унос великих слова"</string>
+  <string name="auto_cap_summary">"Писање великог слова на почетку сваке реченице"</string>
+  <string name="select_language">"Језици"</string>
+  <string name="locale_name_en_GB">"енглески (УК)"</string>
+  <string name="locale_name_en_US">"енглески (САД)"</string>
+  <string name="locale_name_es_US">"шпански (САД)"</string>
+  <string name="locale_name_hi_ZZ">"хенглески"</string>
+  <string name="locale_name_sr_ZZ">"српски (латиница)"</string>
+  <string name="subtype_traditional">"традиционални"</string>
+  <string name="subtype_compact">"компактна"</string>
+  <string name="add">"Додај"</string>
+  <string name="remove">"Уклони"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Трајање вибрације при притиску"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Јачина звука при притиску"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Одлагање при дугом притиску"</string>
+  <string name="button_default">"Подразумевано"</string>
+  <string name="prefs_keyboard_height_settings">Висина тастатуре</string>
+  <string name="keyboard_color">Постави боју тастатуре</string>
+  <string name="hide_special_chars">Сакриј специјалне карактере</string>
+  <string name="hide_language_switch_key">Сакриј дугме за промену језика</string>
+  <string name="show_number_row">Прикажи одвојени ред са бројевима</string>
+  <string name="space_swipe">Превлачењем преко размака помера се селектор</string>
+  <string name="delete_swipe">Брисање превлачењем</string>
+  <string name="matching_navbar_color">Користи боју навигационе траке</string>
+  <string name="setup_message">SecureChats Keyboard није омогућена. Кликните ОК да отворите подешавања језика и уноса. Треба да селектујете SecureChat Keyboard као вашу подразумевану тастатуру да бисте је користили.</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="sr">
+	<body>
+		<main>
+			<h3>Kako započeti čat?</h3>
+			<ul>
+				<li>Pozovite sagovornika klikom na listu kontakata (ikona osobe) i pošaljite mu poruku sa pozivom (ikona dodavanja osobe). Poruka pozivnice će odmah biti ubačena u tekstualno polje vašeg mejsera.</li>
+				<li>Sagovornik vas mora dodati u svoj spisak kontakata, a zatim vam poslati enkriptovanu poruku. Kopirajte ovu poruku u privremenu memoriju i kliknite na dugme „dešifruj“ (ikona otvorenog zaključanog).</li>
+				<li>Novi kontekstualni meni će se otvoriti gde treba da sačuvate ime sagovornika. Zatim kliknite na dugme „završeno“. Kontakt će biti automatski izabran.</li>
+			</ul>
+
+			<h3>Neko mi je poslao poruku pozivnice. Šta da radim?</h3>
+			<ul>
+				<li>Kopirajte poruku pozivnice u privremenu memoriju i kliknite na dugme „dešifruj“ (ikona otvorenog zaključanog).</li>
+				<li>Novi kontekstualni meni će se otvoriti gde treba da sačuvate ime sagovornika. Zatim kliknite na dugme „završeno“.</li>
+				<li>Izaberite sagovornika iz liste kontakata (ikona osobe) i pošaljite mu enkriptovanu poruku (ikona zatvorenog koverti).</li>
+			</ul>
+
+			<h3>Kako poslati/enkriptovati poruku?</h3>
+			<ul>
+				<li>Ako ste već dodali sagovornika u kontakte, izaberite ga iz liste kontakata (ikona osobe) i unesite poruku u tekstualno polje SecurechatsY.</li>
+				<li>Zatim kliknite na dugme „enkriptuj“ (ikona zatvorenog koverti). Poruka će biti enkriptovana i ubačena u tekstualno polje vašeg mejsera, spremna za slanje.</li>
+				<li>Ako niste još dodali sagovornika, pogledajte sekciju „Kako započeti čat?“</li>
+			</ul>
+
+			<h3>Kako primiti/dešifrovati poruku?</h3>
+			<ul>
+				<li>Izaberite sagovornika iz liste kontakata (ikona osobe) i kopirajte poruku u privremenu memoriju. Zatim kliknite na dugme „dešifruj“ (ikona otvorenog zaključanog).</li>
+				<li>Poruka će biti prikazana u tekstualnom polju SecureChats.</li>
+			</ul>
+
+			<h3>Kako videti prethodne poruke sa sagovornikom?</h3>
+			<ul>
+				<li>Izaberite sagovornika iz liste kontakata (ikona osobe), a zatim kliknite na dugme „istorija poruka“ u glavnom prikazu (ikona oblaka za poruke).</li>
+				<li>Imajte na umu da će, ako obrišete kontakt, istorija poruka takođe biti obrisana.</li>
+			</ul>
+
+			<h3>Kako da proverim da li je moj sagovornik zaista onaj za koga se predstavlja?</h3>
+			<ul>
+				<li>Pored imena sagovornika u listi kontakata (ikona osobe) nalazi se simbol potvrđenog/nepotvrđenog (ikona štita).</li>
+				<li>Kliknite na simbol i pojaviće se vaš zajednički sigurnosni broj. Uporedite taj broj sa brojem vašeg sagovornika.</li>
+				<li>Ako se brojevi poklapaju, kliknite na dugme „završeno“ i kontakt će biti označen kao potvrđen.</li>
+			</ul>
+
+			<h3>Koji su tekstualni režimi i kako se prebacivati između njih?</h3>
+			<ul>
+				<li>Postoje dva različita režima za slanje enkriptovanih poruka.</li>
+				<li>U režimu „Raw“ javni ključevi i druge informacije se prikazuju u svom originalnom obliku.<br>
+				U režimu „Fairy Tale“ sve informacije su sakrivene unutar lažnog teksta.</li>
+				<li>U oba režima, poruke ostaju enkriptovane i ne mogu biti pročitane od strane trećih lica.</li>
+				<li>Prebacivanje između režima se vrši klikom na raw/book simbol u levom delu tekstualnog polja SecureChatsS.</li>
+			</ul>
+
+			<h3>Šta je poruka za ažuriranje?</h3>
+			<ul>
+				<li>Svakih 30 dana vaš potpisani preključ se obnavlja.</li>
+				<li>Za ovu svrhu se šalje posebna poruka koja sadrži ažurirane informacije o ključu i vašu enkriptovanu poruku.</li>
+				<li>Za vas i vašeg sagovornika to znači da nije potreban dodatni napor, jer će poruka biti automatski generisana prilikom slanja sledeće enkriptovane poruke.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

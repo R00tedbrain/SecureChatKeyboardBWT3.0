@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Rung khi nhấn phím"</string>
+  <string name="sound_on_keypress">"Âm thanh khi nhấn phím"</string>
+  <string name="popup_on_keypress">"Bật lên khi nhấn phím"</string>
+  <string name="settings_screen_preferences">"Tùy chọn"</string>
+  <string name="settings_screen_key_press">"Nhấn phím"</string>
+  <string name="settings_screen_theme">"Chủ đề"</string>
+  <string name="abbreviation_unit_milliseconds">"<xliff:g id="MILLISECONDS">%s</xliff:g> mili giây"</string>
+  <string name="settings_system_default">"Mặc định của hệ thống"</string>
+  <string name="auto_cap">"Tự động viết hoa"</string>
+  <string name="auto_cap_summary">"Viết hoa chữ đầu tiên của mỗi câu"</string>
+  <string name="select_language">"Ngôn ngữ"</string>
+  <string name="locale_name_en_GB">"Tiếng Anh (Anh)"</string>
+  <string name="locale_name_en_US">"Tiếng Anh (Mỹ)"</string>
+  <string name="locale_name_es_US">"Tiếng Tây Ban Nha (Mỹ)"</string>
+  <string name="locale_name_hi_ZZ">"Tiếng Anh-Hindi"</string>
+  <string name="locale_name_sr_ZZ">"Tiếng Serbia (La tinh)"</string>
+  <string name="subtype_traditional">"Truyền thống"</string>
+  <string name="subtype_compact">"Viết tắt"</string>
+  <string name="add">"Thêm"</string>
+  <string name="remove">"Xóa"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Thời gian rung khi nhấn phím"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Âm lượng khi nhấn phím"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Thời gian trễ nhấn và giữ phím"</string>
+  <string name="button_default">"Mặc định"</string>
+  <string name="prefs_keyboard_height_settings">Chiều cao bàn phím</string>
+  <string name="keyboard_color">Tuỳ chọn màu bàn phím</string>
+  <string name="hide_special_chars">Ẩn ký tự đặc biệt</string>
+  <string name="hide_language_switch_key">Ẩn phím chuyển ngôn ngữ</string>
+  <string name="pref_enable_ime_switch">Chuyển sang các bàn phím khác</string>
+  <string name="show_number_row">Hiển thị bàn phím số</string>
+  <string name="space_swipe">Vuốt phím space để di chuyển con trỏ</string>
+  <string name="delete_swipe">Xoá vuốt</string>
+  <string name="matching_navbar_color">Sử dụng màu thanh điều hướng phù hợp</string>
+  <string name="setup_message">SecureChat Keyboard không được bật. Nhấp vào OK để mở Ngôn ngữ &amp; Nhập vào cài đặt. Bạn sẽ cần chọn Securechat Keyboard trong bàn phím hiện tại của mình để sử dụng nó.</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="vi">
+	<body>
+		<main>
+			<h3>Làm thế nào để bắt đầu trò chuyện?</h3>
+			<ul>
+				<li>Mời đối tác trò chuyện bằng cách nhấp vào danh sách liên lạc (biểu tượng người) và gửi cho họ tin nhắn mời (biểu tượng thêm người). Tin nhắn mời sẽ được đặt trực tiếp vào ô văn bản của ứng dụng nhắn tin.</li>
+				<li>Đối tác trò chuyện của bạn phải thêm bạn vào danh sách liên lạc của họ, sau đó gửi cho bạn một tin nhắn được mã hóa. Sao chép tin nhắn này vào bộ nhớ tạm của bạn và nhấp vào nút "giải mã" (biểu tượng ổ khóa mở).</li>
+				<li>Một menu ngữ cảnh mới sẽ xuất hiện, nơi bạn cần lưu tên của đối tác trò chuyện. Sau đó, nhấp vào nút "xong".<br/>Liên hệ sẽ được tự động chọn.</li>
+			</ul>
+
+			<h3>Có người đã gửi cho tôi tin nhắn mời. Tôi cần phải làm gì?</h3>
+			<ul>
+				<li>Sao chép tin nhắn mời vào bộ nhớ tạm của bạn và nhấp vào nút "giải mã" (biểu tượng ổ khóa mở).</li>
+				<li>Một menu ngữ cảnh mới sẽ xuất hiện, nơi bạn cần lưu tên của đối tác trò chuyện. Sau đó, nhấp vào nút "xong".</li>
+				<li>Chọn đối tác trò chuyện của bạn từ danh sách liên lạc (biểu tượng người) và gửi cho họ một tin nhắn được mã hóa (biểu tượng phong bì đóng).</li>
+			</ul>
+
+			<h3>Làm thế nào để gửi/mã hóa tin nhắn?</h3>
+			<ul>
+				<li>Nếu bạn đã thêm đối tác trò chuyện vào danh sách liên lạc, hãy chọn họ từ danh sách (biểu tượng người) và sau đó nhập tin nhắn của bạn vào ô văn bản của SecureChat.</li>
+				<li>Sau đó, nhấp vào nút "mã hóa" (biểu tượng phong bì đóng). Tin nhắn sẽ được mã hóa và đặt vào ô văn bản của ứng dụng nhắn tin, và bạn có thể gửi nó.</li>
+				<li>Nếu bạn chưa thêm đối tác trò chuyện, hãy xem phần "Làm thế nào để bắt đầu trò chuyện?"</li>
+			</ul>
+
+			<h3>Làm thế nào để nhận/gải mã tin nhắn?</h3>
+			<ul>
+				<li>Chọn đối tác trò chuyện của bạn từ danh sách liên lạc (biểu tượng người) và sao chép tin nhắn vào bộ nhớ tạm của bạn. Sau đó, nhấp vào nút "giải mã" (biểu tượng ổ khóa mở).</li>
+				<li>Tin nhắn sẽ được hiển thị trong ô văn bản của SecureChat.</li>
+			</ul>
+
+			<h3>Làm thế nào để xem các tin nhắn trước đó với đối tác trò chuyện của tôi?</h3>
+			<ul>
+				<li>Chọn đối tác trò chuyện của bạn từ danh sách liên lạc (biểu tượng người) và sau đó nhấp vào nút "nhật ký tin nhắn" trong giao diện chính (biểu tượng bong bóng văn bản).</li>
+				<li>Lưu ý rằng nếu bạn xóa liên hệ, lịch sử tin nhắn cũng sẽ bị xóa.</li>
+			</ul>
+
+			<h3>Làm thế nào để xác minh rằng đối tác trò chuyện của tôi là người mà họ tuyên bố?</h3>
+			<ul>
+				<li>Bên cạnh tên của đối tác trò chuyện trong danh sách liên lạc (biểu tượng người) sẽ xuất hiện biểu tượng đã xác minh/chưa xác minh (biểu tượng khiên).</li>
+				<li>Nhấp vào biểu tượng và số bảo mật chung của bạn sẽ xuất hiện. So sánh số này với số của đối tác trò chuyện của bạn.</li>
+				<li>Nếu chúng khớp, nhấp vào nút "xong" và liên hệ của bạn sẽ được đánh dấu là đã xác minh.</li>
+			</ul>
+
+			<h3>Các chế độ văn bản là gì và làm thế nào để chuyển đổi giữa chúng?</h3>
+			<ul>
+				<li>Có hai chế độ khác nhau để bạn gửi tin nhắn được mã hóa.</li>
+				<li>Ở chế độ "thô", các khóa công khai và thông tin khác được hiển thị ở dạng gốc.<br/>Ở chế độ "truyện cổ tích", tất cả thông tin được ẩn bên trong một văn bản mồi nhử.</li>
+				<li>Ở cả hai chế độ, tất cả tin nhắn vẫn được mã hóa và không thể đọc được bởi bên thứ ba.</li>
+				<li>Bạn có thể chuyển đổi giữa các chế độ bằng cách nhấp vào biểu tượng "thô/sách" trong ô văn bản của SecureChat bên trái.</li>
+			</ul>
+
+			<h3>Tin nhắn cập nhật là gì?</h3>
+			<ul>
+				<li>Mỗi 30 ngày, prekey đã được ký của bạn sẽ được gia hạn.</li>
+				<li>Để làm điều này, một tin nhắn đặc biệt được gửi đi, bao gồm thông tin về khóa được gia hạn và tin nhắn được mã hóa của bạn.</li>
+				<li>Với bạn và đối tác trò chuyện của bạn, điều này không đòi hỏi thêm nỗ lực, vì tin nhắn sẽ được tạo tự động khi bạn gửi tin nhắn được mã hóa tiếp theo.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

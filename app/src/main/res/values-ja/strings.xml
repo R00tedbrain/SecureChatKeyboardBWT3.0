@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"キー操作バイブ"</string>
+  <string name="sound_on_keypress">"キー操作音"</string>
+  <string name="popup_on_keypress">"キー押下時ポップアップ"</string>
+  <string name="settings_screen_preferences">"設定"</string>
+  <string name="info_no_contact_chosen">連絡先が選択されていません</string>
+  <string name="info_pre_key_detected">キーバンドルが検出されました。内容を保存するには「復号」をクリックしてください</string>
+  <string name="info_signal_message_detected">暗号化されたメッセージが検出されました。メッセージを表示するには「復号」をクリックしてください</string>
+  <string name="info_pre_key_and_signal_message_detected">暗号化された更新メッセージが検出されました。メッセージを表示するには「復号」をクリックしてください</string>
+  <string name="info_add_contact">連絡先を追加して、メッセージを送受信してください</string>
+  <string name="info_contact_list">チャット相手を選んでメッセージを送受信してください。新しい相手とチャットするには、追加ボタンから招待してください</string>
+  <string name="info_messages_list_default">まず連絡先を選択して、ここにメッセージを表示してください</string>
+  <string name="info_no_saved_messages">この連絡先には保存されたメッセージがありません</string>
+  <string name="info_verify_contact">エンドツーエンド暗号化の安全性を %1$s と確認するために、上に表示されている数字と相手のデバイスの数字を比較してください</string>
+  <string name="info_session_creation_failed">セッションの作成に失敗しました。可能なら、連絡先リストから送信者を削除し、新しいキーバンドルを要求してください</string>
+  <string name="info_contact_creation_failed">連絡先の作成に失敗しました。中止します</string>
+  <string name="info_add_firstname_add_contact">連絡先を作成するために、名前を入力してください</string>
+  <string name="info_choose_contact_first">まず連絡先を選択してください</string>
+  <string name="info_no_message_to_encrypt">暗号化するメッセージがありません</string>
+  <string name="info_no_message_to_decrypt">復号するメッセージがありません</string>
+  <string name="info_message_decryption_failed">メッセージを復号できませんでした。考えられる理由：既に復号済みのメッセージであるか、セッションが無効である可能性があります。この場合、連絡先を削除し、相手にあなたを削除するよう依頼して、新しい招待を求めてください</string>
+  <string name="info_signal_message_no_contact_found">まず連絡先を追加してください</string>
+  <string name="info_message_encryption_failed">メッセージを暗号化できませんでした</string>
+  <string name="info_update_contact_failed">連絡先情報を更新できませんでした</string>
+
+  <string name="settings_screen_key_press">キープレス</string>
+  <string name="settings_screen_theme">"テーマ"</string>
+  <string name="abbreviation_unit_milliseconds">"<xliff:g id="MILLISECONDS">%s</xliff:g>ミリ秒"</string>
+  <string name="settings_system_default">"システムのデフォルト"</string>
+  <string name="auto_cap">"自動大文字変換"</string>
+  <string name="auto_cap_summary">"英字入力で各文の最初の単語を大文字にします"</string>
+  <string name="select_language">"言語"</string>
+  <string name="locale_name_en_GB">"英語 (英国)"</string>
+  <string name="locale_name_en_US">"英語 (米国)"</string>
+  <string name="locale_name_es_US">"スペイン語 (米国)"</string>
+  <string name="locale_name_hi_ZZ">"ヒングリッシュ"</string>
+  <string name="locale_name_sr_ZZ">"セルビア語（ラテン文字）"</string>
+  <string name="subtype_generic_layout" formatted="true">"<xliff:g id="LANGUAGE_NAME">%1$s</xliff:g>（<xliff:g id="LAYOUT">%2$s</xliff:g>）"</string>
+  <string name="subtype_traditional">"伝統言語"</string>
+  <string name="subtype_compact">"コンパクト"</string>
+  <string name="add">"追加"</string>
+  <string name="remove">"削除"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"キー操作バイブの振動時間"</string>
+  <string name="prefs_keypress_sound_volume_settings">"キー操作音の音量"</string>
+  <string name="prefs_key_longpress_timeout_settings">"キーの長押し時間"</string>
+  <string name="button_default">"デフォルト"</string>
+  <string name="prefs_keyboard_height_settings">キーボードの高さ</string>
+  <string name="keyboard_color">カスタムキーボードの色を設定する</string>
+  <string name="hide_special_chars">特殊文字を隠す</string>
+  <string name="hide_language_switch_key">言語切り替えキーを非表示</string>
+  <string name="pref_enable_ime_switch">他のキーボードに切り替える</string>
+  <string name="show_number_row">別の番号行を表示</string>
+  <string name="space_swipe">スペーススワイプカーソル移動</string>
+  <string name="delete_swipe">スワイプを削除</string>
+  <string name="matching_navbar_color">一致するナビゲーションバーの色を使用する</string>
+  <string name="setup_message">シンプルキーボードが有効になっていません. [OK]をクリックして言語を開きます. 入力設定. 使用するには、現在のキーボードでシンプルキーボードを選択する必要があります</string>
+  <string name="add_language">言語を追加</string>
+  <string name="remove_language">言語を削除</string>
+  <string name="change_keyboard">キーボードを変更する</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="ja">
+	<body>
+		<main>
+			<h3>チャットを始めるにはどうすればよいですか？</h3>
+			<ul>
+				<li>連絡先リスト（人物アイコン）をクリックして、チャット相手に招待メッセージ（人物追加アイコン）を送信してください。招待メッセージはメッセンジャーのテキストフィールドに直接入力されます。</li>
+				<li>チャット相手はあなたを連絡先に追加した後、暗号化されたメッセージを送る必要があります。このメッセージをクリップボードにコピーし、「復号」ボタン（開いた鍵アイコン）をクリックしてください。</li>
+				<li>新しいコンテキストメニューが開き、そこでチャット相手の名前を保存し、「完了」ボタンをクリックしてください。これで連絡先が自動的に選択されます。</li>
+			</ul>
+
+			<h3>誰かから招待メッセージが送られてきました。どうすればよいですか？</h3>
+			<ul>
+				<li>招待メッセージをクリップボードにコピーし、「復号」ボタン（開いた鍵アイコン）をクリックしてください。</li>
+				<li>新しいコンテキストメニューが開き、そこでチャット相手の名前を保存し、「完了」ボタンをクリックしてください。</li>
+				<li>連絡先リスト（人物アイコン）からチャット相手を選び、暗号化されたメッセージ（閉じた封筒アイコン）を送信してください。</li>
+			</ul>
+
+			<h3>メッセージを送信/暗号化するにはどうすればよいですか？</h3>
+			<ul>
+				<li>すでにチャット相手を連絡先に追加している場合は、連絡先リスト（人物アイコン）から選択し、SecureChat テキストフィールドにメッセージを入力してください。</li>
+				<li>次に、「暗号化」ボタン（閉じた封筒アイコン）をクリックすると、メッセージがメッセンジャーのテキストフィールドに暗号化された状態で配置され、送信できるようになります。</li>
+				<li>まだチャット相手を追加していない場合は、「チャットを始めるにはどうすればよいですか？」を参照してください。</li>
+			</ul>
+
+			<h3>メッセージを受信/復号化するにはどうすればよいですか？</h3>
+			<ul>
+				<li>連絡先リスト（人物アイコン）からチャット相手を選び、メッセージをクリップボードにコピーしてください。その後、「復号」ボタン（開いた鍵アイコン）をクリックしてください。</li>
+				<li>メッセージはSecureChat Yテキストフィールドに表示されます。</li>
+			</ul>
+
+			<h3>チャット相手との過去のメッセージをどのように表示できますか？</h3>
+			<ul>
+				<li>連絡先リスト（人物アイコン）からチャット相手を選び、メイン画面にある「メッセージログ」ボタン（テキストバブルアイコン）をクリックしてください。</li>
+				<li>連絡先を削除すると、メッセージ履歴も削除されることに注意してください。</li>
+			</ul>
+
+			<h3>チャット相手が本人であることをどのように確認しますか？</h3>
+			<ul>
+				<li>連絡先リスト（人物アイコン）のチャット相手の名前の横に、認証済み/未認証のシンボル（シールドアイコン）が表示されます。</li>
+				<li>シンボルをクリックすると、共有セキュリティ番号が表示されます。その番号をチャット相手の番号と比較してください。</li>
+				<li>番号が一致したら、「完了」ボタンをクリックして、連絡先が認証済みとしてマークされます。</li>
+			</ul>
+
+			<h3>テキストモードとは何ですか？また、どのように切り替えますか？</h3>
+			<ul>
+				<li>暗号化されたメッセージを送信するための2種類のモードがあります。</li>
+				<li>Rawモードでは、公開鍵やその他の情報がそのまま表示されます。<br>
+				Fairy Taleモードでは、すべての情報が偽のテキスト内に隠されています。</li>
+				<li>どちらのモードでも、メッセージは暗号化されており、第三者には読めません。</li>
+				<li>Securechat テキストフィールドの左側にあるraw/bookシンボルをクリックして、モードを切り替えることができます。</li>
+			</ul>
+
+			<h3>アップデートメッセージとは何ですか？</h3>
+			<ul>
+				<li>30日ごとに、署名済みのプリキーが更新されます。</li>
+				<li>更新されたキー情報と暗号化されたメッセージから構成される特別なメッセージが送信されます。</li>
+				<li>あなたとチャット相手にとって、次の暗号化メッセージを送信する際に自動的に生成されるため、追加の作業は不要です。</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

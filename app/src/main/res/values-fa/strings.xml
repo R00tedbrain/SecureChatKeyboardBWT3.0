@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"لرزش با فشار کلید"</string>
+  <string name="sound_on_keypress">"صدا با فشار کلید"</string>
+  <string name="popup_on_keypress">"بازشدن با فشار کلید"</string>
+  <string name="settings_screen_preferences">"تنظیمات برگزیده"</string>
+  <string name="settings_screen_key_press">فشردن دکمه</string>
+  <string name="settings_screen_appearance">ظاهر</string>
+  <string name="settings_screen_theme">"طرح‌زمینه"</string>
+  <string name="abbreviation_unit_milliseconds">"<xliff:g id="MILLISECONDS">%s</xliff:g> میلی‌ثانیه"</string>
+  <string name="settings_system_default">"پیش‌فرض سیستم"</string>
+  <string name="auto_cap">"بزرگ‌کردن خودکار حروف"</string>
+  <string name="auto_cap_summary">"بزرگ‌نویسی کلمه اول هر جمله"</string>
+  <string name="select_language">"زبان‌ها"</string>
+  <string name="locale_name_en_GB">"انگلیسی (بریتانیا)"</string>
+  <string name="locale_name_en_US">"انگلیسی (امریکا)"</string>
+  <string name="locale_name_es_US">"اسپانیایی (امریکا)"</string>
+  <string name="locale_name_hi_ZZ">"هندی انگلیسی"</string>
+  <string name="locale_name_sr_ZZ">"صربی (لاتین)"</string>
+  <string name="subtype_traditional">"سنتی"</string>
+  <string name="subtype_compact">"فشرده"</string>
+  <string name="add">"افزودن"</string>
+  <string name="remove">"حذف"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"طول مدت لرزش در اثر فشردن کلید"</string>
+  <string name="prefs_keypress_sound_volume_settings">"میزان صدای فشردن کلید"</string>
+  <string name="prefs_key_longpress_timeout_settings">"تأخیر فشار طولانی کلید"</string>
+  <string name="button_default">"پیش‌فرض"</string>
+  <string name="prefs_keyboard_height_settings">ارتفاع صفحه کلید</string>
+  <string name="keyboard_color">تنظیم رنگ صفحه کلید سفارشی</string>
+  <string name="hide_special_chars">پنهان کردن کاراکترهای ویژه</string>
+  <string name="hide_language_switch_key">پنهان کردن کلید تغییر زبان</string>
+  <string name="pref_enable_ime_switch">جابجایی به دیگر صفحه‌کلیدها</string>
+  <string name="show_number_row">نمایش جداگانه ی شماره ردیف</string>
+  <string name="space_swipe">حرکت مکان نما توسط سوایپ کلید فاصله</string>
+  <string name="delete_swipe">حذف سوایپ</string>
+  <string name="matching_navbar_color">استفاده از رنگ منطبق نوار پیمایش</string>
+  <string name="setup_message">SecureChats Keyboard فعال نشده است. دکمه‌ی تائید را برای باز کردن تنظیمات زبان و ورودی بفشارید. برای استفاده از صفحه‌کلید SecureChat Keyboard را در صفحه‌ی باز شده انتخاب کنید.</string>
+  <string name="user_languages">زبان‌های فعال صفحه‌کلید</string>
+  <string name="add_language">افزودن زبان</string>
+  <string name="remove_language">حذف زبان</string>
+  <string name="generic_language_layouts">چیدمان صفحه کلید <xliff:g id="LANGUAGE_NAME" example="English (US)">%s</xliff:g></string>
+  <string name="change_keyboard">تغییر صفحه‌کلید</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="fa">
+	<body>
+		<main>
+			<h3>چگونه یک گفتگو را شروع کنیم؟</h3>
+			<ul>
+				<li>برای دعوت از یک شریک گفتگو، روی لیست مخاطبین (آیکون شخص) کلیک کنید و پیام دعوت خود را ارسال نمایید (آیکون افزودن شخص). پیام دعوت مستقیماً در کادر متن پیام‌رسان قرار می‌گیرد.</li>
+				<li>شریک گفتگو باید شما را به لیست مخاطبین خود اضافه کرده و سپس یک پیام رمزنگاری شده برای شما ارسال کند. این پیام را در کلیپ‌بورد کپی کنید و روی دکمه «رمزگشایی» (آیکون قفل باز) کلیک نمایید.</li>
+				<li>یک منوی متنی جدید باز می‌شود که در آن باید نام شریک گفتگو را ذخیره کنید. سپس روی دکمه «تمام» کلیک کنید.<br/>مخاطب به‌طور خودکار انتخاب می‌شود.</li>
+			</ul>
+
+			<h3>کسی برای من پیام دعوت ارسال کرده است. چه کاری باید انجام دهم؟</h3>
+			<ul>
+				<li>پیام دعوت را در کلیپ‌بورد کپی کنید و روی دکمه «رمزگشایی» (آیکون قفل باز) کلیک کنید.</li>
+				<li>یک منوی متنی جدید باز می‌شود که در آن باید نام شریک گفتگو را ذخیره کنید. سپس روی دکمه «تمام» کلیک کنید.</li>
+				<li>شریک گفتگو را از لیست مخاطبین (آیکون شخص) انتخاب کنید و یک پیام رمزنگاری شده برای او ارسال کنید (آیکون پاکت بسته).</li>
+			</ul>
+
+			<h3>چگونه یک پیام را ارسال/رمزنگاری کنم؟</h3>
+			<ul>
+				<li>اگر شریک گفتگو را قبلاً به مخاطبین اضافه کرده‌اید، او را از لیست مخاطبین (آیکون شخص) انتخاب کرده و پیام خود را در کادر متن SecureChat وارد کنید.</li>
+				<li>سپس روی دکمه «رمزنگاری» (آیکون پاکت بسته) کلیک کنید. پیام به صورت رمزنگاری شده در کادر متن پیام‌رسان قرار می‌گیرد و شما می‌توانید آن را ارسال کنید.</li>
+				<li>اگر هنوز شریک گفتگو را اضافه نکرده‌اید، به بخش «چگونه یک گفتگو را شروع کنیم؟» مراجعه کنید.</li>
+			</ul>
+
+			<h3>چگونه یک پیام را دریافت/رمزگشایی کنم؟</h3>
+			<ul>
+				<li>شریک گفتگو را از لیست مخاطبین (آیکون شخص) انتخاب کرده و پیام را در کلیپ‌بورد کپی کنید. سپس روی دکمه «رمزگشایی» (آیکون قفل باز) کلیک کنید.</li>
+				<li>پیام در کادر متن SecureChat نمایش داده می‌شود.</li>
+			</ul>
+
+			<h3>چگونه می‌توانم پیام‌های قبلی با شریک گفتگویم را مشاهده کنم؟</h3>
+			<ul>
+				<li>شریک گفتگو را از لیست مخاطبین (آیکون شخص) انتخاب کرده و سپس روی دکمه «سوابق پیام‌ها» در نمای اصلی (آیکون حباب متنی) کلیک کنید.</li>
+				<li>توجه داشته باشید که اگر مخاطب را حذف کنید، سوابق پیام‌ها نیز حذف خواهند شد.</li>
+			</ul>
+
+			<h3>چگونه می‌توانم تأیید کنم که شریک گفتگو واقعاً همان شخصی است که ادعا می‌کند؟</h3>
+			<ul>
+				<li>در کنار نام شریک گفتگو در لیست مخاطبین (آیکون شخص)، نماد تأیید/عدم تأیید (آیکون سپر) نمایش داده می‌شود.</li>
+				<li>روی این نماد کلیک کنید تا شماره امنیت مشترک شما نمایش داده شود. این شماره را با شماره شریک گفتگو مقایسه کنید.</li>
+				<li>اگر شماره‌ها مطابقت داشتند، روی دکمه «تمام» کلیک کنید و مخاطب به عنوان تأیید شده علامت‌گذاری می‌شود.</li>
+			</ul>
+
+			<h3>مدهای متنی چیستند و چگونه بین آن‌ها تغییر حالت دهیم؟</h3>
+			<ul>
+				<li>دو مد متفاوت برای ارسال پیام‌های رمزنگاری شده وجود دارد.</li>
+				<li>در مد «خام»، کلیدهای عمومی و سایر اطلاعات به شکل اصلی نمایش داده می‌شوند.<br/>در مد «داستانی»، تمام اطلاعات در یک متن فریبنده پنهان شده‌اند.</li>
+				<li>در هر دو مد، تمام پیام‌ها همچنان رمزنگاری شده باقی می‌مانند و توسط شخص ثالث قابل خواندن نیستند.</li>
+				<li>برای تغییر مدها، روی نماد «خام/کتاب» در کادر متن SecureChat، در سمت چپ کلیک کنید.</li>
+			</ul>
+
+			<h3>پیام به‌روزرسانی چیست؟</h3>
+			<ul>
+				<li>هر 30 روز، پیش‌کلید امضاشده شما به‌روز می‌شود.</li>
+				<li>برای این منظور، یک پیام ویژه ارسال می‌شود که شامل اطلاعات کلید به‌روز شده و پیام رمزنگاری شده شماست.</li>
+				<li>برای شما و شریک گفتگو، این فرآیند بدون زحمت اضافی است، زیرا پیام به طور خودکار هنگام ارسال پیام رمزنگاری شده بعدی تولید می‌شود.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

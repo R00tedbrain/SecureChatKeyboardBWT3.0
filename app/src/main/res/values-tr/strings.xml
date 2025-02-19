@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Tuşa basıldığında titret"</string>
+  <string name="sound_on_keypress">"Tuşa basıldığında ses çıkar"</string>
+  <string name="popup_on_keypress">"Tuşa basıldığında pop-up aç"</string>
+  <string name="settings_screen_preferences">"Tercihler"</string>
+  <string name="settings_screen_key_press">Tuşa basma</string>
+  <string name="settings_screen_appearance">Görünüm</string>
+  <string name="settings_screen_theme">"Tema"</string>
+  <string name="settings_system_default">"Sistem varsayılanı"</string>
+  <string name="auto_cap">"Otomatik büyük harf yap"</string>
+  <string name="auto_cap_summary">"Her cümlenin ilk harfini büyük harf yap"</string>
+  <string name="select_language">"Diller"</string>
+  <string name="locale_name_en_GB">"İngilizce (BK)"</string>
+  <string name="locale_name_en_US">"İngilizce (ABD)"</string>
+  <string name="locale_name_es_US">"İspanyolca (ABD)"</string>
+  <string name="locale_name_hi_ZZ">"Hingilizce"</string>
+  <string name="locale_name_sr_ZZ">"Sırpça (Latin alfabesi)"</string>
+  <string name="subtype_traditional">"Geleneksel"</string>
+  <string name="subtype_compact">"Kompakt"</string>
+  <string name="add">"Ekle"</string>
+  <string name="remove">"Kaldır"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Tuşa basma titreşim süresi"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Tuşa basma ses seviyesi"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Tuşa uzun basma gecikmesi"</string>
+  <string name="button_default">"Varsayılan"</string>
+  <string name="info_no_contact_chosen">Hiçbir kişi seçilmedi</string>
+  <string name="info_pre_key_detected">Anahtar paketi algılandı: İçeriği kaydetmek için “Şifre Çöz”e tıklayın</string>
+  <string name="info_signal_message_detected">Şifrelenmiş mesaj algılandı: Mesajı görüntülemek için “Şifre Çöz”e tıklayın</string>
+  <string name="info_pre_key_and_signal_message_detected">Şifrelenmiş güncelleme mesajı algılandı: Mesajı görüntülemek için “Şifre Çöz”e tıklayın</string>
+  <string name="info_add_contact">Mesaj göndermek/almak için kişi ekleyin</string>
+  <string name="info_contact_list">Mesaj göndermek/almak için sohbet ortağınızı seçin. Yeni biriyle sohbet etmek istiyorsanız, ekleme düğmesiyle onu davet edin</string>
+  <string name="info_messages_list_default">Burada mesajları görmek için önce bir kişi seçin</string>
+  <string name="info_no_saved_messages">Bu kişi için kaydedilmiş mesaj yok</string>
+  <string name="info_verify_contact">Uçtan uca şifrelemenizin güvenliğini %1$s ile kontrol etmek için, yukarıda gösterilen rakamları onların cihazındaki rakamlarla karşılaştırın</string>
+  <string name="info_session_creation_failed">Oturum oluşturulamadı. Mümkünse, kişi listesinden göndereni silin ve yeni bir anahtar paketi isteyin</string>
+  <string name="info_contact_creation_failed">Kişi oluşturulamadı. İptal</string>
+  <string name="info_add_firstname_add_contact">Bir kişi oluşturmak için bir ilk ad girin</string>
+  <string name="info_choose_contact_first">Lütfen önce bir kişi seçin</string>
+  <string name="info_no_message_to_encrypt">Şifrelemek için mesaj yok</string>
+  <string name="info_no_message_to_decrypt">Şifre çözmek için mesaj yok</string>
+  <string name="info_message_decryption_failed">Mesaj çözülemedi. Muhtemel nedenler: Bu mesajı daha önce çözmüş olabilirsiniz veya oturum geçersiz. Bu durumda, kişiyi silin, sizden silmesini isteyin ve yeni bir davet isteyin</string>
+  <string name="info_signal_message_no_contact_found">Lütfen önce kişiyi ekleyin</string>
+  <string name="info_message_encryption_failed">Mesaj şifrelenemedi</string>
+  <string name="info_update_contact_failed">Kişi bilgileri güncellenemedi</string>
+
+  <string name="prefs_keyboard_height_settings">Klavye yüksekliği</string>
+  <string name="keyboard_color">Özel klavye rengi ayarla</string>
+  <string name="hide_special_chars">Özel karakterleri gizle</string>
+  <string name="hide_language_switch_key">Dil değiştirme tuşunu gizle</string>
+  <string name="pref_enable_ime_switch">Diğer klavyelere geç</string>
+  <string name="show_number_row">Ayrık rakam satırını göster</string>
+  <string name="space_swipe">Boşluk tuşunda kaydırarak imleci taşı</string>
+  <string name="delete_swipe">Sil tuşu kaydırması</string>
+  <string name="matching_navbar_color">Eşleşen gezinti çubuğu rengini kullan</string>
+  <string name="setup_message">Securechat Keyboard etkin değil. Diller &amp; Giriş ayarlarını açmak için Tamam\'ı tıklayın. Kullanmak için geçerli klavyenizde Securechat Keyboard\'u seçmeniz gerekmektedir.</string>
+  <string name="user_languages">Geçerli klavye dilleri</string>
+  <string name="add_language">Dil ekle</string>
+  <string name="remove_language">Dil kaldır</string>
+  <string name="generic_language_layouts"><xliff:g id="LANGUAGE_NAME">%s</xliff:g> klavye düzenleri</string>
+  <string name="change_keyboard">Klavyeyi değiştir</string>
+</resources>

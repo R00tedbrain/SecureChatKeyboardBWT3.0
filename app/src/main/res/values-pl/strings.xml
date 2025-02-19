@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Wibracja przy naciśnięciu"</string>
+  <string name="sound_on_keypress">"Dźwięk przy naciśnięciu"</string>
+  <string name="popup_on_keypress">"Powiększ przy naciśnięciu"</string>
+  <string name="settings_screen_preferences">"Ustawienia"</string>
+  <string name="settings_screen_key_press">Wciśnięcie klawisza</string>
+  <string name="settings_screen_appearance">Wygląd</string>
+  <string name="settings_screen_theme">"Motyw"</string>
+  <string name="settings_system_default">"Ustawienie domyślne"</string>
+  <string name="auto_cap">"Wstawiaj wielkie litery"</string>
+  <string name="auto_cap_summary">"Zaczynaj każde zdanie wielką literą"</string>
+  <string name="select_language">"Języki"</string>
+  <string name="locale_name_en_GB">"angielski (Wielka Brytania)"</string>
+  <string name="locale_name_en_US">"angielski (Stany Zjednoczone)"</string>
+  <string name="locale_name_es_US">"hiszpański (USA)"</string>
+  <string name="locale_name_hi_ZZ">"hinglish"</string>
+  <string name="locale_name_sr_ZZ">"serbski (alfabet łaciński)"</string>
+  <string name="subtype_traditional">"tradycyjny"</string>
+  <string name="subtype_compact">"kompaktowa"</string>
+  <string name="add">"Dodaj"</string>
+  <string name="remove">"Usuń"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Wibracja przy naciśniętym klawiszu"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Głośność przy naciśniętym klawiszu"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Opóźnienie przy długim naciśnięciu"</string>
+  <string name="button_default">"Domyślne"</string>
+  <string name="prefs_keyboard_height_settings">Wysokość klawiatury</string>
+  <string name="keyboard_color">Ustaw niestandardowy kolor klawiatury</string>
+  <string name="hide_special_chars">Ukryj znaki specjalne</string>
+  <string name="hide_language_switch_key">Ukryj przycisk zmiany języka</string>
+  <string name="pref_enable_ime_switch">Przycisk zmiany klawiatury</string>
+  <string name="show_number_row">Pokaż oddzielny rząd z cyframi</string>
+  <string name="space_swipe">Przesuń kursor przeciągając spację</string>
+  <string name="delete_swipe">Usuń poprzez przesunięcie</string>
+  <string name="matching_navbar_color">Dopasuj kolor paska nawigacji</string>
+  <string name="setup_message">SecureChats Keyboard nie jest włączona. Kliknij OK, żeby otworzyć ustawienia języka i wprowadzania. Następnie wybierz SecureChats Keyboard w ustawieniach klawiatury.</string>
+  <string name="user_languages">Aktywne języki</string>
+  <string name="add_language">Dodaj język</string>
+  <string name="remove_language">Usuń język</string>
+  <string name="generic_language_layouts"><xliff:g id="LANGUAGE_NAME" example="English (US)">%s</xliff:g> układ klawiatury</string>
+  <string name="change_keyboard">Zmień klawiaturę</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="pl">
+	<body>
+		<main>
+			<h3>Jak rozpocząć czat?</h3>
+			<ul>
+				<li>Zaproś partnera do czatu, klikając na listę kontaktów (ikona osoby) i wysyłając mu wiadomość zaproszeniową (ikona dodania osoby). Wiadomość zaproszeniowa zostanie bezpośrednio umieszczona w polu tekstowym komunikatora.</li>
+				<li>Twój partner czatu musi dodać Cię do swojej listy kontaktów, a następnie wysłać Ci zaszyfrowaną wiadomość. Skopiuj tę wiadomość do schowka i kliknij przycisk „odszyfruj” (ikona otwartej kłódki).</li>
+				<li>Pojawi się nowe menu kontekstowe, w którym musisz zapisać nazwę partnera czatu. Następnie kliknij przycisk „gotowe”.<br/>Kontakt zostanie automatycznie wybrany.</li>
+			</ul>
+
+			<h3>Ktoś wysłał mi wiadomość zaproszeniową. Co mam zrobić?</h3>
+			<ul>
+				<li>Skopiuj wiadomość zaproszeniową do schowka i kliknij przycisk „odszyfruj” (ikona otwartej kłódki).</li>
+				<li>Pojawi się nowe menu kontekstowe, w którym musisz zapisać nazwę partnera czatu. Następnie kliknij przycisk „gotowe”.</li>
+				<li>Wybierz swojego partnera czatu z listy kontaktów (ikona osoby) i wyślij mu zaszyfrowaną wiadomość (ikona zamkniętej koperty).</li>
+			</ul>
+
+			<h3>Jak wysłać/zasyfrować wiadomość?</h3>
+			<ul>
+				<li>Jeśli już dodałeś swojego partnera czatu do kontaktów, wybierz go z listy kontaktów (ikona osoby) i wpisz swoją wiadomość w polu tekstowym SecureChat.</li>
+				<li>Następnie kliknij przycisk „zaszyfruj” (ikona zamkniętej koperty). Wiadomość zostanie umieszczona w zaszyfrowanej formie w polu tekstowym Twojego komunikatora i będziesz mógł ją wysłać.</li>
+				<li>Jeśli jeszcze nie dodałeś swojego partnera czatu, zapoznaj się z instrukcją „Jak rozpocząć czat?”</li>
+			</ul>
+
+			<h3>Jak odebrać/odszyfrować wiadomość?</h3>
+			<ul>
+				<li>Wybierz swojego partnera czatu z listy kontaktów (ikona osoby) i skopiuj wiadomość do schowka. Następnie kliknij przycisk „odszyfruj” (ikona otwartej kłódki).</li>
+				<li>Wiadomość pojawi się w polu tekstowym SecureChats.</li>
+			</ul>
+
+			<h3>Jak mogę zobaczyć wcześniejsze wiadomości z moim partnerem czatu?</h3>
+			<ul>
+				<li>Wybierz swojego partnera czatu z listy kontaktów (ikona osoby) i kliknij przycisk „historia wiadomości” w głównym widoku (ikona dymka tekstowego).</li>
+				<li>Pamiętaj, że jeśli usuniesz kontakt, historia wiadomości również zostanie usunięta.</li>
+			</ul>
+
+			<h3>Jak mogę zweryfikować, że mój partner czatu jest tym, za kogo się podaje?</h3>
+			<ul>
+				<li>Obok nazwy Twojego partnera czatu na liście kontaktów (ikona osoby) znajduje się symbol zweryfikowanego/niezweryfikowanego (ikona tarczy).</li>
+				<li>Kliknij na symbol, a pojawi się Twój wspólny numer bezpieczeństwa. Porównaj go z numerem Twojego partnera czatu.</li>
+				<li>Jeśli się zgadzają, kliknij przycisk „gotowe” i Twój kontakt zostanie oznaczony jako zweryfikowany.</li>
+			</ul>
+
+			<h3>Jakie są tryby tekstowe i jak między nimi przełączać?</h3>
+			<ul>
+				<li>Dostępne są dwa różne tryby, w których możesz wysyłać zaszyfrowane wiadomości.</li>
+				<li>W trybie Surowym klucze publiczne i inne informacje są wyświetlane w swojej oryginalnej formie.<br/>W trybie Bajkowym wszystkie informacje są ukryte w tekście zastępczym.</li>
+				<li>W obu trybach wszystkie wiadomości pozostają zaszyfrowane i nie mogą być odczytane przez osoby trzecie.</li>
+				<li>Możesz przełączać się między trybami, klikając na symbol surowy/książka w polu tekstowym SecureChats, po lewej stronie.</li>
+			</ul>
+
+			<h3>Co to jest wiadomość aktualizacyjna?</h3>
+			<ul>
+				<li>Co 30 dni Twoja podpisana preklucz zostanie odnowiona.</li>
+				<li>W tym celu wysyłana jest specjalna wiadomość, która zawiera informacje o odnowionej kluczu oraz Twoją zaszyfrowaną wiadomość.</li>
+				<li>Dla Ciebie i Twojego partnera czatu nie wymaga to dodatkowego wysiłku, ponieważ wiadomość zostanie wygenerowana automatycznie, gdy wyślesz następną zaszyfrowaną wiadomość.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

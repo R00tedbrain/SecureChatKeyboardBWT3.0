@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"اهتزاز عند ضغط مفتاح"</string>
+  <string name="sound_on_keypress">"صوت عند الضغط على مفتاح"</string>
+  <string name="popup_on_keypress">"انبثاق عند ضغط مفتاح"</string>
+  <string name="settings_screen_preferences">"التفضيلات"</string>
+  <string name="settings_screen_key_press">ضغط المفتاح</string>
+  <string name="settings_screen_appearance">مظهر</string>
+  <string name="settings_screen_theme">"المظهر"</string>
+  <string name="info_no_contact_chosen">لم يتم اختيار جهة اتصال</string>
+  <string name="info_pre_key_detected">تم الكشف عن حزمة المفاتيح: انقر على «فك التشفير» لحفظ المحتوى</string>
+  <string name="info_signal_message_detected">تم الكشف عن رسالة مشفرة: انقر على «فك التشفير» لعرض الرسالة</string>
+  <string name="info_pre_key_and_signal_message_detected">تم الكشف عن رسالة تحديث مشفرة: انقر على «فك التشفير» لعرض الرسالة</string>
+  <string name="info_add_contact">أضف جهة اتصال لإرسال/استقبال الرسائل</string>
+  <string name="info_contact_list">اختر شريك الدردشة لإرسال/استقبال الرسائل. إذا كنت ترغب في الدردشة مع شخص جديد، فقم بدعوته باستخدام زر الإضافة</string>
+  <string name="info_messages_list_default">اختر جهة اتصال أولاً لعرض الرسائل هنا</string>
+  <string name="info_no_saved_messages">لا توجد رسائل محفوظة لهذه جهة الاتصال</string>
+  <string name="info_verify_contact">للتحقق من أمان التشفير من طرف إلى طرف مع %1$s، قارن الأرقام المعروضة أعلاه مع تلك الموجودة على جهازهم</string>
+  <string name="info_session_creation_failed">فشل إنشاء الجلسة. إذا أمكن، احذف المرسل من قائمة جهات الاتصال واطلب حزمة مفاتيح جديدة</string>
+  <string name="info_contact_creation_failed">تعذر إنشاء جهة الاتصال. تم الإلغاء</string>
+  <string name="info_add_firstname_add_contact">أدخل الاسم الأول لإنشاء جهة الاتصال</string>
+  <string name="info_choose_contact_first">يرجى اختيار جهة اتصال أولاً</string>
+  <string name="info_no_message_to_encrypt">لا توجد رسالة للتشفير</string>
+  <string name="info_no_message_to_decrypt">لا توجد رسالة لفك التشفير</string>
+  <string name="info_message_decryption_failed">تعذر فك تشفير الرسالة. الأسباب المحتملة: ربما قمت بفك تشفير الرسالة بالفعل، أو أن الجلسة غير صالحة. في هذه الحالة، احذف جهة الاتصال واطلب منهم حذفك وطلب دعوة جديدة</string>
+  <string name="info_signal_message_no_contact_found">يرجى إضافة جهة الاتصال أولاً</string>
+  <string name="info_message_encryption_failed">تعذر تشفير الرسالة</string>
+  <string name="info_update_contact_failed">تعذر تحديث معلومات جهة الاتصال</string>
+
+  <string name="abbreviation_unit_milliseconds">"<xliff:g id="MILLISECONDS">%s</xliff:g> مللي ثانية"</string>
+  <string name="settings_system_default">"الإعداد الافتراضي للنظام"</string>
+  <string name="auto_cap">"أحرف كبيرة تلقائيًا"</string>
+  <string name="auto_cap_summary">"كتابة الحرف الأول من كل جملة بحرف كبير."</string>
+  <string name="select_language">"اللغات"</string>
+  <string name="locale_name_en_GB">"الإنجليزية (المملكة المتحدة)"</string>
+  <string name="locale_name_en_US">"الإنجليزية (الولايات المتحدة)"</string>
+  <string name="locale_name_es_US">"الإسبانية (الأميركية)"</string>
+  <string name="locale_name_hi_ZZ">"هنجليزية"</string>
+  <string name="locale_name_sr_ZZ">"الصربية (اللاتينية)"</string>
+  <string name="subtype_traditional">"التقليدية"</string>
+  <string name="subtype_compact">"مكثفة"</string>
+  <string name="add">"إضافة"</string>
+  <string name="remove">"إزالة"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"مدة اهتزاز الضغط على المفاتيح"</string>
+  <string name="prefs_keypress_sound_volume_settings">"مستوى صوت الضغط على المفاتيح"</string>
+  <string name="prefs_key_longpress_timeout_settings">"تأخير الضغط الطويل للمفاتيح"</string>
+  <string name="button_default">"الافتراضية"</string>
+  <string name="prefs_keyboard_height_settings">ارتفاع لوحة المفاتيح</string>
+  <string name="keyboard_color">اختيار لون مخصص للوحة المفاتيح</string>
+  <string name="hide_special_chars">إخفاء الرموز الخاصة</string>
+  <string name="hide_language_switch_key">إخفاء زر تبديل اللغة</string>
+  <string name="show_number_row">إظهار الأرقام في صف منفصل</string>
+  <string name="space_swipe">سحب مفتاح المسافة لنقل المؤشر</string>
+  <string name="delete_swipe">الحذف بالسحب</string>
+  <string name="add_language">إضافة لغة</string>
+  <string name="remove_language">إزالة اللغة</string>
+  <string name="change_keyboard">تغيير لوحة المفاتيح</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="ar">
+	<body>
+		<main>
+			<h3>كيف تبدأ محادثة؟</h3>
+			<ul>
+				<li>ادعُ شريك المحادثة بالنقر على قائمة جهات الاتصال (أيقونة الشخص) وإرسال رسالة الدعوة الخاصة بك (أيقونة إضافة شخص). ستوضع رسالة الدعوة مباشرةً في حقل النص الخاص بالراسل.</li>
+				<li>يجب على شريك المحادثة إضافتك إلى قائمة جهات الاتصال الخاصة به ثم إرسال رسالة مشفرة إليك. انسخ هذه الرسالة إلى الحافظة الخاصة بك وانقر على زر "فك التشفير" (أيقونة القفل المفتوح).</li>
+				<li>سيفتح قائمة سياقية جديدة حيث يتعيّن عليك حفظ اسم شريك المحادثة. ثم انقر على زر "تم".<br/>سيتم اختيار جهة الاتصال تلقائيًا.</li>
+			</ul>
+
+			<h3>أرسل لي أحدهم رسالة دعوة. ماذا يجب أن أفعل؟</h3>
+			<ul>
+				<li>انسخ رسالة الدعوة إلى الحافظة الخاصة بك وانقر على زر "فك التشفير" (أيقونة القفل المفتوح).</li>
+				<li>سيفتح قائمة سياقية جديدة حيث يتعيّن عليك حفظ اسم شريك المحادثة. ثم انقر على زر "تم".</li>
+				<li>اختر شريك المحادثة من قائمة جهات الاتصال (أيقونة الشخص) وأرسل له رسالة مشفرة (أيقونة الظرف المغلق).</li>
+			</ul>
+
+			<h3>كيف أرسل/أشفر رسالة؟</h3>
+			<ul>
+				<li>إذا كنت قد أضفت شريك المحادثة إلى جهات الاتصال بالفعل، فاختره من القائمة (أيقونة الشخص) ثم اكتب رسالتك في حقل نص Securechat.</li>
+				<li>ثم انقر على زر "تشفير" (أيقونة الظرف المغلق). ستوضع الرسالة في حقل النص الخاص بالراسل بشكل مشفر ويمكنك إرسالها.</li>
+				<li>إذا لم تقم بإضافة شريك المحادثة بعد، يرجى مراجعة "كيف تبدأ محادثة؟"</li>
+			</ul>
+
+			<h3>كيف أستقبل/أفك تشفير رسالة؟</h3>
+			<ul>
+				<li>اختر شريك المحادثة من قائمة جهات الاتصال (أيقونة الشخص) ونسخ الرسالة إلى الحافظة الخاصة بك. ثم انقر على زر "فك التشفير" (أيقونة القفل المفتوح).</li>
+				<li>ستظهر الرسالة في حقل نص SecureChat.</li>
+			</ul>
+
+			<h3>كيف يمكنني رؤية الرسائل السابقة مع شريك المحادثة؟</h3>
+			<ul>
+				<li>اختر شريك المحادثة من قائمة جهات الاتصال (أيقونة الشخص) ثم انقر على زر "سجل الرسائل" في العرض الرئيسي (أيقونة فقاعة النص).</li>
+				<li>يرجى ملاحظة أنه إذا قمت بحذف جهة الاتصال، سيتم حذف سجل الرسائل أيضًا.</li>
+			</ul>
+
+			<h3>كيف يمكنني التحقق من أن شريك المحادثة هو الشخص الذي يدّعي أنه؟</h3>
+			<ul>
+				<li>بجوار اسم شريك المحادثة في قائمة جهات الاتصال (أيقونة الشخص) يظهر رمز التحقق/عدم التحقق (أيقونة الدرع).</li>
+				<li>انقر على الرمز وستظهر لك قيمة رقم الأمان المشترك. قارنها مع رقم شريك المحادثة.</li>
+				<li>إذا تطابقت، انقر على زر "تم" وسيتم وسم جهة الاتصال على أنها موثوقة.</li>
+			</ul>
+
+			<h3>ما هي أوضاع النص وكيفية التبديل بينها؟</h3>
+			<ul>
+				<li>هناك وضعان مختلفان يمكنك من خلالهما إرسال رسائلك المشفرة.</li>
+				<li>في الوضع "الخام"، تُعرض المفاتيح العامة والمعلومات الأخرى بصيغتها الأصلية.<br/>في الوضع "الخيالي"، يتم إخفاء جميع المعلومات داخل نص تمويهي.</li>
+				<li>في كلا الوضعين، تظل جميع الرسائل مشفرة ولا يمكن قراءتها من قبل أطراف ثالثة.</li>
+				<li>يمكنك التبديل بين الأوضاع بالنقر على رمز الوضع الخام/الكتاب في حقل نص SecureChat، على اليسار.</li>
+			</ul>
+
+			<h3>ما هي رسالة التحديث؟</h3>
+			<ul>
+				<li>كل 30 يومًا، يتم تجديد مفتاحك المبدئي الموقع.</li>
+				<li>لهذا الغرض، تُرسل رسالة خاصة تتضمن معلومات المفتاح المجدد ورسالتك المشفرة.</li>
+				<li>بالنسبة لك ولشريك المحادثة، لا يتطلب ذلك أي جهد إضافي، حيث ستُنشأ الرسالة تلقائيًا عند إرسال الرسالة المشفرة التالية.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

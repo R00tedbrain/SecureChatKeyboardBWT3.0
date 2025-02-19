@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Vibrer ved tastetrykk"</string>
+  <string name="sound_on_keypress">"Lyd ved tastetrykk"</string>
+  <string name="popup_on_keypress">"Forgrunnsvindu ved tastetrykk"</string>
+  <string name="settings_screen_preferences">"Innstillinger"</string>
+  <string name="settings_screen_key_press">"Tastetrykk"</string>
+  <string name="settings_screen_appearance">Utseende</string>
+  <string name="settings_screen_theme">"Tema"</string>
+  <string name="settings_system_default">"Systemstandard"</string>
+  <string name="auto_cap">"Stor forbokstav"</string>
+  <string name="auto_cap_summary">"Bruk stor forbokstav i det første ordet i hver setning"</string>
+  <string name="select_language">"Språk"</string>
+  <string name="locale_name_en_GB">"Engelsk (Storbritannia)"</string>
+  <string name="locale_name_en_US">"Engelsk (USA)"</string>
+  <string name="locale_name_es_US">"spansk (USA)"</string>
+  <string name="locale_name_hi_ZZ">"Hinglish"</string>
+  <string name="locale_name_sr_ZZ">"Serbisk (latin)"</string>
+  <string name="subtype_traditional">"tradisjonelt"</string>
+  <string name="subtype_compact">"kompakt"</string>
+  <string name="add">"Legg til"</string>
+  <string name="remove">"Fjern"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Vibrasjonstid ved tastetrykk"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Lydstyrke ved tastetrykk"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Forsinkelse ved lange tastetrykk"</string>
+  <string name="button_default">"Standard"</string>
+  <string name="prefs_keyboard_height_settings">Tastaturhøyde</string>
+  <string name="keyboard_color">Still inn tilpasset tastaturfarge</string>
+  <string name="hide_special_chars">Skjul spesielle tegn</string>
+  <string name="hide_language_switch_key">Skjul tast for språkbytte</string>
+  <string name="pref_enable_ime_switch">Skift til andre tastaturer</string>
+  <string name="show_number_row">Vis separat tallrad</string>
+  <string name="space_swipe">Mellomrom-sveip flytter markør</string>
+  <string name="delete_swipe">Slette-sveip</string>
+  <string name="matching_navbar_color">Bruk matchende navigasjonslinjefarge</string>
+  <string name="setup_message">Securechat Keyboard er ikke aktivert. Trykk OK for å åpne innstillinger for Språk og inndata. Du må velge Securechat Keyboard som standardtastatur for å bruke det.</string>
+  <string name="user_languages">Aktiverte tastaturspråk</string>
+  <string name="add_language">Legg til språk</string>
+  <string name="remove_language">Fjern språk</string>
+  <string name="generic_language_layouts"><xliff:g id="LANGUAGE_NAME" example="English (US)">%s</xliff:g> tastaturlayouter</string>
+  <string name="change_keyboard">Endre tastatur</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="no">
+	<body>
+		<main>
+			<h3>Hvordan starte en chat?</h3>
+			<ul>
+				<li>Inviter en chatpartner ved å klikke på kontaktlisten (ikon for person) og sende dem din invitasjonsmelding (ikon for å legge til person). Invitasjonsmeldingen vil bli plassert direkte i meldingsfeltet til messenger.</li>
+				<li>Din chatpartner må legge deg til i sin kontaktliste og deretter sende deg en kryptert melding. Kopier denne meldingen til utklippstavlen din og klikk på knappen "dekrypter" (ikon for åpen lås).</li>
+				<li>En ny kontekstmeny vil åpnes der du må lagre navnet til chatpartneren. Klikk deretter på knappen "ferdig".<br/>Kontakten blir nå valgt automatisk.</li>
+			</ul>
+
+			<h3>Noen har sendt meg en invitasjonsmelding. Hva skal jeg gjøre?</h3>
+			<ul>
+				<li>Kopier invitasjonsmeldingen til utklippstavlen din og klikk på knappen "dekrypter" (ikon for åpen lås).</li>
+				<li>En ny kontekstmeny vil åpnes der du må lagre navnet til chatpartneren. Klikk deretter på knappen "ferdig".</li>
+				<li>Velg din chatpartner fra kontaktlisten (ikon for person) og send dem en kryptert melding (ikon for lukket konvolutt).</li>
+			</ul>
+
+			<h3>Hvordan sender/krypterer jeg en melding?</h3>
+			<ul>
+				<li>Hvis du allerede har lagt til chatpartneren i kontaktlisten, velg dem fra kontaktlisten (ikon for person) og skriv deretter meldingen din i SecureChat-tekstfeltet.</li>
+				<li>Klikk deretter på knappen "krypter" (ikon for lukket konvolutt). Meldingen vil bli plassert kryptert i meldingsfeltet til messenger, og du kan sende den.</li>
+				<li>Hvis du ikke har lagt til chatpartneren ennå, se "Hvordan starte en chat?"</li>
+			</ul>
+
+			<h3>Hvordan mottar/ dekrypterer jeg en melding?</h3>
+			<ul>
+				<li>Velg din chatpartner fra kontaktlisten (ikon for person) og kopier meldingen til utklippstavlen din. Klikk deretter på knappen "dekrypter" (ikon for åpen lås).</li>
+				<li>Meldingen vises i SecureChat-tekstfeltet.</li>
+			</ul>
+
+			<h3>Hvordan kan jeg se tidligere meldinger med min chatpartner?</h3>
+			<ul>
+				<li>Velg din chatpartner fra kontaktlisten (ikon for person) og klikk deretter på knappen "meldinglogg" i hovedvisningen (ikon for tekstboble).</li>
+				<li>Vær oppmerksom på at hvis du sletter kontakten, vil også meldingshistorikken bli slettet.</li>
+			</ul>
+
+			<h3>Hvordan kan jeg verifisere at min chatpartner er den personen de utgir seg for å være?</h3>
+			<ul>
+				<li>Ved siden av navnet til din chatpartner i kontaktlisten (ikon for person) vises et symbol for verifisert/ikke verifisert (ikon for skjold).</li>
+				<li>Klikk på symbolet, så vises ditt felles sikkerhetsnummer. Sammenlign dette med nummeret til chatpartneren din.</li>
+				<li>Hvis de stemmer overens, klikk på knappen "ferdig" og kontakten din vil bli merket som verifisert.</li>
+			</ul>
+
+			<h3>Hva er tekstmodusene, og hvordan bytter jeg mellom dem?</h3>
+			<ul>
+				<li>Det finnes to ulike moduser for å sende krypterte meldinger.</li>
+				<li>I "rå modus" vises de offentlige nøklene og annen informasjon i sin opprinnelige form.<br/>I "eventyrmodus" er all informasjon skjult i en avledende tekst.</li>
+				<li>I begge moduser forblir alle meldinger krypterte og kan ikke leses av tredjepart.</li>
+				<li>Du kan bytte mellom modusene ved å klikke på symbolet for rå/bokmodus i SecureChat-tekstfeltet til venstre.</li>
+			</ul>
+
+			<h3>Hva er en oppdateringsmelding?</h3>
+			<ul>
+				<li>Hvert 30. dag fornyes din signerte prekey.</li>
+				<li>Til dette formålet sendes en spesiell melding som består av informasjonen om din fornyede nøkkel og din krypterte melding.</li>
+				<li>For deg og din chatpartner betyr dette ingen ekstra innsats, da meldingen vil bli generert automatisk når du sender den neste krypterte meldingen.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

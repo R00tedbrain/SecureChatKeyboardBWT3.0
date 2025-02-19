@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Vibriraj na pritisak tastera"</string>
+  <string name="sound_on_keypress">"Zvuk na pritisak tastera"</string>
+  <string name="popup_on_keypress">"Iskačući prozor prilikom pritiska tastera"</string>
+  <string name="settings_screen_preferences">"Podešavanja"</string>
+  <string name="settings_screen_theme">"Tema"</string>
+  <string name="settings_system_default">"Podrazumevano"</string>
+  <string name="auto_cap">"Automatski unos velikih slova"</string>
+  <string name="auto_cap_summary">"Pisanje velikog slova na početku svake rečenice"</string>
+  <string name="select_language">"Jezici"</string>
+  <string name="locale_name_en_GB">"engleski (UK)"</string>
+  <string name="locale_name_en_US">"engleski (SAD)"</string>
+  <string name="locale_name_es_US">"španski (SAD)"</string>
+  <string name="locale_name_hi_ZZ">"hengleski"</string>
+  <string name="locale_name_sr_ZZ">"srpski (latinica)"</string>
+  <string name="subtype_traditional">"tradicionalni"</string>
+  <string name="subtype_compact">"kompaktna"</string>
+  <string name="add">"Dodaj"</string>
+  <string name="remove">"Ukloni"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Trajanje vibracije pri pritisku"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Jačina zvuka pri pritisku"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Odlaganje pri dugom pritisku"</string>
+  <string name="button_default">"Podrazumevano"</string>
+  <string name="prefs_keyboard_height_settings">Visina tastature</string>
+  <string name="keyboard_color">Postavi boju tastature</string>
+  <string name="hide_special_chars">Sakrij specijalne karaktere</string>
+  <string name="hide_language_switch_key">Sakrij dugme za promenu jezika</string>
+  <string name="show_number_row">Prikaži odvojeni red sa brojevima</string>
+  <string name="space_swipe">Prevlačenjem preko razmaka pomera se selektor</string>
+  <string name="delete_swipe">Brisanje prevlačenjem</string>
+  <string name="matching_navbar_color">Koristi boju navigacione trake</string>
+  <string name="setup_message">SecureChats Keyboard nije omogućena. Kliknite OK da otvorite podešavanja jezika i unosa. Treba da selektujete SecureChat Keyboard kao vašu podrazumevanu tastaturu da biste je koristili.</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="sr">
+	<body>
+		<main>
+			<h3>Kako započeti razgovor?</h3>
+			<ul>
+				<li>Pozovite partnera za razgovor klikom na listu kontakata (ikona osobe) i slanjem poruke za poziv (ikona dodavanja osobe). Poruka za poziv biće direktno smeštena u polje za tekst u aplikaciji za poruke.</li>
+				<li>Vaš partner za razgovor mora vas dodati u svoju listu kontakata, a zatim vam poslati šifrovanu poruku. Kopirajte tu poruku u međuspremnik i kliknite na dugme „dešifruj“ (ikona otvorenog lokota).</li>
+				<li>Otvoriće se novi kontekstualni meni u kojem treba da sačuvate ime partnera za razgovor. Zatim kliknite na dugme „gotovo“.<br/>Kontakt će biti automatski izabran.</li>
+			</ul>
+
+			<h3>Neko mi je poslao pozivnu poruku. Šta treba da uradim?</h3>
+			<ul>
+				<li>Kopirajte pozivnu poruku u međuspremnik i kliknite na dugme „dešifruj“ (ikona otvorenog lokota).</li>
+				<li>Otvoriće se novi kontekstualni meni u kojem treba da sačuvate ime partnera za razgovor. Zatim kliknite na dugme „gotovo“.</li>
+				<li>Izaberite svog partnera za razgovor iz liste kontakata (ikona osobe) i pošaljite mu šifrovanu poruku (ikona zatvorene koverte).</li>
+			</ul>
+
+			<h3>Kako da pošaljem/šifrujem poruku?</h3>
+			<ul>
+				<li>Ako ste već dodali partnera za razgovor u kontakte, izaberite ga iz liste kontakata (ikona osobe) i zatim unesite svoju poruku u SecureChat polje za tekst.</li>
+				<li>Zatim kliknite na dugme „šifruj“ (ikona zatvorene koverte). Poruka će biti šifrovana i smeštena u polje za tekst u aplikaciji za poruke, nakon čega je možete poslati.</li>
+				<li>Ako još niste dodali partnera za razgovor, pogledajte odeljak „Kako započeti razgovor?“</li>
+			</ul>
+
+			<h3>Kako da primim/dešifrujem poruku?</h3>
+			<ul>
+				<li>Izaberite svog partnera za razgovor iz liste kontakata (ikona osobe) i kopirajte poruku u međuspremnik. Zatim kliknite na dugme „dešifruj“ (ikona otvorenog lokota).</li>
+				<li>Poruka će se prikazati u SecureChat polju za tekst.</li>
+			</ul>
+
+			<h3>Kako mogu da vidim prethodne poruke sa svojim partnerom za razgovor?</h3>
+			<ul>
+				<li>Izaberite svog partnera za razgovor iz liste kontakata (ikona osobe) i zatim kliknite na dugme „istorija poruka“ u glavnom prikazu (ikona tekstualne balončića).</li>
+				<li>Napomena: Ako obrišete kontakt, istorija poruka će takođe biti obrisana.</li>
+			</ul>
+
+			<h3>Kako mogu da potvrdim da je moj partner za razgovor zaista onaj za koga se predstavlja?</h3>
+			<ul>
+				<li>Pored imena vašeg partnera za razgovor u listi kontakata (ikona osobe) pojavljuje se simbol verifikacije/neverifikacije (ikona štita).</li>
+				<li>Kliknite na simbol i pojaviće se vaš zajednički sigurnosni broj. Uporedite ga sa brojem vašeg partnera za razgovor.</li>
+				<li>Ako se poklapaju, kliknite na dugme „gotovo“ i vaš kontakt će biti označen kao verifikovan.</li>
+			</ul>
+
+			<h3>Koji su tekstualni modovi i kako da ih prebacujem?</h3>
+			<ul>
+				<li>Postoje dva različita moda za slanje šifrovanih poruka.</li>
+				<li>U "sirovom" modu, javni ključevi i druge informacije se prikazuju u svom originalnom obliku.<br/>U "bajkovitom" modu, sve informacije su skrivene unutar zagonetnog teksta.</li>
+				<li>U oba moda, sve poruke ostaju šifrovane i ne mogu ih čitati treće strane.</li>
+				<li>Možete da prebacujete modove klikom na ikonu za sirovi/mod knjiga u SecureChat polju za tekst, sa leve strane.</li>
+			</ul>
+
+			<h3>Šta je poruka ažuriranja?</h3>
+			<ul>
+				<li>Svakih 30 dana, vaš potpisani prekey će biti obnovljen.</li>
+				<li>U tu svrhu se šalje posebna poruka koja sadrži informacije o obnovljenom ključu i vašu šifrovanu poruku.</li>
+				<li>Za vas i vašeg partnera za razgovor, ovo ne predstavlja dodatni napor, jer će poruka biti automatski generisana kada pošaljete sledeću šifrovanu poruku.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

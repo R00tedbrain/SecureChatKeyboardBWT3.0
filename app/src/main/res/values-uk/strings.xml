@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Вібр. при натисканні клавіш"</string>
+  <string name="sound_on_keypress">"Звук при натиску клав."</string>
+  <string name="popup_on_keypress">"Збільшення натиснутих"</string>
+  <string name="settings_screen_preferences">"Параметри"</string>
+  <string name="settings_screen_key_press">Натискання клавіш</string>
+  <string name="settings_screen_appearance">Вигляд</string>
+  <string name="settings_screen_theme">"Тема"</string>
+  <string name="abbreviation_unit_milliseconds">"<xliff:g id="MILLISECONDS">%s</xliff:g> мс"</string>
+  <string name="settings_system_default">"За умовчанням"</string>
+  <string name="auto_cap">"Вел. літери автоматично"</string>
+  <string name="auto_cap_summary">"Писати перше слово в кожному реченні з великої літери"</string>
+  <string name="select_language">"Мови"</string>
+  <string name="info_no_contact_chosen">Контакт не вибрано</string>
+  <string name="info_pre_key_detected">Виявлено пакет ключів: натисніть «Розшифрувати», щоб зберегти вміст</string>
+  <string name="info_signal_message_detected">Виявлено зашифроване повідомлення: натисніть «Розшифрувати», щоб переглянути повідомлення</string>
+  <string name="info_pre_key_and_signal_message_detected">Виявлено зашифроване повідомлення про оновлення: натисніть «Розшифрувати», щоб переглянути повідомлення</string>
+  <string name="info_add_contact">Додайте контакт для відправки/отримання повідомлень</string>
+  <string name="info_contact_list">Виберіть співрозмовника для відправки/отримання повідомлень. Якщо хочете поспілкуватися з кимось новим, запросіть його за допомогою кнопки додавання</string>
+  <string name="info_messages_list_default">Спочатку виберіть контакт, щоб побачити повідомлення тут</string>
+  <string name="info_no_saved_messages">Для цього контакту немає збережених повідомлень</string>
+  <string name="info_verify_contact">Щоб перевірити безпеку вашого наскрізного шифрування з %1$s, порівняйте наведені вище цифри з цифрами на їхньому пристрої</string>
+  <string name="info_session_creation_failed">Не вдалося створити сесію. Якщо можливо, видаліть відправника зі списку контактів і запросіть новий пакет ключів</string>
+  <string name="info_contact_creation_failed">Не вдалося створити контакт. Відміна</string>
+  <string name="info_add_firstname_add_contact">Введіть ім’я для створення контакту</string>
+  <string name="info_choose_contact_first">Будь ласка, спочатку виберіть контакт</string>
+  <string name="info_no_message_to_encrypt">Немає повідомлення для шифрування</string>
+  <string name="info_no_message_to_decrypt">Немає повідомлення для розшифрування</string>
+  <string name="info_message_decryption_failed">Не вдалося розшифрувати повідомлення. Можливі причини: ви вже розшифрували це повідомлення раніше або сесія недійсна. У цьому випадку видаліть контакт, попросіть його видалити вас і запросіть нове запрошення</string>
+  <string name="info_signal_message_no_contact_found">Будь ласка, спочатку додайте контакт</string>
+  <string name="info_message_encryption_failed">Не вдалося зашифрувати повідомлення</string>
+  <string name="info_update_contact_failed">Не вдалося оновити інформацію про контакт</string>
+
+  <string name="locale_name_en_GB">"Англійська (Велика Британія)"</string>
+  <string name="locale_name_en_US">"Англійська (США)"</string>
+  <string name="locale_name_es_US">"іспанська (США)"</string>
+  <string name="locale_name_hi_ZZ">"Хінґліш"</string>
+  <string name="locale_name_sr_ZZ">"сербська (латиниця)"</string>
+  <string name="subtype_traditional">"традиційна"</string>
+  <string name="subtype_compact">"компактна"</string>
+  <string name="add">"Додати"</string>
+  <string name="remove">"Видалити"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Вібрація при натисканні клавіш"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Гучність натискання клавіш"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Затримка довгого натискання"</string>
+  <string name="button_default">"За умовчанням"</string>
+  <string name="prefs_keyboard_height_settings">Висота клавіатури</string>
+  <string name="keyboard_color">Змінити колір клавіатури</string>
+  <string name="hide_special_chars">Приховати спеціальні символи</string>
+  <string name="hide_language_switch_key">Приховати клавішу зміни мови</string>
+  <string name="pref_enable_ime_switch">Перемикатись на інші клавіатури</string>
+  <string name="show_number_row">Показувати рядок цифр</string>
+  <string name="space_swipe">Переміщати курсор ковзанням по пробілу</string>
+  <string name="delete_swipe">Видаляти ковзанням</string>
+  <string name="matching_navbar_color">Автопідбір кольору для навігаційної панелі</string>
+  <string name="setup_message">Securechat Keyboard не увімкнута. Нажміть ОК для відкриття налаштувань Мови та введення. Виберіть SecureChat Keyboard вашою поточною клавіатурою, щоб використовувати її.</string>
+  <string name="user_languages">Увімкнені розкладки клавіатури</string>
+  <string name="add_language">Додати мову</string>
+  <string name="remove_language">Видалити мову</string>
+  <string name="generic_language_layouts"><xliff:g id="LANGUAGE_NAME" example="English (US)">%s</xliff:g> розкладки клавіатури</string>
+  <string name="change_keyboard">Змінити клавіатуру</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="uk">
+	<body>
+		<main>
+			<h3>Як почати чат?</h3>
+			<ul>
+				<li>Запросіть співрозмовника, натиснувши на список контактів (іконка особи) та надіславши йому запрошувальне повідомлення (іконка додавання особи). Запрошувальне повідомлення буде безпосередньо розміщене в текстовому полі месенджера.</li>
+				<li>Ваш співрозмовник повинен додати вас до свого списку контактів, а потім надіслати вам зашифроване повідомлення. Скопіюйте це повідомлення у буфер обміну та натисніть кнопку «розшифрувати» (іконка відкритого замка).</li>
+				<li>З’явиться нове контекстне меню, де вам потрібно зберегти ім’я співрозмовника. Потім натисніть кнопку «готово».<br/>Контакт буде вибрано автоматично.</li>
+			</ul>
+
+			<h3>Хтось надіслав мені запрошувальне повідомлення. Що мені робити?</h3>
+			<ul>
+				<li>Скопіюйте запрошувальне повідомлення у буфер обміну та натисніть кнопку «розшифрувати» (іконка відкритого замка).</li>
+				<li>З’явиться нове контекстне меню, де вам потрібно зберегти ім’я співрозмовника. Потім натисніть кнопку «готово».</li>
+				<li>Виберіть свого співрозмовника зі списку контактів (іконка особи) та надішліть йому зашифроване повідомлення (іконка закритого конверта).</li>
+			</ul>
+
+			<h3>Як надіслати/зашифрувати повідомлення?</h3>
+			<ul>
+				<li>Якщо ви вже додали співрозмовника до своїх контактів, виберіть його зі списку контактів (іконка особи) та введіть своє повідомлення в текстове поле SecureChat.</li>
+				<li>Потім натисніть кнопку «зашифрувати» (іконка закритого конверта). Повідомлення буде зашифроване у текстовому полі вашого месенджера, і ви зможете його надіслати.</li>
+				<li>Якщо ви ще не додали співрозмовника, ознайомтеся з розділом «Як почати чат?»</li>
+			</ul>
+
+			<h3>Як отримати/розшифрувати повідомлення?</h3>
+			<ul>
+				<li>Виберіть свого співрозмовника зі списку контактів (іконка особи) та скопіюйте повідомлення у буфер обміну. Потім натисніть кнопку «розшифрувати» (іконка відкритого замка).</li>
+				<li>Повідомлення з’явиться в текстовому полі SecureChat.</li>
+			</ul>
+
+			<h3>Як переглянути попередні повідомлення з моїм співрозмовником?</h3>
+			<ul>
+				<li>Виберіть свого співрозмовника зі списку контактів (іконка особи) та натисніть кнопку «журнал повідомлень» в основному вікні (іконка текстової бульбашки).</li>
+				<li>Зверніть увагу, що якщо ви видалите контакт, історія повідомлень також буде видалена.</li>
+			</ul>
+
+			<h3>Як я можу переконатися, що мій співрозмовник є тим, за кого себе видає?</h3>
+			<ul>
+				<li>Поруч з ім’ям вашого співрозмовника у списку контактів (іконка особи) з’являється символ підтвердження/непідтвердження (іконка щита).</li>
+				<li>Натисніть на цей символ, і з’явиться ваш спільний номер безпеки. Порівняйте його з номером вашого співрозмовника.</li>
+				<li>Якщо вони співпадають, натисніть кнопку «готово», і ваш контакт буде позначено як підтверджений.</li>
+			</ul>
+
+			<h3>Які є текстові режими і як між ними перемикатися?</h3>
+			<ul>
+				<li>Існують два різні режими, у яких ви можете надсилати зашифровані повідомлення.</li>
+				<li>У режимі «сирого тексту» публічні ключі та інша інформація відображаються в оригінальному вигляді.<br/>У режимі «казкового» всі дані приховані у приманковому тексті.</li>
+				<li>У обох режимах всі повідомлення залишаються зашифрованими і не можуть бути прочитані сторонніми особами.</li>
+				<li>Ви можете перемикатися між режимами, натискаючи на іконку режиму сирого тексту/книги в текстовому полі SecureChat, зліва.</li>
+			</ul>
+
+			<h3>Що таке повідомлення про оновлення?</h3>
+			<ul>
+				<li>Кожні 30 днів ваш підписаний попередній ключ буде оновлено.</li>
+				<li>Для цього надсилається спеціальне повідомлення, яке містить інформацію про оновлений ключ і ваше зашифроване повідомлення.</li>
+				<li>Для вас та вашого співрозмовника це не вимагає додаткових зусиль, оскільки повідомлення буде створено автоматично при надсиланні наступного зашифрованого повідомлення.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>

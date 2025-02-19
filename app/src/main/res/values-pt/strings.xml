@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+/*
+**
+** Copyright 2008, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+  <string name="vibrate_on_keypress">"Vibrar ao tocar a tecla"</string>
+  <string name="sound_on_keypress">"Som ao tocar a tecla"</string>
+  <string name="popup_on_keypress">"Exibir pop-up ao digitar"</string>
+  <string name="settings_screen_preferences">"Preferências"</string>
+  <string name="settings_screen_key_press">"Pressionar tecla"</string>
+  <string name="settings_screen_appearance">Aparência</string>
+  <string name="settings_screen_theme">"Tema"</string>
+  <string name="settings_system_default">"Padrão do sistema"</string>
+  <string name="auto_cap">"Capitalização automática"</string>
+  <string name="auto_cap_summary">"Iniciar a primeira palavra de cada frase com letra maiúscula"</string>
+  <string name="select_language">"Idiomas"</string>
+  <string name="locale_name_en_GB">"inglês (Reino Unido)"</string>
+  <string name="locale_name_en_US">"inglês (EUA)"</string>
+  <string name="locale_name_es_US">"espanhol (EUA)"</string>
+  <string name="locale_name_hi_ZZ">"Hindi-inglês"</string>
+  <string name="locale_name_sr_ZZ">"Sérvio (Latino)"</string>
+  <string name="subtype_traditional">"tradicional"</string>
+  <string name="subtype_compact">"compacto"</string>
+  <string name="add">"Adicionar"</string>
+  <string name="remove">"Remover"</string>
+  <string name="prefs_keypress_vibration_duration_settings">"Duração da vibração ao tocar"</string>
+  <string name="prefs_keypress_sound_volume_settings">"Volume ao tocar na tela"</string>
+  <string name="prefs_key_longpress_timeout_settings">"Atraso ao pressionar teclas"</string>
+  <string name="button_default">"Padrão"</string>
+  <string name="prefs_keyboard_height_settings">Altura do teclado</string>
+  <string name="keyboard_color">Personalizar cor do teclado</string>
+  <string name="hide_special_chars">Ocultar caracteres especiais</string>
+  <string name="hide_language_switch_key">Ocultar tecla de mudança de idioma</string>
+  <string name="pref_enable_ime_switch">Mudar para outros teclados</string>
+  <string name="show_number_row">Mostrar números em linha separada</string>
+  <string name="space_swipe">Deslizar a barra de espaço para mover o cursor</string>
+  <string name="delete_swipe">Deslizar para excluir</string>
+  <string name="matching_navbar_color">Usar cor correspondente à barra de navegação</string>
+  <string name="setup_message"> SecureChat Keyboard não está ativado. Clique em OK para abrir as configurações &amp; de idiomas e entrada. Você precisará selecionar SecureChat Keyboard no teclado atual para usá-lo.</string>
+  <string name="user_languages">Idiomas de teclado ativados</string>
+  <string name="add_language">Adicionar idioma</string>
+  <string name="remove_language">Remover idioma</string>
+  <string name="generic_language_layouts"><xliff:g id="LANGUAGE_NAME">%s</xliff:g> layouts de teclado</string>
+  <string name="change_keyboard">Mudar teclado</string>
+  <string name="e2ee_help_view_text" translatable="false"><![CDATA[<html lang="pt">
+	<body>
+		<main>
+			<h3>Como iniciar uma conversa?</h3>
+			<ul>
+				<li>Convide um parceiro de conversa clicando na lista de contatos (ícone de pessoa) e enviando sua mensagem de convite (ícone de adicionar pessoa). A mensagem de convite será colocada diretamente no campo de texto do mensageiro.</li>
+				<li>Seu parceiro de conversa precisa adicioná-lo à lista de contatos e, em seguida, enviar-lhe uma mensagem criptografada. Copie essa mensagem para a sua área de transferência e clique no botão "descriptografar" (ícone de cadeado aberto).</li>
+				<li>Um novo menu de contexto será aberto, onde você deverá salvar o nome do parceiro de conversa. Em seguida, clique no botão "concluído".<br/>O contato agora será selecionado automaticamente.</li>
+			</ul>
+
+			<h3>Alguém me enviou uma mensagem de convite. O que devo fazer?</h3>
+			<ul>
+				<li>Copie a mensagem de convite para a sua área de transferência e clique no botão "descriptografar" (ícone de cadeado aberto).</li>
+				<li>Um novo menu de contexto será aberto, onde você deverá salvar o nome do parceiro de conversa. Em seguida, clique no botão "concluído".</li>
+				<li>Selecione seu parceiro de conversa pela lista de contatos (ícone de pessoa) e envie-lhe uma mensagem criptografada (ícone de envelope fechado).</li>
+			</ul>
+
+			<h3>Como enviar/criptografar uma mensagem?</h3>
+			<ul>
+				<li>Se você já adicionou seu parceiro de conversa como contato, selecione-o na lista de contatos (ícone de pessoa) e escreva sua mensagem no campo de texto do SecureChat.</li>
+				<li>Em seguida, clique no botão "criptografar" (ícone de envelope fechado). A mensagem será colocada criptografada no campo de texto do seu mensageiro e você poderá enviá-la.</li>
+				<li>Se você ainda não adicionou seu parceiro de conversa, veja "Como iniciar uma conversa?"</li>
+			</ul>
+
+			<h3>Como receber/descriptografar uma mensagem?</h3>
+			<ul>
+				<li>Selecione seu parceiro de conversa na lista de contatos (ícone de pessoa) e copie a mensagem para a sua área de transferência. Em seguida, clique no botão "descriptografar" (ícone de cadeado aberto).</li>
+				<li>A mensagem será exibida no campo de texto do SecureChat.</li>
+			</ul>
+
+			<h3>Como posso ver mensagens anteriores com meu parceiro de conversa?</h3>
+			<ul>
+				<li>Selecione seu parceiro de conversa na lista de contatos (ícone de pessoa) e, em seguida, clique no botão "registro de mensagens" na visualização principal (ícone de balão de texto).</li>
+				<li>Note que, se você excluir o contato, o histórico de mensagens também será apagado.</li>
+			</ul>
+
+			<h3>Como posso verificar se meu parceiro de conversa é realmente quem diz ser?</h3>
+			<ul>
+				<li>Ao lado do nome do seu parceiro de conversa na lista de contatos (ícone de pessoa) há um símbolo de verificado/não verificado (ícone de escudo).</li>
+				<li>Clique no símbolo e aparecerá o seu número de segurança compartilhado. Compare esse número com o número do seu parceiro de conversa.</li>
+				<li>Se eles coincidirem, clique no botão "concluído" e seu contato será marcado como verificado.</li>
+			</ul>
+
+			<h3>Quais são os modos de texto e como posso alternar entre eles?</h3>
+			<ul>
+				<li>Existem dois modos diferentes nos quais você pode enviar suas mensagens criptografadas.</li>
+				<li>No modo Raw, as chaves públicas e outras informações são exibidas em sua forma bruta.<br/>No modo Conto de Fadas, todas as informações são ocultadas em um texto de disfarce.</li>
+				<li>Em ambos os modos, todas as mensagens permanecem criptografadas e não podem ser lidas por terceiros.</li>
+				<li>Você pode alternar entre os modos clicando no ícone raw/livro no campo de texto do SecureChat à esquerda.</li>
+			</ul>
+
+			<h3>O que é uma mensagem de atualização?</h3>
+			<ul>
+				<li>A cada 30 dias, sua pré-chave assinada será renovada.</li>
+				<li>Para esse fim, é enviada uma mensagem especial, que consiste nas informações da sua chave renovada e na sua mensagem criptografada.</li>
+				<li>Para você e seu parceiro de conversa, isso significa que nenhum esforço adicional é necessário, pois a mensagem será gerada automaticamente quando você enviar a próxima mensagem criptografada.</li>
+			</ul>
+		</main>
+	</body>
+</html>]]></string>
+
+</resources>
