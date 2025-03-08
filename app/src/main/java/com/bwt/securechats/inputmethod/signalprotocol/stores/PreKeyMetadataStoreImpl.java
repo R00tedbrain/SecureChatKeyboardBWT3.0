@@ -1,7 +1,12 @@
 package com.bwt.securechats.inputmethod.signalprotocol.stores;
 
+/**
+ * Implementación concreta de PreKeyMetadataStore.
+ * Repite los mismos getters/setters, permitiendo la serialización JSON si usas Jackson.
+ */
 public class PreKeyMetadataStoreImpl extends PreKeyMetadataStore {
 
+  // ECC
   public int getNextSignedPreKeyId() {
     return nextSignedPreKeyId;
   }
@@ -57,5 +62,21 @@ public class PreKeyMetadataStoreImpl extends PreKeyMetadataStore {
   public void setOldSignedPreKeyDeletionTime(long oldSignedPreKeyDeletionTime) {
     this.oldSignedPreKeyDeletionTime = oldSignedPreKeyDeletionTime;
   }
-}
 
+  // PQC (Kyber)
+  public long getNextKyberPreKeyRefreshTime() {
+    return nextKyberPreKeyRefreshTime;
+  }
+
+  public void setNextKyberPreKeyRefreshTime(long nextKyberPreKeyRefreshTime) {
+    this.nextKyberPreKeyRefreshTime = nextKyberPreKeyRefreshTime;
+  }
+
+  public long getOldKyberPreKeyDeletionTime() {
+    return oldKyberPreKeyDeletionTime;
+  }
+
+  public void setOldKyberPreKeyDeletionTime(long oldKyberPreKeyDeletionTime) {
+    this.oldKyberPreKeyDeletionTime = oldKyberPreKeyDeletionTime;
+  }
+}

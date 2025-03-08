@@ -5,6 +5,9 @@ package com.bwt.securechats.inputmethod.signalprotocol.stores;
  */
 public abstract class PreKeyMetadataStore {
 
+  // ------------------------------------------------
+  // Campos para ECC SignedPreKeys
+  // ------------------------------------------------
   int nextSignedPreKeyId = 0;
   int activeSignedPreKeyId = 0;
   boolean isSignedPreKeyRegistered = false;
@@ -13,6 +16,16 @@ public abstract class PreKeyMetadataStore {
 
   long nextSignedPreKeyRefreshTime = 0L;
   long oldSignedPreKeyDeletionTime = 0L; // lastSignedPreKeyRotationTime + 48h
+
+  // ------------------------------------------------
+  // NUEVOS CAMPOS para rotación de pre-claves Kyber
+  // ------------------------------------------------
+  long nextKyberPreKeyRefreshTime = 0L;
+  long oldKyberPreKeyDeletionTime = 0L;
+
+  // ------------------------------------------------
+  // Getters/Setters ECC
+  // ------------------------------------------------
 
   public int getNextSignedPreKeyId() {
     return nextSignedPreKeyId;
@@ -46,12 +59,10 @@ public abstract class PreKeyMetadataStore {
     this.signedPreKeyFailureCount = signedPreKeyFailureCount;
   }
 
-  // get bound
   public int getNextOneTimePreKeyId() {
     return nextOneTimePreKeyId;
   }
 
-  // set bound
   public void setNextOneTimePreKeyId(int nextOneTimePreKeyId) {
     this.nextOneTimePreKeyId = nextOneTimePreKeyId;
   }
@@ -70,5 +81,25 @@ public abstract class PreKeyMetadataStore {
 
   public void setOldSignedPreKeyDeletionTime(long oldSignedPreKeyDeletionTime) {
     this.oldSignedPreKeyDeletionTime = oldSignedPreKeyDeletionTime;
+  }
+
+  // ------------------------------------------------
+  // Getters/Setters PQC (Kyber)
+  // ------------------------------------------------
+
+  public long getNextKyberPreKeyRefreshTime() {
+    return nextKyberPreKeyRefreshTime;
+  }
+
+  public void setNextKyberPreKeyRefreshTime(long nextKyberPreKeyRefreshTime) {
+    this.nextKyberPreKeyRefreshTime = nextKyberPreKeyRefreshTime;
+  }
+
+  public long getOldKyberPreKeyDeletionTime() {
+    return oldKyberPreKeyDeletionTime;
+  }
+
+  public void setOldKyberPreKeyDeletionTime(long oldKyberPreKeyDeletionTime) {
+    this.oldKyberPreKeyDeletionTime = oldKyberPreKeyDeletionTime;
   }
 }
