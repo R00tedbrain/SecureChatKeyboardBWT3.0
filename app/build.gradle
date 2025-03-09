@@ -28,7 +28,7 @@ android {
 }
 
 dependencies {
-    implementation files("libs/bcprov-ext-jdk15to18-172.jar")
+    implementation 'org.bouncycastle:bcprov-ext-jdk18on:1.78.1'
     implementation 'com.google.protobuf:protobuf-javalite:3.21.12'
     implementation 'org.signal:libsignal-android:0.67.2'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
