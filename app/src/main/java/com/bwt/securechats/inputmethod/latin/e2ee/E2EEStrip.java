@@ -50,8 +50,8 @@ public class E2EEStrip {
   private final String INFO_CONTACT_INVALID = "Contact is invalid and was not saved";
   private final String INFO_SESSION_CREATION_FAILED = "Session creation failed. If possible delete sender in contact list and ask for a new keybundle";
 
-  private final int CHAR_THRESHOLD_RAW = 500;
-  private final int CHAR_THRESHOLD_FAIRYTALE = 500;
+  private final int CHAR_THRESHOLD_RAW = 1700;
+  private final int CHAR_THRESHOLD_FAIRYTALE = 1700;
 
   public E2EEStrip(Context context) {
     mContext = context;

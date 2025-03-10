@@ -34,6 +34,11 @@ public class EncodeHelper {
   }
 
   public static byte[] convertBinaryToByteArray(String binary) {
+    // Corrección para evitar NumberFormatException cuando 'binary' está vacío o nulo
+    if (binary == null || binary.isEmpty()) {
+      Log.e(TAG, "convertBinaryToByteArray => empty or null binary string => returning empty array");
+      return new byte[0];
+    }
     return new BigInteger(binary, 2).toByteArray();
   }
 
@@ -217,7 +222,7 @@ public class EncodeHelper {
 
   public static String minifyJSON(String json) {
     String minifiedJSON = json.replaceAll(" ", "")
-        .replaceAll("\n", "");
+            .replaceAll("\n", "");
     return simplifyJsonKeys(minifiedJSON);
   }
 
@@ -241,20 +246,20 @@ public class EncodeHelper {
 
   private static String simplifyJsonKeys(String json) {
     return json
-        .replaceAll("\"preKeyResponse\"", "\"" + simplifiedJSONMap.get("preKeyResponse") + "\"")
-        .replaceAll("\"identityKey\"", "\"" + simplifiedJSONMap.get("identityKey") + "\"")
-        .replaceAll("\"publicKey\"", "\"" + simplifiedJSONMap.get("publicKey") + "\"")
-        .replaceAll("\"devices\"", "\"" + simplifiedJSONMap.get("devices") + "\"")
-        .replaceAll("\"deviceId\"", "\"" + simplifiedJSONMap.get("deviceId") + "\"")
-        .replaceAll("\"registrationId\"", "\"" + simplifiedJSONMap.get("registrationId") + "\"")
-        .replaceAll("\"signedPreKey\"", "\"" + simplifiedJSONMap.get("signedPreKey") + "\"")
-        .replaceAll("\"keyId\"", "\"" + simplifiedJSONMap.get("keyId") + "\"")
-        .replaceAll("\"signature\"", "\"" + simplifiedJSONMap.get("signature") + "\"")
-        .replaceAll("\"preKey\"", "\"" + simplifiedJSONMap.get("preKey") + "\"")
-        .replaceAll("\"ciphertextMessage\"", "\"" + simplifiedJSONMap.get("ciphertextMessage") + "\"")
-        .replaceAll("\"ciphertextType\"", "\"" + simplifiedJSONMap.get("ciphertextType") + "\"")
-        .replaceAll("\"timestamp\"", "\"" + simplifiedJSONMap.get("timestamp") + "\"")
-        .replaceAll("\"signalProtocolAddressName\"", "\"" + simplifiedJSONMap.get("signalProtocolAddressName") + "\"");
+            .replaceAll("\"preKeyResponse\"", "\"" + simplifiedJSONMap.get("preKeyResponse") + "\"")
+            .replaceAll("\"identityKey\"", "\"" + simplifiedJSONMap.get("identityKey") + "\"")
+            .replaceAll("\"publicKey\"", "\"" + simplifiedJSONMap.get("publicKey") + "\"")
+            .replaceAll("\"devices\"", "\"" + simplifiedJSONMap.get("devices") + "\"")
+            .replaceAll("\"deviceId\"", "\"" + simplifiedJSONMap.get("deviceId") + "\"")
+            .replaceAll("\"registrationId\"", "\"" + simplifiedJSONMap.get("registrationId") + "\"")
+            .replaceAll("\"signedPreKey\"", "\"" + simplifiedJSONMap.get("signedPreKey") + "\"")
+            .replaceAll("\"keyId\"", "\"" + simplifiedJSONMap.get("keyId") + "\"")
+            .replaceAll("\"signature\"", "\"" + simplifiedJSONMap.get("signature") + "\"")
+            .replaceAll("\"preKey\"", "\"" + simplifiedJSONMap.get("preKey") + "\"")
+            .replaceAll("\"ciphertextMessage\"", "\"" + simplifiedJSONMap.get("ciphertextMessage") + "\"")
+            .replaceAll("\"ciphertextType\"", "\"" + simplifiedJSONMap.get("ciphertextType") + "\"")
+            .replaceAll("\"timestamp\"", "\"" + simplifiedJSONMap.get("timestamp") + "\"")
+            .replaceAll("\"signalProtocolAddressName\"", "\"" + simplifiedJSONMap.get("signalProtocolAddressName") + "\"");
   }
 
   private static HashMap<String, String> initSimplifiedJsonMap() {
@@ -278,21 +283,21 @@ public class EncodeHelper {
 
   public static String deSimplifyJsonKeys(final String simplifiedJSON) {
     return simplifiedJSON
-        .replaceAll("\"pR\"", "\"" + getMapKeyFromValue("pR") + "\"")
-        .replaceAll("\"i\"", "\"" + getMapKeyFromValue("i") + "\"")
-        .replaceAll("\"pK\"", "\"" + getMapKeyFromValue("pK") + "\"")
-        .replaceAll("\"d\"", "\"" + getMapKeyFromValue("d") + "\"")
-        .replaceAll("\"dI\"", "\"" + getMapKeyFromValue("dI") + "\"")
-        .replaceAll("\"iK\"", "\"" + getMapKeyFromValue("iK") + "\"")
-        .replaceAll("\"rI\"", "\"" + getMapKeyFromValue("rI") + "\"")
-        .replaceAll("\"k\"", "\"" + getMapKeyFromValue("k") + "\"")
-        .replaceAll("\"s\"", "\"" + getMapKeyFromValue("s") + "\"")
-        .replaceAll("\"sK\"", "\"" + getMapKeyFromValue("sK") + "\"")
-        .replaceAll("\"c\"", "\"" + getMapKeyFromValue("c") + "\"")
-        .replaceAll("\"cT\"", "\"" + getMapKeyFromValue("cT") + "\"")
-        .replaceAll("\"t\"", "\"" + getMapKeyFromValue("t") + "\"")
-        .replaceAll("\"prK\"", "\"" + getMapKeyFromValue("prK") + "\"")
-        .replaceAll("\"a\"", "\"" + getMapKeyFromValue("a") + "\"");
+            .replaceAll("\"pR\"", "\"" + getMapKeyFromValue("pR") + "\"")
+            .replaceAll("\"i\"", "\"" + getMapKeyFromValue("i") + "\"")
+            .replaceAll("\"pK\"", "\"" + getMapKeyFromValue("pK") + "\"")
+            .replaceAll("\"d\"", "\"" + getMapKeyFromValue("d") + "\"")
+            .replaceAll("\"dI\"", "\"" + getMapKeyFromValue("dI") + "\"")
+            .replaceAll("\"iK\"", "\"" + getMapKeyFromValue("iK") + "\"")
+            .replaceAll("\"rI\"", "\"" + getMapKeyFromValue("rI") + "\"")
+            .replaceAll("\"k\"", "\"" + getMapKeyFromValue("k") + "\"")
+            .replaceAll("\"s\"", "\"" + getMapKeyFromValue("s") + "\"")
+            .replaceAll("\"sK\"", "\"" + getMapKeyFromValue("sK") + "\"")
+            .replaceAll("\"c\"", "\"" + getMapKeyFromValue("c") + "\"")
+            .replaceAll("\"cT\"", "\"" + getMapKeyFromValue("cT") + "\"")
+            .replaceAll("\"t\"", "\"" + getMapKeyFromValue("t") + "\"")
+            .replaceAll("\"prK\"", "\"" + getMapKeyFromValue("prK") + "\"")
+            .replaceAll("\"a\"", "\"" + getMapKeyFromValue("a") + "\"");
   }
 
   private static String getMapKeyFromValue(String value) {

@@ -2,6 +2,8 @@ package com.bwt.securechats.inputmethod.signalprotocol.pqc;
 
 import android.util.Log;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
@@ -65,7 +67,9 @@ public class BCKyberPreKeyStoreImpl {
 
     /**
      * Devuelve un Set con todos los IDs de pre-clave Kyber actualmente almacenados.
+     * Se ignora en la serialización/deserialización para evitar problemas con Jackson.
      */
+    @JsonIgnore
     public synchronized Set<Integer> getAllIds() {
         return store.keySet();
     }
