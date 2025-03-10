@@ -25,7 +25,11 @@ import androidx.security.crypto.EncryptedSharedPreferences;
 import androidx.security.crypto.MasterKey;
 
 public class StorageHelper {
+
   static final String TAG = "StorageHelper_DEBUG";
+
+  // << FLAG para alternar entre EncryptedSharedPreferences y SharedPreferences normal >>
+  private static final boolean USE_ENCRYPTED = true;
 
   private final Context mContext;
   private final String mSharedPreferenceName = "protocol";
@@ -135,11 +139,7 @@ public class StorageHelper {
       logError("mContext");
       return;
     }
-    // --- ORIGINAL (comentado):
-    //SharedPreferences sharedPreferences = mContext.getSharedPreferences(mSharedPreferenceName, Context.MODE_PRIVATE);
-
-    // --- NUEVO: Usamos EncryptedSharedPreferences:
-    SharedPreferences sharedPreferences = getSecureSharedPreferences();
+    SharedPreferences sharedPreferences = getSafeSharedPreferences();
     if (sharedPreferences == null) {
       logError("sharedPreferences");
       return;
@@ -159,11 +159,7 @@ public class StorageHelper {
       logError("mContext");
       return null;
     }
-    // --- ORIGINAL (comentado):
-    //SharedPreferences sharedPreferences = mContext.getSharedPreferences(mSharedPreferenceName, Context.MODE_PRIVATE);
-
-    // --- NUEVO: Usamos EncryptedSharedPreferences:
-    SharedPreferences sharedPreferences = getSecureSharedPreferences();
+    SharedPreferences sharedPreferences = getSafeSharedPreferences();
     if (sharedPreferences == null) {
       logError("sharedPreferences");
       return null;
@@ -194,25 +190,21 @@ public class StorageHelper {
       return;
     }
 
-    // 1. Obtenemos el Account
     Account account = getAccountFromSharedPreferences();
     if (account == null) {
       Log.e(TAG, "deleteMessagesForContact: Account is null => cannot proceed");
       return;
     }
 
-    // 2. Obtenemos la lista global de mensajes
     List<StorageMessage> allMessages = account.getUnencryptedMessages();
     if (allMessages == null) {
       Log.i(TAG, "deleteMessagesForContact => allMessages is null => nothing to remove");
       return;
     }
 
-    // 3. Eliminamos los mensajes que correspondan a este contactUUID
     int before = allMessages.size();
     Log.d(TAG, "deleteMessagesForContact => before removal => size=" + before);
 
-    // removeIf => Java 8+
     allMessages.removeIf(msg -> {
       boolean match = contactUUID.equals(msg.getContactUUID());
       if (match) {
@@ -225,22 +217,38 @@ public class StorageHelper {
     Log.i(TAG, "deleteMessagesForContact => removed " + (before - after)
             + " messages for contactUUID=" + contactUUID);
 
-    // 4. Guardar nuevamente la lista de mensajes depurada
     account.setUnencryptedMessages(new ArrayList<>(allMessages));
-
-    // 5. Persistir en SharedPreferences
     Log.d(TAG, "deleteMessagesForContact => storing updated account info");
     storeAllInformationInSharedPreferences(account);
   }
 
   /**
-   * Devuelve una instancia de SharedPreferences cifradas (EncryptedSharedPreferences).
+   * Decide si usas EncryptedSharedPreferences o normal, según USE_ENCRYPTED.
    */
-  private SharedPreferences getSecureSharedPreferences() {
+  private SharedPreferences getSafeSharedPreferences() {
+    if (USE_ENCRYPTED) {
+      return getEncryptedPreferences();
+    } else {
+      return getNormalPreferences();
+    }
+  }
+
+  /**
+   * SharedPreferences normal (no cifradas).
+   */
+  private SharedPreferences getNormalPreferences() {
+    return mContext.getSharedPreferences(mSharedPreferenceName, Context.MODE_PRIVATE);
+  }
+
+  /**
+   * SharedPreferences cifradas con TU Masterkey.
+   */
+  private SharedPreferences getEncryptedPreferences() {
     try {
-      MasterKey masterKey = Masterkey.getMasterKey(mContext);
+      // Llamas a TU com.bwt.securechats.inputmethod.Masterkey
+      MasterKey masterKey = com.bwt.securechats.inputmethod.Masterkey.getMasterKey(mContext);
       if (masterKey == null) {
-        Log.e(TAG, "getSecureSharedPreferences => MasterKey is null. Returning null.");
+        Log.e(TAG, "getEncryptedPreferences => MasterKey is null. Returning null.");
         return null;
       }
       return EncryptedSharedPreferences.create(

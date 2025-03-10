@@ -19,6 +19,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.KeyDeserializer;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.databind.node.IntNode;
@@ -40,6 +41,10 @@ public class JsonUtil {
 
   static {
     objectMapper = new ObjectMapper();
+    // Desactiva el FAIL_ON_EMPTY_BEANS para evitar error con beans "vacíos"
+    objectMapper.configure(SerializationFeature.FAIL_ON_EMPTY_BEANS, false);
+
+    // Módulo con tus Serializers/Deserializers
     SimpleModule module = new SimpleModule();
     module.addSerializer(IdentityKeyPair.class, new IdentityKeyPairSerializer());
     module.addDeserializer(IdentityKeyPair.class, new IdentityKeyPairDeserializer());
@@ -50,10 +55,15 @@ public class JsonUtil {
     module.addKeySerializer(SenderKey.class, new SenderKeySerializer());
     module.addKeyDeserializer(SenderKey.class, new SenderKeyDeserializer());
     objectMapper.registerModule(module);
-    objectMapper.findAndRegisterModules(); // for Instant type
+
+    // Para tipos extra (Instant, etc.)
+    objectMapper.findAndRegisterModules();
+
+    // Ignora campos que no existan en la clase
     objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-    objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL); // ignore null values
-    // objectMapper.enable(SerializationFeature.INDENT_OUTPUT); // for pretty json
+
+    // No serializa null
+    objectMapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
   }
 
   public static String toJson(Object object) {
@@ -71,17 +81,17 @@ public class JsonUtil {
   }
 
   public static <T> T fromJson(String json, Class<T> clazz)
-      throws IOException {
+          throws IOException {
     return objectMapper.readValue(json, clazz);
   }
 
   public static <T> T fromJson(String json, TypeReference<T> typeRef)
-      throws IOException {
+          throws IOException {
     return objectMapper.readValue(json, typeRef);
   }
 
   public static <T> T fromJsonResponse(String json, TypeReference<T> typeRef)
-      throws MalformedResponseException {
+          throws MalformedResponseException {
     try {
       return JsonUtil.fromJson(json, typeRef);
     } catch (IOException e) {
@@ -90,7 +100,7 @@ public class JsonUtil {
   }
 
   public static <T> T fromJsonResponse(String body, Class<T> clazz)
-      throws MalformedResponseException {
+          throws MalformedResponseException {
     try {
       return JsonUtil.fromJson(body, clazz);
     } catch (IOException e) {
@@ -98,20 +108,23 @@ public class JsonUtil {
     }
   }
 
+  // Helpers
   public static ArrayList<Contact> convertContactsList(ArrayList<Contact> classFromSharedPreferences) {
-    return objectMapper.convertValue(classFromSharedPreferences, new TypeReference<ArrayList<Contact>>() {
-    });
+    return objectMapper.convertValue(classFromSharedPreferences, new TypeReference<ArrayList<Contact>>() {});
   }
 
   public static ArrayList<StorageMessage> convertUnencryptedMessagesList(ArrayList<StorageMessage> classFromSharedPreferences) {
-    return objectMapper.convertValue(classFromSharedPreferences, new TypeReference<ArrayList<StorageMessage>>() {
-    });
+    return objectMapper.convertValue(classFromSharedPreferences, new TypeReference<ArrayList<StorageMessage>>() {});
   }
+
+  // --------------------------------------------------------------------------
+  // Serializers / Deserializers
+  // --------------------------------------------------------------------------
 
   public static class IdentityKeySerializer extends JsonSerializer<IdentityKey> {
     @Override
     public void serialize(IdentityKey value, JsonGenerator gen, SerializerProvider serializers)
-        throws IOException {
+            throws IOException {
       Log.d(TAG, "IdentityKeySerializer used");
       gen.writeStartObject();
       gen.writeStringField("publicKey", Base64.encodeBytesWithoutPadding(value.getPublicKey().serialize()));
@@ -135,7 +148,7 @@ public class JsonUtil {
   public static class IdentityKeyPairSerializer extends JsonSerializer<IdentityKeyPair> {
     @Override
     public void serialize(IdentityKeyPair value, JsonGenerator gen, SerializerProvider serializers)
-        throws IOException {
+            throws IOException {
       Log.d(TAG, "IdentityKeyPairSerializer used");
       gen.writeString(Base64.encodeBytesWithoutPadding(value.serialize()));
     }
@@ -152,7 +165,7 @@ public class JsonUtil {
   public static class SignalProtocolAddressSerializer extends JsonSerializer<SignalProtocolAddress> {
     @Override
     public void serialize(SignalProtocolAddress value, JsonGenerator gen, SerializerProvider serializers)
-        throws IOException {
+            throws IOException {
       Log.d(TAG, "SignalProtocolAddressKeySerializer used");
       gen.writeStartObject();
       gen.writeStringField("name", value.getName());

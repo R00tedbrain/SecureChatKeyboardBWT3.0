@@ -76,7 +76,7 @@ import java.util.concurrent.TimeUnit;
  * Input method implementation for Qwerty'ish keyboard.
  */
 public class LatinIME extends InputMethodService implements KeyboardActionListener, E2EEStripView.Listener,
-    RichInputMethodManager.SubtypeChangedListener {
+        RichInputMethodManager.SubtypeChangedListener {
   static final String TAG = LatinIME.class.getSimpleName();
   private static final boolean TRACE = false;
 
@@ -127,7 +127,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       }
       final Resources res = latinIme.getResources();
       mDelayInMillisecondsToUpdateShiftState = res.getInteger(
-          R.integer.config_delay_in_milliseconds_to_update_shift_state);
+              R.integer.config_delay_in_milliseconds_to_update_shift_state);
     }
 
     @Override
@@ -140,18 +140,18 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       switch (msg.what) {
         case MSG_UPDATE_SHIFT_STATE:
           switcher.requestUpdatingShiftState(latinIme.getCurrentAutoCapsState(),
-              latinIme.getCurrentRecapitalizeState());
+                  latinIme.getCurrentRecapitalizeState());
           break;
         case MSG_RESET_CACHES:
           final SettingsValues settingsValues = latinIme.mSettings.getCurrent();
           if (latinIme.mInputLogic.retryResetCachesAndReturnSuccess(
-              msg.arg1 == ARG1_TRUE /* tryResumeSuggestions */,
-              msg.arg2 /* remainingTries */, this /* handler */)) {
+                  msg.arg1 == ARG1_TRUE /* tryResumeSuggestions */,
+                  msg.arg2 /* remainingTries */, this /* handler */)) {
             // If we were able to reset the caches, then we can reload the keyboard.
             // Otherwise, we'll do it when we can.
             latinIme.mKeyboardSwitcher.loadKeyboard(latinIme.getCurrentInputEditorInfo(),
-                settingsValues, latinIme.getCurrentAutoCapsState(),
-                latinIme.getCurrentRecapitalizeState());
+                    settingsValues, latinIme.getCurrentAutoCapsState(),
+                    latinIme.getCurrentRecapitalizeState());
           }
           break;
         case MSG_WAIT_FOR_DICTIONARY_LOAD:
@@ -166,18 +166,18 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     public void postResetCaches(final boolean tryResumeSuggestions, final int remainingTries) {
       removeMessages(MSG_RESET_CACHES);
       sendMessage(obtainMessage(MSG_RESET_CACHES, tryResumeSuggestions ? 1 : 0,
-          remainingTries, null));
+              remainingTries, null));
     }
 
     public void postUpdateShiftState() {
       removeMessages(MSG_UPDATE_SHIFT_STATE);
       sendMessageDelayed(obtainMessage(MSG_UPDATE_SHIFT_STATE),
-          mDelayInMillisecondsToUpdateShiftState);
+              mDelayInMillisecondsToUpdateShiftState);
     }
 
     public void postDeallocateMemory() {
       sendMessageDelayed(obtainMessage(MSG_DEALLOCATE_MEMORY),
-          DELAY_DEALLOCATE_MEMORY_MILLIS);
+              DELAY_DEALLOCATE_MEMORY_MILLIS);
     }
 
     public void cancelDeallocateMemory() {
@@ -236,7 +236,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
 
     public void onStartInputView(final EditorInfo editorInfo, final boolean restarting) {
       if (hasMessages(MSG_PENDING_IMS_CALLBACK)
-          && KeyboardId.equivalentEditorInfoForKeyboard(editorInfo, mAppliedEditorInfo)) {
+              && KeyboardId.equivalentEditorInfoForKeyboard(editorInfo, mAppliedEditorInfo)) {
         // Typically this is the second onStartInputView after orientation changed.
         resetPendingImsCallback();
       } else {
@@ -245,7 +245,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
           mPendingSuccessiveImsCallback = false;
           resetPendingImsCallback();
           sendMessageDelayed(obtainMessage(MSG_PENDING_IMS_CALLBACK),
-              PENDING_IMS_CALLBACK_DURATION_MILLIS);
+                  PENDING_IMS_CALLBACK_DURATION_MILLIS);
         }
         final LatinIME latinIme = getOwnerInstance();
         if (latinIme != null) {
@@ -350,7 +350,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
   private boolean isImeSuppressedByHardwareKeyboard() {
     final KeyboardSwitcher switcher = KeyboardSwitcher.getInstance();
     return !onEvaluateInputViewShown() && switcher.isImeSuppressedByHardwareKeyboard(
-        mSettings.getCurrent(), switcher.getKeyboardSwitchState());
+            mSettings.getCurrent(), switcher.getKeyboardSwitchState());
   }
 
   @Override
@@ -432,6 +432,15 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
   void onStartInputInternal(final EditorInfo editorInfo, final boolean restarting) {
     super.onStartInput(editorInfo, restarting);
 
+    // [ADDED CODE] -----------------------------------------------------------
+    // Recarga la cuenta si detectamos que está en null,
+    // para que no desaparezcan contactos ni pre-keys
+    if (SignalProtocolMain.getInstance().getAccount() == null) {
+      Log.d(TAG, "onStartInputInternal => mAccount is null => forcing reloadAccount...");
+      SignalProtocolMain.reloadAccount(this);
+    }
+    // [END OF ADDED CODE] ----------------------------------------------------
+
     // If the primary hint language does not match the current subtype language, then try
     // to switch to the primary hint language.
     // TODO: Support all the locales in EditorInfo#hintLocales.
@@ -444,6 +453,14 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
 
   void onStartInputViewInternal(final EditorInfo editorInfo, final boolean restarting) {
     super.onStartInputView(editorInfo, restarting);
+
+    // [ADDED CODE] -----------------------------------------------------------
+    // Volvemos a forzar la recarga por si la IME fue destruida
+    if (SignalProtocolMain.getInstance().getAccount() == null) {
+      Log.d(TAG, "onStartInputViewInternal => mAccount is null => forcing reloadAccount...");
+      SignalProtocolMain.reloadAccount(this);
+    }
+    // [END OF ADDED CODE] ----------------------------------------------------
 
     // Switch to the null consumer to handle cases leading to early exit below, for which we
     // also wouldn't be consuming gesture data.
@@ -463,17 +480,17 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     }
     if (DebugFlags.DEBUG_ENABLED) {
       Log.d(TAG, "onStartInputView: editorInfo:"
-          + String.format("inputType=0x%08x imeOptions=0x%08x",
-          editorInfo.inputType, editorInfo.imeOptions));
+              + String.format("inputType=0x%08x imeOptions=0x%08x",
+              editorInfo.inputType, editorInfo.imeOptions));
       Log.d(TAG, "All caps = "
-          + ((editorInfo.inputType & InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS) != 0)
-          + ", sentence caps = "
-          + ((editorInfo.inputType & InputType.TYPE_TEXT_FLAG_CAP_SENTENCES) != 0)
-          + ", word caps = "
-          + ((editorInfo.inputType & InputType.TYPE_TEXT_FLAG_CAP_WORDS) != 0));
+              + ((editorInfo.inputType & InputType.TYPE_TEXT_FLAG_CAP_CHARACTERS) != 0)
+              + ", sentence caps = "
+              + ((editorInfo.inputType & InputType.TYPE_TEXT_FLAG_CAP_SENTENCES) != 0)
+              + ", word caps = "
+              + ((editorInfo.inputType & InputType.TYPE_TEXT_FLAG_CAP_WORDS) != 0));
     }
     Log.i(TAG, "Starting input. Cursor position = "
-        + editorInfo.initialSelStart + "," + editorInfo.initialSelEnd);
+            + editorInfo.initialSelStart + "," + editorInfo.initialSelEnd);
 
     // In landscape mode, this method gets called without the input view being created.
     if (mainKeyboardView == null) {
@@ -504,7 +521,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
 
       // TODO[IL]: Can the following be moved to InputLogic#startInput?
       if (!mInputLogic.mConnection.resetCachesUponCursorMoveAndReturnSuccess(
-          editorInfo.initialSelStart, editorInfo.initialSelEnd)) {
+              editorInfo.initialSelStart, editorInfo.initialSelEnd)) {
         // Sometimes, while rotating, for some reason the framework tells the app we are not
         // connected to it and that means we can't refresh the cache. In this case, schedule
         // a refresh later.
@@ -521,7 +538,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     }
 
     if (isDifferentTextField ||
-        !currentSettingsValues.hasSameOrientation(getResources().getConfiguration())) {
+            !currentSettingsValues.hasSameOrientation(getResources().getConfiguration())) {
       loadSettings();
     }
     if (isDifferentTextField) {
@@ -529,7 +546,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       currentSettingsValues = mSettings.getCurrent();
 
       switcher.loadKeyboard(editorInfo, currentSettingsValues, getCurrentAutoCapsState(),
-          getCurrentRecapitalizeState());
+              getCurrentRecapitalizeState());
       if (needToCallLoadKeyboardLater) {
         // If we need to call loadKeyboard again later, we need to save its state now. The
         // later call will be done in #retryResetCaches.
@@ -539,13 +556,13 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       // TODO: Come up with a more comprehensive way to reset the keyboard layout when
       // a keyboard layout set doesn't get reloaded in this method.
       switcher.resetKeyboardStateToAlphabet(getCurrentAutoCapsState(),
-          getCurrentRecapitalizeState());
+              getCurrentRecapitalizeState());
       // In apps like Talk, we come here when the text is sent and the field gets emptied and
       // we need to re-evaluate the shift state, but not the whole layout which would be
       // disruptive.
       // Space state must be updated before calling updateShiftState
       switcher.requestUpdatingShiftState(getCurrentAutoCapsState(),
-          getCurrentRecapitalizeState());
+              getCurrentRecapitalizeState());
     }
 
     if (TRACE) Debug.startMethodTracing("/data/trace/latinime");
@@ -590,11 +607,11 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
                                 final int newSelStart, final int newSelEnd,
                                 final int composingSpanStart, final int composingSpanEnd) {
     super.onUpdateSelection(oldSelStart, oldSelEnd, newSelStart, newSelEnd,
-        composingSpanStart, composingSpanEnd);
+            composingSpanStart, composingSpanEnd);
     if (DebugFlags.DEBUG_ENABLED) {
       Log.i(TAG, "onUpdateSelection: oss=" + oldSelStart + ", ose=" + oldSelEnd
-          + ", nss=" + newSelStart + ", nse=" + newSelEnd
-          + ", cs=" + composingSpanStart + ", ce=" + composingSpanEnd);
+              + ", nss=" + newSelStart + ", nse=" + newSelEnd
+              + ", cs=" + composingSpanStart + ", ce=" + composingSpanEnd);
     }
 
     // This call happens whether our view is displayed or not, but if it's not then we should
@@ -602,9 +619,9 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     // view is not displayed we have no means of showing suggestions anyway, and if it is then
     // we want to show suggestions anyway.
     if (isInputViewShown()
-        && mInputLogic.onUpdateSelection(newSelStart, newSelEnd)) {
+            && mInputLogic.onUpdateSelection(newSelStart, newSelEnd)) {
       mKeyboardSwitcher.requestUpdatingShiftState(getCurrentAutoCapsState(),
-          getCurrentRecapitalizeState());
+              getCurrentRecapitalizeState());
     }
   }
 
@@ -647,7 +664,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     mE2EEStripView.setVisibility(View.VISIBLE);
 
     final int e2eeOptionsHeight = (mE2EEStripView.getVisibility() == View.VISIBLE)
-        ? mE2EEStripView.getHeight() : 0;
+            ? mE2EEStripView.getHeight() : 0;
     final int visibleTopY = inputHeight - visibleKeyboardView.getHeight() - e2eeOptionsHeight;
     // Need to set expanded touchable region only if a keyboard view is being shown.
     if (visibleKeyboardView.isShown()) {
@@ -655,8 +672,8 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       final int touchTop = mKeyboardSwitcher.isShowingMoreKeysPanel() ? 0 : visibleTopY;
       final int touchRight = visibleKeyboardView.getWidth();
       final int touchBottom = inputHeight
-          // Extend touchable region below the keyboard.
-          + EXTENDED_TOUCHABLE_REGION_HEIGHT;
+              // Extend touchable region below the keyboard.
+              + EXTENDED_TOUCHABLE_REGION_HEIGHT;
       outInsets.touchableInsets = InputMethodService.Insets.TOUCHABLE_INSETS_REGION;
       outInsets.touchableRegion.set(touchLeft, touchTop, touchRight, touchBottom);
     }
@@ -703,7 +720,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
 
   private void updateSoftInputWindowLayoutParameters() {
     // Override layout parameters to expand {@link SoftInputWindow} to the entire screen.
-    // See {@link InputMethodService#setinputView(View)} and
+    // See {@link InputMethodService#setInputView(View)} and
     // {@link SoftInputWindow#updateWidthHeight(WindowManager.LayoutParams)}.
     final Window window = getWindow().getWindow();
     ViewLayoutUtils.updateLayoutHeightOf(window, LayoutParams.MATCH_PARENT);
@@ -716,7 +733,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       // See {@link InputMethodService#setInputView(View) and
       // com.android.internal.R.layout.input_method.xml.
       final int layoutHeight = isFullscreenMode()
-          ? LayoutParams.WRAP_CONTENT : LayoutParams.MATCH_PARENT;
+              ? LayoutParams.WRAP_CONTENT : LayoutParams.MATCH_PARENT;
       final View inputArea = window.findViewById(android.R.id.inputArea);
       ViewLayoutUtils.updateLayoutHeightOf(inputArea, layoutHeight);
       ViewLayoutUtils.updateLayoutGravityOf(inputArea, Gravity.BOTTOM);
@@ -726,7 +743,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
 
   int getCurrentAutoCapsState() {
     return mInputLogic.getCurrentAutoCapsState(mSettings.getCurrent(),
-        mRichImm.getCurrentSubtype().getKeyboardLayoutSet());
+            mRichImm.getCurrentSubtype().getKeyboardLayoutSet());
   }
 
   int getCurrentRecapitalizeState() {
@@ -747,7 +764,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       return false;
     }
     mOptionsDialog = mRichImm.showSubtypePicker(this,
-        mKeyboardSwitcher.getMainKeyboardView().getWindowToken(), this);
+            mKeyboardSwitcher.getMainKeyboardView().getWindowToken(), this);
     return mOptionsDialog != null;
   }
 
@@ -829,7 +846,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     final int keyX = mainKeyboardView.getKeyX(x);
     final int keyY = mainKeyboardView.getKeyY(y);
     final Event event = createSoftwareKeypressEvent(getCodePointForKeyboard(codePoint),
-        keyX, keyY, isKeyRepeat);
+            keyX, keyY, isKeyRepeat);
     onEvent(event);
   }
 
@@ -837,7 +854,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
   // completely replace #onCodeInput.
   public void onEvent(final Event event) {
     final InputTransaction completeInputTransaction =
-        mInputLogic.onCodeInput(mSettings.getCurrent(), event);
+            mInputLogic.onCodeInput(mSettings.getCurrent(), event);
     updateStateAfterInputTransaction(completeInputTransaction);
     mKeyboardSwitcher.onEvent(event, getCurrentAutoCapsState(), getCurrentRecapitalizeState());
   }
@@ -865,7 +882,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     // TODO: have the keyboard pass the correct key code when we need it.
     final Event event = Event.createSoftwareTextEvent(rawText, Constants.CODE_OUTPUT_TEXT);
     final InputTransaction completeInputTransaction =
-        mInputLogic.onTextInput(mSettings.getCurrent(), event);
+            mInputLogic.onTextInput(mSettings.getCurrent(), event);
     updateStateAfterInputTransaction(completeInputTransaction);
     mKeyboardSwitcher.onEvent(event, getCurrentAutoCapsState(), getCurrentRecapitalizeState());
   }
@@ -875,7 +892,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
   public void onFinishSlidingInput() {
     // User finished sliding input.
     mKeyboardSwitcher.onFinishSlidingInput(getCurrentAutoCapsState(),
-        getCurrentRecapitalizeState());
+            getCurrentRecapitalizeState());
   }
 
   private void loadKeyboard() {
@@ -888,7 +905,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     if (mKeyboardSwitcher.getMainKeyboardView() != null) {
       // Reload keyboard because the current language has been changed.
       mKeyboardSwitcher.loadKeyboard(getCurrentInputEditorInfo(), mSettings.getCurrent(),
-          getCurrentAutoCapsState(), getCurrentRecapitalizeState());
+              getCurrentAutoCapsState(), getCurrentRecapitalizeState());
     }
   }
 
@@ -906,7 +923,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
         break;
       case InputTransaction.SHIFT_UPDATE_NOW:
         mKeyboardSwitcher.requestUpdatingShiftState(getCurrentAutoCapsState(),
-            getCurrentRecapitalizeState());
+                getCurrentRecapitalizeState());
         break;
       default: // SHIFT_NO_UPDATE
     }
@@ -930,7 +947,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
       }
     }
     final AudioAndHapticFeedbackManager feedbackManager =
-        AudioAndHapticFeedbackManager.getInstance();
+            AudioAndHapticFeedbackManager.getInstance();
     if (repeatCount == 0) {
       // TODO: Reconsider how to perform haptic feedback when repeating key.
       feedbackManager.performHapticFeedback(keyboardView);
@@ -944,7 +961,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
   public void onPressKey(final int primaryCode, final int repeatCount,
                          final boolean isSinglePointer) {
     mKeyboardSwitcher.onPressKey(primaryCode, isSinglePointer, getCurrentAutoCapsState(),
-        getCurrentRecapitalizeState());
+            getCurrentRecapitalizeState());
     hapticAndAudioFeedback(primaryCode, repeatCount);
   }
 
@@ -953,7 +970,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
   @Override
   public void onReleaseKey(final int primaryCode, final boolean withSliding) {
     mKeyboardSwitcher.onReleaseKey(primaryCode, withSliding, getCurrentAutoCapsState(),
-        getCurrentRecapitalizeState());
+            getCurrentRecapitalizeState());
   }
 
   // receive ringer mode change.
@@ -976,8 +993,8 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     final Intent intent = new Intent();
     intent.setClass(LatinIME.this, SettingsActivity.class);
     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK
-        | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
-        | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED
+            | Intent.FLAG_ACTIVITY_CLEAR_TOP);
     startActivity(intent);
   }
 
@@ -985,7 +1002,7 @@ public class LatinIME extends InputMethodService implements KeyboardActionListen
     final SettingsValues settingsValues = mSettings.getCurrent();
     final StringBuilder s = new StringBuilder(settingsValues.toString());
     s.append("\nAttributes : ").append(settingsValues.mInputAttributes)
-        .append("\nContext : ").append(context);
+            .append("\nContext : ").append(context);
     throw new RuntimeException(s.toString());
   }
 

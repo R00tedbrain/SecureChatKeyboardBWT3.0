@@ -2,25 +2,36 @@ package com.bwt.securechats.inputmethod.signalprotocol.pqc;
 
 import android.util.Log;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 /**
- * Store en memoria para las pre-claves Kyber (PQC).
- * Similar a PreKeyStoreImpl, pero guardando BCKyberPreKeyRecord serializados.
+ * Almacén en memoria para las pre-claves Kyber (PQC).
+ * Ahora serializable por Jackson para poder persistirlo en EncryptedSharedPreferences.
  */
-public class BCKyberPreKeyStoreImpl {
-
+@JsonAutoDetect(fieldVisibility = Visibility.ANY)       // Jackson serializa/deserializa campos privados
+@JsonIgnoreProperties(ignoreUnknown = true)             // Ignora campos desconocidos en el JSON
+public class BCKyberPreKeyStoreImpl implements Serializable {
+    private static final long serialVersionUID = 1L;
     private static final String TAG = "BCKyberPreKeyStoreImpl";
 
+    // Mapa con preclaves PQC; Jackson convertirá byte[] a base64
     private final Map<Integer, byte[]> store = new HashMap<>();
+
+    // Constructor por defecto para Jackson
+    public BCKyberPreKeyStoreImpl() {
+        // Empty for Jackson
+    }
 
     public synchronized void storePreKey(BCKyberPreKeyRecord record) {
         try {
@@ -65,12 +76,14 @@ public class BCKyberPreKeyStoreImpl {
         return store.size();
     }
 
-    /**
-     * Devuelve un Set con todos los IDs de pre-clave Kyber actualmente almacenados.
-     * Se ignora en la serialización/deserialización para evitar problemas con Jackson.
-     */
+    // Ignoramos esta propiedad para evitar el error Jackson al deserializar un Set inmutable.
     @JsonIgnore
-    public synchronized Set<Integer> getAllIds() {
+    public synchronized java.util.Set<Integer> getAllIds() {
         return store.keySet();
+    }
+
+    // [Opcional] Getter si lo necesitas
+    public Map<Integer, byte[]> getStore() {
+        return store;
     }
 }
