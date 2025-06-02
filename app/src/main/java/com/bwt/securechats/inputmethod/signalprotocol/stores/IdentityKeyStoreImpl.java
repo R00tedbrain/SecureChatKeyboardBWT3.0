@@ -10,6 +10,7 @@ import org.signal.libsignal.protocol.IdentityKey;
 import org.signal.libsignal.protocol.IdentityKeyPair;
 import org.signal.libsignal.protocol.SignalProtocolAddress;
 import org.signal.libsignal.protocol.state.IdentityKeyStore;
+import org.signal.libsignal.protocol.state.IdentityKeyStore.IdentityChange;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -47,14 +48,14 @@ public class IdentityKeyStoreImpl implements IdentityKeyStore {
   }
 
   @Override
-  public boolean saveIdentity(SignalProtocolAddress address, IdentityKey identityKey) {
+  public IdentityChange saveIdentity(SignalProtocolAddress address, IdentityKey identityKey) {
     IdentityKey existing = getIdentityKeyFromEntryInList(address);
 
     if (!identityKey.equals(existing)) {
       trustedKeys.add(new TrustedKey(address, identityKey));
-      return true;
+      return IdentityChange.REPLACED_EXISTING;
     } else {
-      return false;
+      return IdentityChange.NEW_OR_UNCHANGED;
     }
   }
 

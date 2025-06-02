@@ -14,6 +14,8 @@ import org.signal.libsignal.protocol.state.PreKeyRecord;
 import org.signal.libsignal.protocol.state.SessionRecord;
 import org.signal.libsignal.protocol.state.SignalProtocolStore;
 import org.signal.libsignal.protocol.state.SignedPreKeyRecord;
+import org.signal.libsignal.protocol.state.IdentityKeyStore;
+import org.signal.libsignal.protocol.state.IdentityKeyStore.IdentityChange;
 
 import java.util.List;
 import java.util.UUID;
@@ -80,7 +82,7 @@ public class SignalProtocolStoreImpl implements SignalProtocolStore, KyberPreKey
   }
 
   @Override
-  public boolean saveIdentity(SignalProtocolAddress address, IdentityKey identityKey) {
+  public IdentityChange saveIdentity(SignalProtocolAddress address, IdentityKey identityKey) {
     return identityKeyStore.saveIdentity(address, identityKey);
   }
 

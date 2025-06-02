@@ -218,19 +218,19 @@ public class SignalProtocolTest {
     final String unencryptedMessage = "Can you fly this plane, and land it?";
     sendMessageAfterSessionBuild(alice, ALICE_USERNAME, bob, BOB_USERNAME, unencryptedMessage);
 
-    final String unencryptedMessage2 = "Surely you can’t be serious";
+    final String unencryptedMessage2 = "Surely you can't be serious";
     sendMessageAfterSessionBuild(bob, BOB_USERNAME, alice, ALICE_USERNAME, unencryptedMessage2);
 
-    final String unencryptedMessage3 = "I am serious ... and don’t call me Shirley.";
+    final String unencryptedMessage3 = "I am serious ... and don't call me Shirley.";
     sendMessageAfterSessionBuild(alice, ALICE_USERNAME, bob, BOB_USERNAME, unencryptedMessage3);
 
-    final String unencryptedMessage4 = "I won’t deceive you, Mr. Striker. We’re running out of time.";
+    final String unencryptedMessage4 = "I won't deceive you, Mr. Striker. We're running out of time.";
     sendMessageAfterSessionBuild(bob, BOB_USERNAME, alice, ALICE_USERNAME, unencryptedMessage4);
 
     final String unencryptedMessage5 = "Surely there must be something you can do.";
     sendMessageAfterSessionBuild(alice, ALICE_USERNAME, bob, BOB_USERNAME, unencryptedMessage5);
 
-    final String unencryptedMessage6 = "I’m doing everything I can ... and stop calling me Shirley!";
+    final String unencryptedMessage6 = "I'm doing everything I can ... and stop calling me Shirley!";
     sendMessageAfterSessionBuild(bob, BOB_USERNAME, alice, ALICE_USERNAME, unencryptedMessage6);
 
     printHashMapForAccountName(ALICE_USERNAME, sharedPreferencesStoreAlice);
@@ -300,7 +300,7 @@ public class SignalProtocolTest {
     assertEquals(unencryptedMessage, Objects.requireNonNull(alice.getUnencryptedMessages().stream().filter(m -> m.getContactUUID().equals(contactBob.getSignalProtocolAddressName())).collect(Collectors.toList())).get(0).getUnencryptedMessage());
     assertEquals(unencryptedMessage, Objects.requireNonNull(bob.getUnencryptedMessages().stream().filter(m -> m.getContactUUID().equals(contactAlice.getSignalProtocolAddressName())).collect(Collectors.toList())).get(0).getUnencryptedMessage());
 
-    final String unencryptedMessage2 = "No, I’ve been nervous lots of times.";
+    final String unencryptedMessage2 = "No, I've been nervous lots of times.";
     sendMessageAfterSessionBuild(bob, BOB_USERNAME, alice, ALICE_USERNAME, unencryptedMessage2);
 
     assertEquals(2, alice.getUnencryptedMessages().size());
@@ -618,7 +618,7 @@ public class SignalProtocolTest {
       signedPreKeySignature = device.getSignedPreKey().getSignature();
     }
 
-    PreKeyBundle preKeyBundle = new PreKeyBundle(device.getRegistrationId(), device.getDeviceId(), preKeyId, preKey, signedPreKeyId, signedPreKey, signedPreKeySignature, incomingPreKeyResponse.getIdentityKey());
+    PreKeyBundle preKeyBundle = new PreKeyBundle(device.getRegistrationId(), device.getDeviceId(), preKeyId, preKey, signedPreKeyId, signedPreKey, signedPreKeySignature, incomingPreKeyResponse.getIdentityKey(), 0, null, null);
     assertNotNull(preKeyBundle.getSignedPreKeySignature());
     assertNotNull(preKeyBundle.getPreKey());
     assertEquals(preKeyBundle.getPreKeyId(), 1);
@@ -651,7 +651,8 @@ public class SignalProtocolTest {
             account.getMetadataStore().getActiveSignedPreKeyId(),
             account.getSignalProtocolStore().loadSignedPreKey(account.getMetadataStore().getActiveSignedPreKeyId()).getKeyPair().getPublicKey(),
             signedPreKeySignature,
-            account.getSignalProtocolStore().getIdentityKeyPair().getPublicKey()
+            account.getSignalProtocolStore().getIdentityKeyPair().getPublicKey(),
+            0, null, null
     );
 
     List<PreKeyResponseItem> responseItems = new LinkedList<>();

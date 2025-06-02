@@ -453,6 +453,7 @@ public class SignalProtocolMain {
 
         // 2) Procesar PQC: Encapsular la clave AES contra la KyberPublicKey (opcional)
         //    Solo si en PreKeyResponse hemos colocado kyberPubKey y kyberPreKeyId
+        //    Solo si en PreKeyResponse hemos colocado kyberPubKey y kyberPreKeyId
         if (messageEnvelope.getPreKeyResponse().getKyberPubKey() != null) {
           byte[] remoteKyberPub = messageEnvelope.getPreKeyResponse().getKyberPubKey();
           int remoteKyberId = messageEnvelope.getPreKeyResponse().getKyberPreKeyId();
@@ -591,7 +592,8 @@ public class SignalProtocolMain {
             preKeyId, preKey,
             signedPreKeyId, signedPreKey,
             signedPreKeySignature,
-            preKeyResponse.getIdentityKey());
+            preKeyResponse.getIdentityKey(),
+            0, null, null);
   }
 
   private void storeUnencryptedMessageInMap(Account account,
@@ -674,7 +676,8 @@ public class SignalProtocolMain {
                     .loadSignedPreKey(mAccount.getMetadataStore().getActiveSignedPreKeyId())
                     .getKeyPair().getPublicKey(),
             signedPreKeySignature,
-            mAccount.getSignalProtocolStore().getIdentityKeyPair().getPublicKey()
+            mAccount.getSignalProtocolStore().getIdentityKeyPair().getPublicKey(),
+            0, null, null
     );
   }
 

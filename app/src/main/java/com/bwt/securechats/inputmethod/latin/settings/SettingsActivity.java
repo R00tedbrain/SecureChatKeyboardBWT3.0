@@ -21,15 +21,12 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;  // <--- Import necesario
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.inputmethod.InputMethodInfo;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
-import android.widget.Toast;
 
 import com.bwt.securechats.inputmethod.R;
 import com.bwt.securechats.inputmethod.latin.utils.FragmentUtils;
@@ -38,28 +35,9 @@ public class SettingsActivity extends PreferenceActivity {
   private static final String DEFAULT_FRAGMENT = SettingsFragment.class.getName();
   private static final String TAG = SettingsActivity.class.getSimpleName();
 
-  // INICIO BLOQUE VALIDACIÓN
-  // Puedes modificar estas claves según lo que necesites
-  private static final String[] VALID_KEYS = {
-          "X2btzANsU5Ra#azJ@zG",
-          "@Hf&iM^tJ*4zmuV2tK!",
-          "MM3&8TAojDxSFc5uS&Z",
-          "ufn&q4RxJMm8W4u4Mas",
-          "tKb@Ln8!vRqPyXFNDSs"
-  };
-  // FIN BLOQUE VALIDACIÓN
-
   @Override
   protected void onStart() {
     super.onStart();
-
-    // INICIO BLOQUE VALIDACIÓN
-    // 1. Comprobamos si la app ya está activada. De no estarlo, pedimos la clave.
-    if (!isAppActivated()) {
-      showActivationDialog();
-      return; // Salimos para que no siga con el resto hasta que se active.
-    }
-    // FIN BLOQUE VALIDACIÓN
 
     boolean enabled = false;
     try {
@@ -142,55 +120,4 @@ public class SettingsActivity extends PreferenceActivity {
   public boolean isValidFragment(final String fragmentName) {
     return FragmentUtils.isValidFragment(fragmentName);
   }
-
-  // INICIO BLOQUE VALIDACIÓN
-
-  // Método para saber si la app ya está activada (clave introducida correctamente).
-  private boolean isAppActivated() {
-    SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-    return prefs.getBoolean("isActivated", false);
-  }
-
-  // Muestra un AlertDialog con un EditText donde el usuario introduce la clave.
-  private void showActivationDialog() {
-    final EditText input = new EditText(this);
-    input.setHint("Introduzca la clave");
-
-    new AlertDialog.Builder(this)
-            .setTitle("Activación")
-            .setMessage("Por favor, introduzca una de las claves válidas:")
-            .setView(input)
-            .setCancelable(false)
-            .setPositiveButton("OK", (dialog, which) -> {
-              String userKey = input.getText().toString().trim();
-              if (checkKey(userKey)) {
-                setAppActivated();
-                Toast.makeText(this, "Activación correcta", Toast.LENGTH_SHORT).show();
-                // No llamamos finish() aquí para permitir que la actividad continúe
-                dialog.dismiss();
-              } else {
-                Toast.makeText(this, "Clave incorrecta", Toast.LENGTH_SHORT).show();
-                // Finaliza la actividad para que no pueda usarse sin clave
-                finish();
-              }
-            })
-            .show();
-  }
-
-  // Comprueba si la clave introducida coincide con alguna de las válidas
-  private boolean checkKey(String enteredKey) {
-    for (String validKey : VALID_KEYS) {
-      if (validKey.equals(enteredKey)) {
-        return true;
-      }
-    }
-    return false;
-  }
-
-  // Guarda en SharedPreferences que la app está activada
-  private void setAppActivated() {
-    SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
-    prefs.edit().putBoolean("isActivated", true).apply();
-  }
-  // FIN BLOQUE VALIDACIÓN
 }
