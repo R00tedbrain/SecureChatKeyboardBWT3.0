@@ -1,4 +1,7 @@
 # 🔐 SecureChats Keyboard BWT 3.0
+![icono](https://github.com/user-attachments/assets/5a517fa3-29bd-453f-9242-65a7aa058c79)
+
+
 
 ## English
 
@@ -256,6 +259,7 @@ cd SecureChatKeyboardBWT3.0
 ---
 
 ## Español
+![icono](https://github.com/user-attachments/assets/179c3035-6188-4311-921a-660036241e69)
 
 ### 🌟 Teclado Seguro Post-Cuántico Avanzado para Android
 
