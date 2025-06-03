@@ -3,12 +3,13 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 34
     buildToolsVersion '33.0.0'
+    ndkVersion "21.4.7075529"
     defaultConfig {
         applicationId "com.bwt.securechats"
         minSdkVersion 26
         targetSdkVersion 34
         versionCode 1
-        versionName "1"
+        versionName "3.0.0"
     }
     buildTypes {
         release {
@@ -17,6 +18,12 @@ android {
             renderscriptDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+    dependenciesInfo {
+        // Disables dependency metadata when building APKs.
+        includeInApk = false
+        // Disables dependency metadata when building Android App Bundles.
+        includeInBundle = false
     }
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17

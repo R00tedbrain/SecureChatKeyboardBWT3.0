@@ -1,0 +1,10 @@
+SecureChats Keyboard BWT 3.0 - Enhanced with Post-Quantum Cryptography
+• Added Kyber PQC for quantum-resistant encryption
+• Implemented EncryptedSharedPreferences with AES256-GCM
+• Enhanced key rotation (2 days vs 30 days)
+• Added per-contact history deletion
+• Updated to libsignal-android 0.73.2
+• Support for 89+ languages
+• Improved security architecture
+• Faster key management
+• Based on KryptEY with revolutionary PQC improvements 
