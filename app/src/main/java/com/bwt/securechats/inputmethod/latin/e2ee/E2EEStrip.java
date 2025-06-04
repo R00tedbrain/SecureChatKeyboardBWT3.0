@@ -50,8 +50,8 @@ public class E2EEStrip {
   private final String INFO_CONTACT_INVALID = "Contact is invalid and was not saved";
   private final String INFO_SESSION_CREATION_FAILED = "Session creation failed. If possible delete sender in contact list and ask for a new keybundle";
 
-  private final int CHAR_THRESHOLD_RAW = 1700;
-  private final int CHAR_THRESHOLD_FAIRYTALE = 1700;
+  private final int CHAR_THRESHOLD_RAW = 10000;
+  private final int CHAR_THRESHOLD_FAIRYTALE = 10000;
 
   public E2EEStrip(Context context) {
     mContext = context;
@@ -217,9 +217,15 @@ public class E2EEStrip {
 
   public void checkMessageLengthForEncodingMethod(String message, Encoder encodingMethod, boolean isPreKeyResponse) throws TooManyCharsException {
     if (message == null || encodingMethod == null) return;
+    
+    // Para PreKeyResponse (claves), no aplicamos ninguna limitación
+    // ya que las claves Kyber pueden ser muy grandes
+    if (isPreKeyResponse) {
+      Log.d(TAG, "PreKeyResponse length: " + message.getBytes(StandardCharsets.UTF_8).length + " characters (no limit applied)");
+      return; // Sin limitación para claves
+    }
+    
     final int messageBytes = message.getBytes(StandardCharsets.UTF_8).length;
-    if (isPreKeyResponse && messageBytes > CHAR_THRESHOLD_RAW)
-      throw new TooManyCharsException(String.format("Too many characters for invite or update message (%s characters, only %s characters allowed)", messageBytes, CHAR_THRESHOLD_RAW));
     if (encodingMethod.equals(Encoder.RAW) && messageBytes > CHAR_THRESHOLD_RAW) {
       throw new TooManyCharsException(String.format("Too many characters for raw message (%s characters, only %s characters allowed)", messageBytes, CHAR_THRESHOLD_RAW));
     } else if (encodingMethod.equals(Encoder.FAIRYTALE) && messageBytes > CHAR_THRESHOLD_FAIRYTALE) {

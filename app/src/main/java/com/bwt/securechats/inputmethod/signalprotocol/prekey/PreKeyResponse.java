@@ -45,6 +45,12 @@ public class PreKeyResponse {
   @JsonProperty
   private int kyberPreKeyId;
 
+  /**
+   * Firma de la clave pública Kyber (requerida en libsignal 0.73.2).
+   */
+  @JsonProperty
+  private byte[] kyberSignature;
+
   // ----------------------------------------------------
   // Constructores
   // ----------------------------------------------------
@@ -94,6 +100,14 @@ public class PreKeyResponse {
     this.kyberPreKeyId = kyberPreKeyId;
   }
 
+  public byte[] getKyberSignature() {
+    return kyberSignature;
+  }
+
+  public void setKyberSignature(byte[] kyberSignature) {
+    this.kyberSignature = kyberSignature;
+  }
+
   // ----------------------------------------------------
   // equals, hashCode, toString
   // ----------------------------------------------------
@@ -108,13 +122,16 @@ public class PreKeyResponse {
             Objects.equals(devices, that.devices) &&
             // Comparamos contenido de arrays PQC:
             (kyberPubKey == null ? (that.kyberPubKey == null)
-                    : java.util.Arrays.equals(kyberPubKey, that.kyberPubKey));
+                    : java.util.Arrays.equals(kyberPubKey, that.kyberPubKey)) &&
+            (kyberSignature == null ? (that.kyberSignature == null)
+                    : java.util.Arrays.equals(kyberSignature, that.kyberSignature));
   }
 
   @Override
   public int hashCode() {
     int result = Objects.hash(identityKey, devices, kyberPreKeyId);
     result = 31 * result + (kyberPubKey != null ? java.util.Arrays.hashCode(kyberPubKey) : 0);
+    result = 31 * result + (kyberSignature != null ? java.util.Arrays.hashCode(kyberSignature) : 0);
     return result;
   }
 
@@ -125,6 +142,7 @@ public class PreKeyResponse {
             ", devices=" + devices +
             ", kyberPubKey=" + (kyberPubKey == null ? null : ("len=" + kyberPubKey.length)) +
             ", kyberPreKeyId=" + kyberPreKeyId +
+            ", kyberSignature=" + (kyberSignature == null ? null : ("len=" + kyberSignature.length)) +
             '}';
   }
 }
