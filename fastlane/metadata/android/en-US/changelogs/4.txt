@@ -1,0 +1,18 @@
+🔧 V4 - F-DROID COMPILATION FIX
+
+✅ FIXED:
+• Added dependenciesInfo configuration to build.gradle
+• Disabled dependency metadata when building APKs
+• Disabled dependency metadata when building Android App Bundles
+• Resolved F-Droid compilation issues
+
+📱 ANDROID BUILD CONFIGURATION:
+• includeInApk = false
+• includeInBundle = false
+
+🏗️ BUILD SYSTEM:
+• Optimized for F-Droid compilation process
+• Reduced APK size by excluding dependency metadata
+• Improved build reproducibility
+
+Ready for F-Droid! 📦 

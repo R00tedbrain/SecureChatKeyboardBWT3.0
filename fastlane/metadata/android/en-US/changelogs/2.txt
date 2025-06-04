@@ -1,0 +1,24 @@
+🔐 V2 - SECURE CHATS KEYBOARD BWT 3.0
+
+🛡️ MAJOR SECURITY UPGRADE:
+• Migrated from SharedPreferences to EncryptedSharedPreferences
+• Added button to remove conversation history
+• Enhanced data protection with AES-256 encryption
+
+📈 UPDATED DEPENDENCIES:
+• Upgraded to latest libsignal version
+• Added Kyber Post-Quantum Cryptography support
+• Updated all dependencies to latest stable versions
+• Updated Gradle build system
+
+🔮 POST-QUANTUM FEATURES:
+• Kyber algorithm integration
+• Future-proof encryption against quantum computers
+• Hybrid cryptographic approach
+
+🧹 PRIVACY ENHANCEMENTS:
+• Secure conversation history management
+• Improved data deletion capabilities
+• Better memory protection
+
+The future of secure messaging starts here! 🌟 
