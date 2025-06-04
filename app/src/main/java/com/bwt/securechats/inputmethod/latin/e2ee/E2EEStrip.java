@@ -168,7 +168,15 @@ public class E2EEStrip {
 
   public String getPreKeyResponseMessage() {
     final MessageEnvelope messageEnvelope = SignalProtocolMain.getPreKeyResponseMessage();
-    return JsonUtil.toJson(messageEnvelope);
+    if (messageEnvelope == null) {
+      Log.e(TAG, "Failed to create PreKeyResponseMessage - envelope is null");
+      return null;
+    }
+    String json = JsonUtil.toJson(messageEnvelope);
+    if (json == null) {
+      Log.e(TAG, "Failed to convert PreKeyResponseMessage to JSON");
+    }
+    return json;
   }
 
   public Object getContactFromEnvelope(MessageEnvelope messageEnvelope) {

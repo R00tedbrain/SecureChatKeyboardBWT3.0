@@ -82,11 +82,21 @@ public class JsonUtil {
 
   public static <T> T fromJson(String json, Class<T> clazz)
           throws IOException {
+    // Validar que json no sea null ni vacío
+    if (json == null || json.trim().isEmpty()) {
+      Log.w(TAG, "fromJson called with null or empty string");
+      return null;
+    }
     return objectMapper.readValue(json, clazz);
   }
 
   public static <T> T fromJson(String json, TypeReference<T> typeRef)
           throws IOException {
+    // Validar que json no sea null ni vacío
+    if (json == null || json.trim().isEmpty()) {
+      Log.w(TAG, "fromJson called with null or empty string");
+      return null;
+    }
     return objectMapper.readValue(json, typeRef);
   }
 

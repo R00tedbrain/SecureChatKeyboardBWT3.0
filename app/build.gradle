@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 34
     buildToolsVersion '33.0.0'
-    ndkVersion "21.4.7075529"
     defaultConfig {
         applicationId "com.bwt.securechats"
         minSdkVersion 26

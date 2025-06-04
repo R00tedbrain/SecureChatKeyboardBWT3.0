@@ -8,7 +8,6 @@ import org.signal.libsignal.protocol.InvalidKeyIdException;
 import org.signal.libsignal.protocol.NoSessionException;
 import org.signal.libsignal.protocol.SignalProtocolAddress;
 import org.signal.libsignal.protocol.groups.state.SenderKeyRecord;
-import org.signal.libsignal.protocol.state.KyberPreKeyRecord;
 import org.signal.libsignal.protocol.state.KyberPreKeyStore;
 import org.signal.libsignal.protocol.state.PreKeyRecord;
 import org.signal.libsignal.protocol.state.SessionRecord;
@@ -16,6 +15,7 @@ import org.signal.libsignal.protocol.state.SignalProtocolStore;
 import org.signal.libsignal.protocol.state.SignedPreKeyRecord;
 import org.signal.libsignal.protocol.state.IdentityKeyStore;
 import org.signal.libsignal.protocol.state.IdentityKeyStore.IdentityChange;
+import org.signal.libsignal.protocol.state.KyberPreKeyRecord;
 
 import java.util.List;
 import java.util.UUID;
@@ -24,6 +24,7 @@ import android.util.Log;
 
 import com.bwt.securechats.inputmethod.signalprotocol.pqc.BCKyberPreKeyRecord;
 import com.bwt.securechats.inputmethod.signalprotocol.pqc.BCKyberPreKeyStoreImpl;
+import com.bwt.securechats.inputmethod.signalprotocol.state.KyberPreKeyStoreImpl;
 
 /**
  * Implementación principal del SignalProtocolStore que combina:
@@ -54,6 +55,10 @@ public class SignalProtocolStoreImpl implements SignalProtocolStore, KyberPreKey
   // NUEVO: Store de pre-claves Kyber (PQC) con Bouncy Castle
   @JsonProperty
   private final BCKyberPreKeyStoreImpl bcKyberPreKeyStore = new BCKyberPreKeyStoreImpl();
+
+  // Store de claves Kyber usando las clases oficiales de libsignal
+  @JsonProperty
+  private final KyberPreKeyStoreImpl kyberPreKeyStore = new KyberPreKeyStoreImpl();
 
   @JsonProperty
   private IdentityKeyStoreImpl identityKeyStore;
@@ -188,50 +193,40 @@ public class SignalProtocolStoreImpl implements SignalProtocolStore, KyberPreKey
 
 
   // ================================================================
-  // Métodos de KyberPreKeyStore: Por ahora "stub" en libsignal,
-  // pero nosotros delegamos a bcKyberPreKeyStore.
+  // Métodos de KyberPreKeyStore: Delegamos a kyberPreKeyStore
+  // Usamos KyberPreKeyRecord correctamente desde libsignal 0.73.2
   // ================================================================
   @Override
-  public KyberPreKeyRecord loadKyberPreKey(int preKeyId) throws InvalidKeyIdException {
-    Log.d(TAG, "loadKyberPreKey => not implemented in official libsignal, ignoring");
-    throw new UnsupportedOperationException("Libsignal internal KyberPreKeyRecord not used.");
+  public KyberPreKeyRecord loadKyberPreKey(int kyberPreKeyId) throws InvalidKeyIdException {
+    return kyberPreKeyStore.loadKyberPreKey(kyberPreKeyId);
   }
 
   @Override
   public List<KyberPreKeyRecord> loadKyberPreKeys() {
-    Log.d(TAG, "loadKyberPreKeys => not implemented in official libsignal.");
-    throw new UnsupportedOperationException("Libsignal internal KyberPreKeyRecord not used.");
+    return kyberPreKeyStore.loadKyberPreKeys();
   }
 
   @Override
-  public void storeKyberPreKey(int preKeyId, KyberPreKeyRecord record) {
-    Log.d(TAG, "storeKyberPreKey => not implemented in official libsignal.");
-    throw new UnsupportedOperationException("Libsignal internal KyberPreKeyRecord not used.");
+  public void storeKyberPreKey(int kyberPreKeyId, KyberPreKeyRecord record) {
+    kyberPreKeyStore.storeKyberPreKey(kyberPreKeyId, record);
   }
 
   @Override
-  public boolean containsKyberPreKey(int preKeyId) {
-    Log.d(TAG, "containsKyberPreKey => not implemented in official libsignal.");
-    return false;
+  public boolean containsKyberPreKey(int kyberPreKeyId) {
+    return kyberPreKeyStore.containsKyberPreKey(kyberPreKeyId);
   }
 
-  public void removeKyberPreKey(int preKeyId) {
-    Log.d(TAG, "removeKyberPreKey => not implemented in official libsignal.");
-    throw new UnsupportedOperationException("Libsignal internal KyberPreKeyRecord not used.");
+  @Override
+  public void markKyberPreKeyUsed(int kyberPreKeyId) {
+    kyberPreKeyStore.markKyberPreKeyUsed(kyberPreKeyId);
   }
 
-  public void markKyberPreKeyUsed(int preKeyId) {
-    throw new UnsupportedOperationException("Libsignal internal KyberPreKeyRecord not used.");
+  /**
+   * Método para obtener el KyberPreKeyStore
+   */
+  public KyberPreKeyStore getKyberPreKeyStore() {
+    return kyberPreKeyStore;
   }
-
-  public KyberPreKeyRecord loadLastResortKyberPreKey() throws InvalidKeyIdException {
-    throw new UnsupportedOperationException("Libsignal internal KyberPreKeyRecord not used.");
-  }
-
-  public void storeLastResortKyberPreKey(KyberPreKeyRecord record) {
-    throw new UnsupportedOperationException("Libsignal internal KyberPreKeyRecord not used.");
-  }
-
 
   // ------------------------------------------------------------------
   // NUESTRO STORE BouncyCastle para PQC:

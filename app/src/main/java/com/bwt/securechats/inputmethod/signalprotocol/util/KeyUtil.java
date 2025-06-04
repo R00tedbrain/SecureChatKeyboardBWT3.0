@@ -13,6 +13,9 @@ import org.signal.libsignal.protocol.InvalidKeyException;
 import org.signal.libsignal.protocol.ecc.Curve;
 import org.signal.libsignal.protocol.ecc.ECKeyPair;
 import org.signal.libsignal.protocol.ecc.ECPrivateKey;
+import org.signal.libsignal.protocol.kem.KEMKeyPair;
+import org.signal.libsignal.protocol.kem.KEMKeyType;
+import org.signal.libsignal.protocol.state.KyberPreKeyRecord;
 import org.signal.libsignal.protocol.state.PreKeyRecord;
 import org.signal.libsignal.protocol.state.SignedPreKeyRecord;
 import org.signal.libsignal.protocol.util.KeyHelper;
@@ -193,35 +196,50 @@ public class KeyUtil {
   // --------------------------------------------------------------------------
 
   /**
-   * Genera y almacena una pre-clave Kyber en el store PQC dentro de SignalProtocolStoreImpl.
-   * Se puede rotar mensualmente, igual que con las ECC (aquí lo hacemos cada 2 días).
+   * Genera un ID único para una nueva clave Kyber.
+   */
+  public static int generateKyberPreKeyId(final SignalProtocolStoreImpl protocolStore) {
+    // Usar un ID aleatorio para evitar colisiones, similar a como libsignal maneja otros IDs
+    Random random = new SecureRandom();
+    int kyberPreKeyId;
+    
+    // Asegurar que el ID no esté ya en uso
+    do {
+      kyberPreKeyId = Math.abs(random.nextInt()) % Medium.MAX_VALUE;
+    } while (protocolStore.containsKyberPreKey(kyberPreKeyId));
+    
+    Log.d(TAG, "Generated Kyber prekey ID: " + kyberPreKeyId);
+    return kyberPreKeyId;
+  }
+
+  /**
+   * Genera y almacena una pre-clave Kyber en el store.
+   * NOTA: Esta es una implementación temporal que usa BCKyberPreKeyRecord
+   * ya que KyberPreKeyRecord real no es accesible desde Java en libsignal 0.73.2
    */
   public static void generateAndStoreKyberPreKey(SignalProtocolStoreImpl store) {
-    Log.d(TAG, "Generating & storing a Kyber PreKey (PQC)...");
+    Log.d(TAG, "Generating & storing a Kyber PreKey...");
     if (store == null) {
-      Log.e(TAG, "Store is null => cannot create PQC prekey!");
+      Log.e(TAG, "Store is null => cannot create Kyber prekey!");
       return;
     }
     try {
-      // 1) Generamos un par de llaves Kyber
+      // Usamos un ID aleatorio para la clave Kyber
+      int kyberPreKeyId = generateKyberPreKeyId(store);
+      
+      // Generamos el par de claves usando BCKyberPreKeyRecord
       KeyPair kp = KyberUtil.generateKyberKeyPair();
-
-      // 2) Obtenemos sus bytes codificados (X.509 pub, PKCS8 priv)
       byte[] pubEnc = kp.getPublic().getEncoded();
       byte[] privEnc = kp.getPrivate().getEncoded();
-
-      // 3) Elegimos un preKeyId "aleatorio"
-      int kyberPreKeyId = new Random().nextInt(1000000);
-
-      // 4) Creamos el record
+      
+      // Crear el BCKyberPreKeyRecord
       BCKyberPreKeyRecord record = new BCKyberPreKeyRecord(kyberPreKeyId, pubEnc, privEnc);
-
-      // 5) Guardamos en BCKyberPreKeyStoreImpl
+      
+      // Guardar en el store BC
       store.getBcKyberPreKeyStore().storePreKey(record);
-
-      Log.d(TAG, "Kyber PreKey stored => id=" + kyberPreKeyId
-              + ", total PQC prekeys=" + store.getBcKyberPreKeyStore().size());
-
+      
+      Log.d(TAG, "Kyber PreKey stored => id=" + kyberPreKeyId);
+      
     } catch (Exception e) {
       Log.e(TAG, "Error generating/storing Kyber preKey", e);
     }

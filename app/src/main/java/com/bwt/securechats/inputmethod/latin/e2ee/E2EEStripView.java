@@ -506,10 +506,17 @@ public class E2EEStripView extends RelativeLayout
     mAddContactCancelButton = findViewById(R.id.e2ee_add_contact_cancel_button);
     mAddContactAddButton = findViewById(R.id.e2ee_add_contact_button);
 
+    // Log para debuggear el problema del "null"
+    Log.d(TAG, "setupAddContactView => mAddContactInfoTextView: " + mAddContactInfoTextView);
+    
+    // Usar el recurso de string en lugar de la constante hardcodeada
+    String addContactText = getResources().getString(R.string.info_add_contact);
+    Log.d(TAG, "setupAddContactView => addContactText from resources: " + addContactText);
+    
+    mAddContactInfoTextView.setText(addContactText);
+
     setupFirstNameInputEditTextField();
     setupLastNameInputEditTextField();
-
-    mAddContactInfoTextView.setText(INFO_ADD_CONTACT);
 
     createAddContactCancelClickListener();
   }
@@ -604,7 +611,9 @@ public class E2EEStripView extends RelativeLayout
 
   private boolean providedContactInformationIsValid(CharSequence firstName, CharSequence lastName) {
     if (firstName == null || firstName.length() == 0) {
-      Toast.makeText(getContext(), INFO_ADD_FIRSTNAME_ADD_CONTACT, Toast.LENGTH_SHORT).show();
+      String firstNameText = getResources().getString(R.string.info_add_firstname_add_contact);
+      Log.d(TAG, "providedContactInformationIsValid => showing toast: " + firstNameText);
+      Toast.makeText(getContext(), firstNameText, Toast.LENGTH_SHORT).show();
       return false;
     }
     return true;
@@ -690,7 +699,10 @@ public class E2EEStripView extends RelativeLayout
         }
 
         final String decodedItem = mE2EEStrip.decodeMessage(item);
-        if (decodedItem == null) return;
+        if (decodedItem == null || decodedItem.trim().isEmpty()) {
+          Log.d(TAG, "Decoded item is null or empty => not a valid encrypted message");
+          return;
+        }
 
         final MessageEnvelope envelope = JsonUtil.fromJson(decodedItem, MessageEnvelope.class);
         if (envelope == null) return;
@@ -708,6 +720,8 @@ public class E2EEStripView extends RelativeLayout
         }
       } catch (IOException e) {
         Log.e(TAG, "Error reading from clipboard", e);
+      } catch (Exception e) {
+        Log.e(TAG, "Unexpected error in clipboard listener: " + e.getMessage());
       }
     });
   }
@@ -918,9 +932,23 @@ public class E2EEStripView extends RelativeLayout
     Log.d(TAG, "sendPreKeyResponseMessageToApplication called");
     final String encoded;
     final String message = mE2EEStrip.getPreKeyResponseMessage();
+    
+    // Validar que message no sea null
+    if (message == null) {
+      Log.e(TAG, "Failed to generate PreKeyResponseMessage - message is null");
+      Toast.makeText(getContext(), "Failed to generate invitation message. Please try again.", Toast.LENGTH_LONG).show();
+      return;
+    }
+    
     try {
       mE2EEStrip.checkMessageLengthForEncodingMethod(message, encodingMethod, true);
       encoded = mE2EEStrip.encode(message, encodingMethod);
+      
+      if (encoded == null) {
+        Log.e(TAG, "Failed to encode PreKeyResponseMessage");
+        Toast.makeText(getContext(), "Failed to encode invitation message.", Toast.LENGTH_SHORT).show();
+        return;
+      }
     } catch (TooManyCharsException e) {
       Log.e(TAG, "TooManyCharsException => " + e.getMessage(), e);
       Toast.makeText(getContext(), e.getMessage(), Toast.LENGTH_LONG).show();
@@ -977,7 +1005,6 @@ public class E2EEStripView extends RelativeLayout
     }
     showChosenContactInMainInfoField();
     mE2EEStrip.clearClipboard();
-    changeImageButtonState(mDecryptButton, ButtonState.DISABLED);
   }
 
   private void processSignalMessage(MessageEnvelope messageEnvelope, Contact sender) {
