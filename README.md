@@ -3,6 +3,12 @@
 
 
 
+
+<img width="538" alt="Captura de pantalla 2025-06-09 a las 17 36 53" src="https://github.com/user-attachments/assets/b829d314-f16e-4753-8db5-2b43d82c0be3" /> <img width="527" alt="Captura de pantalla 2025-06-09 a las 17 38 02" src="https://github.com/user-attachments/assets/44a9b86b-d555-4b1c-b3a8-b76807a036b8" />
+
+<img width="551" alt="Captura de pantalla 2025-06-09 a las 17 38 44" src="https://github.com/user-attachments/assets/2564ff30-1fd7-4e64-bcb4-b96333e4b2ae" />
+
+
 ## English
 
 ### 🌟 Advanced Post-Quantum Secure Keyboard for Android
