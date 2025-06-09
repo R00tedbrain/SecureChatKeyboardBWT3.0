@@ -269,7 +269,17 @@ cd SecureChatKeyboardBWT3.0
 ---
 
 ## Español
-![icono](https://github.com/user-attachments/assets/179c3035-6188-4311-921a-660036241e69)
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/5a517fa3-29bd-453f-9242-65a7aa058c79" alt="icono" width="600" />
+</div>
+
+
+<img width="1551" alt="Captura de pantalla 2025-06-09 a las 17 40 52" src="https://github.com/user-attachments/assets/9d02e271-65fb-44da-92c9-a505952da667" />
+
+
+<img width="1555" alt="Captura de pantalla 2025-06-09 a las 17 40 24" src="https://github.com/user-attachments/assets/f5039166-b0dd-4614-ac60-caa412e3d123" />
+
+<img width="1555" alt="Captura de pantalla 2025-06-09 a las 17 39 49" src="https://github.com/user-attachments/assets/80f09300-9157-4e9d-a229-7c6ed0efeec1" />
 
 ### 🌟 Teclado Seguro Post-Cuántico Avanzado para Android
 
