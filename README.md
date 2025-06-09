@@ -1,5 +1,8 @@
 # 🔐 SecureChats Keyboard BWT 3.0
-![icono](https://github.com/user-attachments/assets/5a517fa3-29bd-453f-9242-65a7aa058c79)
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/5a517fa3-29bd-453f-9242-65a7aa058c79" alt="icono" width="600" />
+</div>
 
 
 
