@@ -3,7 +3,11 @@
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5a517fa3-29bd-453f-9242-65a7aa058c79" alt="icono" width="600" />
 </div>
-
+<div align="center">
+  <a href="https://www.youtube.com/shorts/q_wTsI0SYmg">
+    <img src="https://img.youtube.com/vi/q_wTsI0SYmg/0.jpg" alt="Mira el vídeo" width="600" />
+  </a>
+</div>
 
 
 <img width="1551" alt="Captura de pantalla 2025-06-09 a las 17 40 52" src="https://github.com/user-attachments/assets/9d02e271-65fb-44da-92c9-a505952da667" />
