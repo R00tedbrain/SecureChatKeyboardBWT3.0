@@ -9,7 +9,12 @@ android {
         targetSdkVersion 34
         versionCode 2
         versionName "2.0.0"
+        
+        // Filtrar arquitecturas nativas para reducir el tamaño del APK
+        // Esto elimina arquitecturas no necesarias que F-Droid considera innecesarias
+        // Usando splits en lugar de ndk abiFilters para evitar conflictos
     }
+    
     buildTypes {
         release {
             minifyEnabled false
@@ -18,31 +23,87 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    
+    // Configuración para splits de APK (opcional, para reducir tamaño)
+    splits {
+        abi {
+            enable true
+            reset()
+            include 'arm64-v8a', 'armeabi-v7a'
+            universalApk false
+        }
+    }
+    
+    // Configuración para excluir archivos innecesarios
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/proguard/**'
+        exclude 'META-INF/gradle/**'
+        exclude 'META-INF/maven/**'
+        exclude 'META-INF/versions/**'
+        exclude 'META-INF/*.kotlin_module'
+        exclude 'META-INF/*.version'
+        exclude 'META-INF/com.android.tools/**'
+        exclude 'DebugProbesKt.bin'
+        exclude 'kotlin-tooling-metadata.json'
+        
+        // EXCLUIR TODOS LOS ARCHIVOS PROBLEMÁTICOS QUE F-DROID NO ACEPTA
+        exclude '**/*.dll'
+        exclude '**/*.dylib'
+        exclude '**/*_testing_*.dylib'
+        exclude '**/*_testing_*.dll'
+        exclude '**/*_debug*.dll'
+        exclude '**/*_debug*.dylib'
+        exclude '**/libsignal_jni_testing_*.dylib'
+        exclude '**/libsignal_jni_aarch64.dylib'
+        exclude '**/libsignal_jni_amd64.dylib'
+        exclude '**/signal_jni_*.dll'
+        exclude 'lib/*/libsignal_jni_testing.so'
+        exclude 'lib/*/libsignal_jni_debug.so'
+        exclude 'lib/*/libsignal_jni_unstripped.so'
+        exclude 'lib/*/libsignal_ffi_testing.so'
+        exclude 'lib/*/libsignal_ffi_debug.so'
+        
+        // Mantener solo las bibliotecas esenciales de producción para Android
+        pickFirst 'lib/arm64-v8a/libsignal_jni.so'
+        pickFirst 'lib/armeabi-v7a/libsignal_jni.so'
+        pickFirst 'lib/arm64-v8a/libzkgroup.so'
+        pickFirst 'lib/armeabi-v7a/libzkgroup.so'
+    }
+    
     dependenciesInfo {
         // Disables dependency metadata when building APKs.
         includeInApk = false
         // Disables dependency metadata when building Android App Bundles.
         includeInBundle = false
     }
+    
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
         targetCompatibility JavaVersion.VERSION_17
         // Habilitar core library desugaring
         coreLibraryDesugaringEnabled true
     }
+    
     namespace 'com.bwt.securechats.inputmethod'
 }
 
 dependencies {
     implementation 'org.bouncycastle:bcprov-ext-jdk18on:1.78.1'
-    implementation 'com.google.protobuf:protobuf-javalite:3.21.12'
+    implementation 'com.google.protobuf:protobuf-javalite:3.21.12' // Eliminar duplicación
     implementation 'org.signal:libsignal-android:0.73.2'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.14.1'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.1'
-    implementation 'com.google.protobuf:protobuf-javalite:3.21.12'
-    testImplementation "junit:junit:4.13.2"
-    // Agregar la dependencia para el core library desugaring
-    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
     implementation "androidx.security:security-crypto:1.1.0-alpha03"
-
+    
+    // Test dependencies
+    testImplementation "junit:junit:4.13.2"
+    
+    // Core library desugaring para compatibilidad con API antiguas
+    coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:2.0.3'
 }

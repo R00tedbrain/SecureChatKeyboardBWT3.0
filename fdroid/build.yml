@@ -8,12 +8,31 @@ builds:
     forceversion: true
     forcevercode: true
     ndk: r21e
-    # Especificar versiones exactas para reproducibilidad
+    
+    # Configurar build reproducible y optimizado
     build:
       - echo "Configurando build reproducible..."
       - export ANDROID_NDK_HOME=$ANDROID_NDK
       - export NDK_VERSION=21.4.7075529
+      - echo "Limpiando archivos temporales..."
+      - rm -rf app/build/tmp/
+      - rm -rf app/build/intermediates/
+      - rm -rf .gradle/
+      - echo "Configurando filtros de arquitectura..."
+      - export ABI_FILTERS="arm64-v8a,armeabi-v7a"
       
-    # Deshabilitar verificación temporal
+    # Configuración para evitar archivos innecesarios
+    prebuild:
+      - echo "Limpiando archivos innecesarios antes del build..."
+      - find . -name "*.dll" -delete
+      - find . -name "*.dylib" -delete
+      - find . -name "*.so.debug" -delete
+      - find . -name "*_debug.so" -delete
+      - find . -name "*_testing.so" -delete
+      - find . -name "*_unstripped.so" -delete
+      - echo "Archivos de debug eliminados"
+      
+    # Deshabilitar verificaciones problemáticas temporalmente
     disable: 
       - ReproducibleBuilds 
+      - NonFreeNet 

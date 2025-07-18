@@ -50,6 +50,38 @@ captures/
 .externalNativeBuild
 .cxx/
 
+# Archivos nativos problemáticos que F-Droid no acepta
+*.dll
+*.dylib
+*.so.debug
+*_debug.so
+*_testing.so
+*_unstripped.so
+lib/*/libsignal_jni_debug.so
+lib/*/libsignal_jni_testing.so
+lib/*/libsignal_jni_unstripped.so
+lib/*/libsignal_ffi_debug.so
+lib/*/libsignal_ffi_testing.so
+
+# Archivos temporales de build
+.tmp/
+tmp/
+*.tmp
+*.temp
+*.cache
+*.bak
+*.backup
+*.swp
+*.swo
+*~
+
+# Archivos de debug y desarrollo
+debug/
+*.debug
+*.pdb
+*.symbols
+*.map
+
 # Freeline
 freeline.py
 freeline/
@@ -81,7 +113,18 @@ Desktop.ini
 *.swp
 *.swo
 
-# Backup files
-*.bak
-*.tmp
-*~
+# Android signing files
+*.keystore
+*.jks
+key.properties
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# F-Droid specific exclusions
+fdroid/metadata/
+fdroid/tmp/
+fdroid/build/

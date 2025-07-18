@@ -2,16 +2,13 @@
 
 buildscript {
     repositories {
-        jcenter()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
         google()
+        mavenCentral()
+        // jcenter() deprecado, usar mavenCentral()
     }
     dependencies {
         classpath 'com.android.tools.build:gradle:8.5.0'
-
+        
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }
@@ -19,11 +16,21 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         google()
+        mavenCentral()
+        // jcenter() deprecado, usar mavenCentral()
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+// Configuración para F-Droid
+ext {
+    // Configuraciones comunes para F-Droid
+    compileSdkVersion = 34
+    buildToolsVersion = "33.0.0"
+    minSdkVersion = 26
+    targetSdkVersion = 34
 }
