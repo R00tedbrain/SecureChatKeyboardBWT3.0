@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 34
+    compileSdkVersion 35
     buildToolsVersion '33.0.0'
     defaultConfig {
         applicationId "com.bwt.securechats"
         minSdkVersion 26
-        targetSdkVersion 34
+        targetSdkVersion 35
         versionCode 2
         versionName "2.0.0"
         
-        // Cambiar nombre del APK
-        archivesBaseName = "SecureChatKeyboard"
+        // Cambiar nombre del APK - esto debe funcionar en Android Studio
+        setProperty("archivesBaseName", "SecureChatKeyboard")
         
         // Filtrar arquitecturas nativas para reducir el tamaño del APK
         // Esto elimina arquitecturas no necesarias que F-Droid considera innecesarias
@@ -24,16 +24,20 @@ android {
             debuggable false
             renderscriptDebuggable false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            
+            // Configuraciones para Android Studio
+            shrinkResources false
+            zipAlignEnabled true
+            
+            // Nombre del APK para Android Studio
+            applicationIdSuffix ""
         }
     }
     
     // Configuración para splits de APK (opcional, para reducir tamaño)
     splits {
         abi {
-            enable true
-            reset()
-            include 'arm64-v8a', 'armeabi-v7a'
-            universalApk true
+            enable false
         }
     }
     
@@ -94,6 +98,14 @@ android {
     }
     
     namespace 'com.bwt.securechats.inputmethod'
+}
+
+// Configuración específica para Android Studio
+android.applicationVariants.all { variant ->
+    variant.outputs.all { output ->
+        def formattedDate = new Date().format('yyyyMMdd')
+        outputFileName = "SecureChatKeyboard-${variant.buildType.name}-${formattedDate}.apk"
+    }
 }
 
 dependencies {
