@@ -10,6 +10,9 @@ android {
         versionCode 2
         versionName "2.0.0"
         
+        // Cambiar nombre del APK
+        archivesBaseName = "SecureChatKeyboard"
+        
         // Filtrar arquitecturas nativas para reducir el tamaño del APK
         // Esto elimina arquitecturas no necesarias que F-Droid considera innecesarias
         // Usando splits en lugar de ndk abiFilters para evitar conflictos

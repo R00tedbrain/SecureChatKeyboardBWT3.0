@@ -13,7 +13,7 @@
       "attributes": [],
       "versionCode": 2,
       "versionName": "2.0.0",
-      "outputFile": "app-universal-release.apk"
+      "outputFile": "SecureChatKeyboard-universal-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -26,7 +26,7 @@
       "attributes": [],
       "versionCode": 2,
       "versionName": "2.0.0",
-      "outputFile": "app-armeabi-v7a-release.apk"
+      "outputFile": "SecureChatKeyboard-armeabi-v7a-release.apk"
     },
     {
       "type": "ONE_OF_MANY",
@@ -39,7 +39,7 @@
       "attributes": [],
       "versionCode": 2,
       "versionName": "2.0.0",
-      "outputFile": "app-arm64-v8a-release.apk"
+      "outputFile": "SecureChatKeyboard-arm64-v8a-release.apk"
     }
   ],
   "elementType": "File",
