@@ -1,0 +1,28 @@
+🔮 SECURECHATS KEYBOARD BWT 2.0.0 - OPTIMIZATION & F-DROID RELEASE 🔮
+
+🚀 F-DROID OPTIMIZED VERSION:
+• APK size optimized from 158MB to 29MB
+• Removed all unnecessary native files (.dll, .dylib)
+• Clean build system for F-Droid compliance  
+• Reproducible builds configuration
+
+🔧 TECHNICAL IMPROVEMENTS:
+• Updated to Android API 35 (Android 15 compatible)
+• Enhanced ABI filtering (arm64-v8a, armeabi-v7a)
+• Improved native library management
+• Better resource shrinking
+
+🛡️ SECURITY MAINTAINED:
+• All post-quantum cryptography features preserved
+• End-to-End Encryption with Signal Protocol intact
+• Kyber 1024 integration still active
+• Perfect Forward Secrecy unchanged
+
+⌨️ KEYBOARD FEATURES RETAINED:
+• Real-time encryption/decryption working
+• Contact management and verification preserved
+• Message history with secure deletion available  
+• Steganography modes (JSON + Fairy Tale) functional
+• 89+ language localizations maintained
+
+Ready for F-Droid distribution! 🌟 

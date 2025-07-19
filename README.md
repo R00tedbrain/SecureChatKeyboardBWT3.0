@@ -1,4 +1,4 @@
-# 🔐 SecureChats Keyboard BWT 3.0
+# 🔐 SecureChats Keyboard BWT 2.0.0
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5a517fa3-29bd-453f-9242-65a7aa058c79" alt="icono" width="600" />
@@ -21,9 +21,9 @@
 
 ### 🌟 Advanced Post-Quantum Secure Keyboard for Android
 
-**SecureChats Keyboard BWT 3.0** is an enhanced version of the innovative KryptEY Android keyboard, originally created by **mellitopia** and **amnesica**. This advanced iteration integrates **end-to-end encryption (E2EE)** with **post-quantum cryptography** resistance, built on the Signal Protocol foundation with enhanced **Kyber (PQC)** implementation for future-proof security against quantum computer attacks.
+**SecureChats Keyboard BWT 2.0.0** is an enhanced version of the innovative KryptEY Android keyboard, originally created by **mellitopia** and **amnesica**. This advanced iteration integrates **end-to-end encryption (E2EE)** with **post-quantum cryptography** resistance, built on the Signal Protocol foundation with enhanced **Kyber (PQC)** implementation for future-proof security against quantum computer attacks.
 
-**🚀 What's New in BWT 3.0:**
+**🚀 What's New in BWT 2.0.0:**
 - **Post-Quantum Cryptography (Kyber)** integration
 - **EncryptedSharedPreferences** with AES256-GCM
 - **Enhanced key rotation** (2 days vs original 30 days)
@@ -287,9 +287,9 @@ cd SecureChatKeyboardBWT3.0
 
 ### 🌟 Teclado Seguro Post-Cuántico Avanzado para Android
 
-**SecureChats Keyboard BWT 3.0** es una versión mejorada del innovador teclado KryptEY para Android, originalmente creado por **mellitopia** y **amnesica**. Esta iteración avanzada integra **cifrado de extremo a extremo (E2EE)** con resistencia a **criptografía post-cuántica**, construido sobre la base del Protocolo Signal con implementación mejorada de **Kyber (PQC)** para seguridad a prueba de futuro contra ataques de computadoras cuánticas.
+**SecureChats Keyboard BWT 2.0.0** es una versión mejorada del innovador teclado KryptEY para Android, originalmente creado por **mellitopia** y **amnesica**. Esta iteración avanzada integra **cifrado de extremo a extremo (E2EE)** con resistencia a **criptografía post-cuántica**, construido sobre la base del Protocolo Signal con implementación mejorada de **Kyber (PQC)** para seguridad a prueba de futuro contra ataques de computadoras cuánticas.
 
-**🚀 Novedades en BWT 3.0:**
+**🚀 Novedades en BWT 2.0.0:**
 - **Criptografía Post-Cuántica (Kyber)** integrada
 - **EncryptedSharedPreferences** con AES256-GCM
 - **Rotación de claves mejorada** (2 días vs 30 días originales)
@@ -493,6 +493,6 @@ Licenciado bajo la **Licencia GPL-3.0** (mantenida del original). Ver [LICENSE](
 
 ---
 
-**⚡ SecureChats Keyboard BWT 3.0 - El Futuro de la Comunicación Móvil Segura ⚡**
+**⚡ SecureChats Keyboard BWT 2.0.0 - El Futuro de la Comunicación Móvil Segura ⚡**
 
 *Construido sobre la base sólida de KryptEY con mejoras revolucionarias de seguridad post-cuántica*
