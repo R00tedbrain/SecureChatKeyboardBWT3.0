@@ -6,7 +6,7 @@
 KEYSTORE_PATH="/Users/sirh0f/Dev/KeysActualizadasAgosto2025"
 KEYSTORE_ALIAS="release"
 UNSIGNED_APK="app/build/outputs/apk/release/SecureChatKeyboard-release-20250719.apk"
-SIGNED_APK="SecureChatKeyboard-release-SIGNED.apk"
+SIGNED_APK="SecureChatsKeyboardv2.apk"
 
 # Verificar que existe el APK sin firmar
 if [ ! -f "$UNSIGNED_APK" ]; then
@@ -29,7 +29,7 @@ else
     KEYSTORE_PASSWORD="$1"
 fi
 
-echo "🔑 Firmando APK optimizado..."
+echo "🔑 Firmando APK para release v2.0.0..."
 
 # Firmar el APK con apksigner (sin comillas en el password)
 /Users/sirh0f/Library/Android/sdk/build-tools/35.0.0/apksigner sign \
@@ -47,7 +47,7 @@ if [ $? -eq 0 ]; then
     echo "📊 Tamaño del APK firmado:"
     ls -lh "$SIGNED_APK"
     echo ""
-    echo "🚀 Para F-Droid usar: $SIGNED_APK"
+    echo "🚀 APK lista para subir como release v2.0.0"
 else
     echo "❌ Error al firmar el APK"
     exit 1
