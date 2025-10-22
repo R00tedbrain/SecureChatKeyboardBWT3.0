@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Script para firmar el APK optimizado de 29MB
+# Script para firmar el APK recién generado
 # Uso: ./sign_apk.sh [password_del_keystore]
 
 KEYSTORE_PATH="/Users/sirh0f/Dev/KeysActualizadasAgosto2025"
 KEYSTORE_ALIAS="release"
-UNSIGNED_APK="app/build/outputs/apk/release/SecureChatKeyboard-release-20250719.apk"
+UNSIGNED_APK="app/build/outputs/apk/release/SecureChatKeyboard-release-20250720.apk"
 SIGNED_APK="SecureChatsKeyboardv2.apk"
 
 # Verificar que existe el APK sin firmar
@@ -29,7 +29,7 @@ else
     KEYSTORE_PASSWORD="$1"
 fi
 
-echo "🔑 Firmando APK para release v2.0.0..."
+echo "🔑 Firmando APK limpio para F-Droid..."
 
 # Firmar el APK con apksigner (sin comillas en el password)
 /Users/sirh0f/Library/Android/sdk/build-tools/35.0.0/apksigner sign \
@@ -47,7 +47,7 @@ if [ $? -eq 0 ]; then
     echo "📊 Tamaño del APK firmado:"
     ls -lh "$SIGNED_APK"
     echo ""
-    echo "🚀 APK lista para subir como release v2.0.0"
+    echo "🚀 APK limpio y firmado, listo para F-Droid"
 else
     echo "❌ Error al firmar el APK"
     exit 1

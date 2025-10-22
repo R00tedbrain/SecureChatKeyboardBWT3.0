@@ -2,6 +2,12 @@
 
 <div align="center">
   <img src="https://github.com/user-attachments/assets/5a517fa3-29bd-453f-9242-65a7aa058c79" alt="icono" width="600" />
+  
+  <br><br>
+  
+  <a href="https://play.google.com/store/apps/details?id=com.bwt.securechats&hl=es">
+    <img src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png" alt="Disponible en Google Play" width="250"/>
+  </a>
 </div>
 <div align="center">
   <a href="https://www.youtube.com/shorts/q_wTsI0SYmg">
