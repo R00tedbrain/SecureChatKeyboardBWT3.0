@@ -27,7 +27,7 @@
 
 ### 🌟 Advanced Post-Quantum Secure Keyboard for Android
 
-**SecureChats Keyboard BWT 2.0.0** is an enhanced version of the innovative KryptEY Android keyboard, originally created by **mellitopia** and **amnesica**. This advanced iteration integrates **end-to-end encryption (E2EE)** with **post-quantum cryptography** resistance, built on the Signal Protocol foundation with enhanced **Kyber (PQC)** implementation for future-proof security against quantum computer attacks.
+**SecureChats Keyboard BWT 2.0.0** is an enhanced version of the innovative KryptEY Android keyboard  https://github.com/amnesica/KryptEY , originally created by **mellitopia** https://github.com/mellitopia and **amnesica** https://github.com/amnesica . This advanced iteration integrates **end-to-end encryption (E2EE)** with **post-quantum cryptography** resistance, built on the Signal Protocol foundation with enhanced **Kyber (PQC)** implementation for future-proof security against quantum computer attacks.
 
 **🚀 What's New in BWT 2.0.0:**
 - **Post-Quantum Cryptography (Kyber)** integration
