@@ -1,3 +1,11 @@
+***DEPERECATED REPOSITORY****
+
+***NEW REPO*** https://github.com/r00tedbrain-backup/Securechatskeyboard
+
+***NEW ios & android versions ***
+
+
+
 # 🔐 SecureChats Keyboard BWT 2.0.0
 
 <div align="center">
