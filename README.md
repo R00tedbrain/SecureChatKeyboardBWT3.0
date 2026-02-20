@@ -1,8 +1,20 @@
-***DEPERECATED REPOSITORY****
+ ***DEPERECATED REPOSITORY***
 
 ***NEW REPO*** https://github.com/r00tedbrain-backup/Securechatskeyboard
 
 ***NEW ios & android versions ***
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
